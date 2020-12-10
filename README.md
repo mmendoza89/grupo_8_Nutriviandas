@@ -11,26 +11,26 @@ Proveemos viandas elaboradas por Estudiante de Lic. en Nutrición [@nutrivida_s
 Entregas a ZONA OESTE Y CABA <br><br>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod gravida magna. Cras feugiat malesuada sapien auctor ultrices. Morbi leo ipsum, mollis id rhoncus eget, tincidunt vel lectus. Sed blandit consequat odio sed tempor. Morbi efficitur ornare elit nec auctor. Suspendisse a nisi eu elit dictum hendrerit blandit eu lacus. <br><br>
 <hr>
-<br><br>
+<br>
 
 ## Público Objetivo
 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod gravida magna. Cras feugiat malesuada sapien auctor ultrices. Morbi leo ipsum, mollis id rhoncus eget, tincidunt vel lectus. Sed blandit consequat odio sed tempor. Morbi efficitur ornare elit nec auctor. Suspendisse a nisi eu elit dictum hendrerit blandit eu lacus. 
-<br><br>
 <hr>
-<br><br>
+<br>
 
 ## Integrantes
 ### Lucas Lorenzo
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod gravida magna. Cras feugiat malesuada sapien auctor ultrices. Morbi leo ipsum, mollis id rhoncus eget, tincidunt vel lectus. Sed blandit consequat odio sed tempor. Morbi efficitur ornare elit nec auctor. Suspendisse a nisi eu elit dictum hendrerit blandit eu lacus.
 
 ### Marco Mendoza
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod gravida magna. Cras feugiat malesuada sapien auctor ultrices. Morbi leo ipsum, mollis id rhoncus eget, tincidunt vel lectus. Sed blandit consequat odio sed tempor. Morbi efficitur ornare elit nec auctor. Suspendisse a nisi eu elit dictum hendrerit blandit eu lacus. 
+> Ingeniero de sistemas y estudiando Desarrollo Web Full Stack. Siempre alrededor de la tecnologia y en busca de seguir desarrollando mis skills tanto tecnicos como blandos. De verdad apasionado con la idea de convertirme en un desarrollador web.<br><br><i>PD: No tengo tiempo ya para mis juegos de PC, pero ahi estan siempre viendome y agarrando polvo. ~~It's sad.~~</i>
 
 ### Luis R. Díaz Muñiz
 > Actualmente trabajo en Web Front End, doy clases, y estoy estudiando desarrollo Full Stack. Tengo 49 años y estoy sentado frente a una computadora desde que a los 8, 9 o 10 llegó una Commodore 64 a casa. 🤓 <br>
 Hice también el curso de Android Developer en DH.<br>
 Además, soy músico, actualmente en receso, pero por años trabajé de esto haciendo música de teatro, algo de cine, trabajé en un circo, viajé, grabé, toqué batería, percu, guitarra, algo de bajo... 😎
 <hr>
+<br>
 
 ## Sitios de referencia
 
@@ -49,3 +49,9 @@ Otra solución bastante completa y son competencia directa.<br><br>
 ### Caserito Viandas
 >[Caserito Viandas](https://caseritoviandas.com/41c-Destacados)
 Tomamos en cuenta este competidor por la variedad de menú y el enfoque a la pérdida de peso.<br><br>
+<hr>
+<br>
+
+## Wireframe
+
+> Hemos desarrollado nuestro wireframe usando la herramienta Figma. Haciendo click [aquí](https://www.figma.com/file/EtLLGBqC7CLkrZ5y88Tqc6/Nutrivida?node-id=0%3A1 "Nutrivianda's Wireframe") podran verlo.
