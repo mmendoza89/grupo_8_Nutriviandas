@@ -54,4 +54,4 @@ Tomamos en cuenta este competidor por la variedad de menú y el enfoque a la pé
 
 ## Wireframe
 
-> Hemos desarrollado nuestro wireframe usando la herramienta Figma. Haciendo click [aquí](https://www.figma.com/file/EtLLGBqC7CLkrZ5y88Tqc6/Nutrivida?node-id=0%3A1 "Nutrivianda's Wireframe") podran verlo. De igual forma, puede encontrar los PNG [aquí](./wireframes).
+> Hemos desarrollado nuestro wireframe usando la herramienta Figma. Haciendo click [aquí](https://www.figma.com/file/EtLLGBqC7CLkrZ5y88Tqc6/Nutrivida?node-id=0%3A1 "Nutrivianda's Wireframe") podran verlo. De igual forma, puede encontrar los PNG [aquí](./wireframe).
