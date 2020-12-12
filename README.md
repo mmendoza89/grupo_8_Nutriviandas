@@ -20,8 +20,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod gravida m
 
 ## Integrantes
 ### Lucas Lorenzo
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod gravida magna. Cras feugiat malesuada sapien auctor ultrices. Morbi leo ipsum, mollis id rhoncus eget, tincidunt vel lectus. Sed blandit consequat odio sed tempor. Morbi efficitur ornare elit nec auctor. Suspendisse a nisi eu elit dictum hendrerit blandit eu lacus.
-
+> Analista de E-commerce en Natural Life, 25 años dando vuelta en este mundo y recién ahora estoy arrancando con la programación y dandome cuenta que me encanta este nuevo mundo!
+Amante incondicional de la tecnología y los juegos (No son lo mismo jaja) No me gustan los deportes físicos, pero de tanto en tanto con amigos nunca vienen mal.
 ### Marco Mendoza
 > Ingeniero de sistemas y estudiando Desarrollo Web Full Stack. Siempre alrededor de la tecnologia y en busca de seguir desarrollando mis skills tanto tecnicos como blandos. De verdad apasionado con la idea de convertirme en un desarrollador web.<br><br><i>PD: No tengo tiempo ya para mis juegos de PC, pero ahi estan siempre viendome y agarrando polvo. ~~It's sad.~~</i>
 
