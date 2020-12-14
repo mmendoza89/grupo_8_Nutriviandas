@@ -8,9 +8,7 @@
 ## Descripción
 >Nutriviandas Saludables 🌿<br>
 Proveemos viandas elaboradas por Estudiante de Lic. en Nutrición [@nutrivida_saludable](https://www.instagram.com/nutrivida_saludable "@nutrivida_saludable") y Profesional Gastronómico.<br><br>
-Entregas a ZONA OESTE Y CABA <br><br>
-
->Somos un emprendimiento enfocado en ofrecer alimentos, viandas y opciones viables para una alimentación sana y equilibrada. En la gran mayoría de casos las personas que adquieren viandas u menús armados suelen recibir opciones repetidas, en nuestro caso ofrecemos una gran variedad de opciones que rotan cada semana, además de nuestras riquísimas variedades de pizzas, hamburguesas y tartas individuales. <hr><br><br>
+Entregas a ZONA OESTE Y CABA <br><br>Somos un emprendimiento enfocado en ofrecer alimentos, viandas y opciones viables para una alimentación sana y equilibrada. En la gran mayoría de casos las personas que adquieren viandas u menús armados suelen recibir opciones repetidas, en nuestro caso ofrecemos una gran variedad de opciones que rotan cada semana, además de nuestras riquísimas variedades de pizzas, hamburguesas y tartas individuales. <hr><br><br>
 <hr>
 <br>
 
