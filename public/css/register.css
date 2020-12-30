@@ -1,3 +1,63 @@
-h1{
-    color: pink;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #7ded75;
+    position: sticky;
+}
+
+.logo{
+    margin: 20px;
+    height: 150px;
+    vertical-align: middle;
+}
+
+.container-header ul, ul.navbar-left li, ul.navbar-right li{
+    display: inline-block;
+}
+
+.navbar-right li #crear_cuenta, 
+.navbar-right li #ingresar,
+.navbar-left li a{
+    text-decoration: none;
+    color: white;
+}
+
+footer{
+    background-color: grey;
+}
+
+.footer-menu-centro{
+    text-align: center;
+}
+
+ul.footer-menu-centro h3{
+    color: #343434;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+ul.footer-menu-centro li, .footer-menu-seguinos li{
+    display: inline-block;
+}
+
+ul.footer-menu-centro li a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+.footer-menu-seguinos a{
+    color: white;
+}
+
+.fa-instagram, .fa-facebook, .fa-twitter-square{
+    font-size: 20px;
 }
