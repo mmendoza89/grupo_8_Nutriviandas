@@ -1,3 +1,24 @@
+/* font-family: 'El Messiri', sans-serif;
+font-family: 'Shadows Into Light', cursive; */
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --color-main: #7ded75;
+    --color-orange: #f49136;
+    --color-pink: #ec7aae;
+    --color-text: #353535;
+    --html-font-size: 16px;
+}
+
+html{
+    font-size: var(--html-font-size);
+}
+
 h1{
-    color: red;
+    font-family: 'Shadows Into Light', cursive; 
+    color: var(--color-text);
+    font-size: 1rem;
 }
