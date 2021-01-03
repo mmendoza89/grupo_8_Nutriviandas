@@ -5,29 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>Formulario de registro</title>
+    <title>Nutriviandas - registro</title>
 </head>
 <body>
-    <header>
-        <nav class="barmenu">
-            <div class="container-header">
-                <a href="register.html">
-                    <img class="logo" src="/images/logo_nutriviandas.jpeg" alt="Logo de Nutriviandas">
-                </a>
-                <ul class="navbar-left">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Nuestros Menus</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-                <ul class="navbar-right">
-                    <li><a id="crear_cuenta" href="#">Creá tu cuenta</a></li>
-                    <li><a id="ingresar" href="#">Ingresá</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
     <main>
-
+        <div class="container-logo">
+            <a href="index.html">
+                <img class="logo-register-login" src="/images/logo_nutriviandas.jpeg" alt="Logo de Nutriviandas">
+            </a>
+        </div>
+        <div class="register-main">
+            <div class="register-box">
+                <h3 class="titulo-registrar">Ingresa tus datos</h3>
+                <form class="register-form">
+                    <input type="email" id="r-email" placeholder="E-mail" required><br>
+                    <input type="text" id="r-nombre" placeholder="Nombre" required><br>
+                    <input type="text" id="r-apellido" placeholder="Apellido" required><br>
+                    <input type="password" id="r-contraseña" placeholder="Contraseña" required><br>
+                    <input type="password" id="r-confirmar-c" placeholder="Confirmar Contraseña" required><br>
+                    <!--usandon un button solo para simular el error al introducir un dato erroneo. Luego lo cambiaremos a un type= submit-->
+                    <input type="button" value="Registrarse" id="registrar-b" onclick="alert('Por favor, verifique los datos')">
+                    <!--<input type="submit" value="Registrarse" id="registrar-b">-->
+                </form>
+            </div>
+            <div class="img-r">
+                <img class="imagen-registro" src="/images/food-registro.jpg" alt="Comida sección de registro">
+            </div>
+        </div>
+        
     </main>
     <footer>
         <nav class="footer_menu">

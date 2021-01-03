@@ -4,17 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
-    <title>Nutriviandas - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Nutriviandas - login</title>
 </head>
 <body>
-    <header>
-        <h1>Este es el Formulario de Login</h1>
-    </header>
     <main>
-
+        <div class="container-logo">
+            <a href="index.html">
+                <img class="logo-register-login" src="/images/logo_nutriviandas.jpeg" alt="Logo de Nutriviandas">
+            </a>
+        </div>
+        <div class="box-login">
+            <h3 class="titulo-iniciar">Inicia sesión</h3>
+            <form class="login-form">
+                <input type="email" id="l-email" placeholder="E-mail" required><br>
+                <input type="password" id="l-contraseña" placeholder="Contraseña" required><br>
+                <!--usandon un button solo para simular el error al introducir un dato erroneo. Luego lo cambiaremos a un type= submit-->
+                <input type="button" value="Ingresar" id="login-b" onclick="alert('E-mail o contraseña son invalidos')">
+                <!--<input type="submit" value="Ingresar" id="login-b">-->
+            </form>
+            <div id="recuperar-contraseña">
+                <a class="link-normal" href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+        </div>
     </main>
     <footer>
-
+        <nav class="footer_menu">
+            <div class="container-footer">
+                <ul class="footer-menu-centro">
+                    <h3>Mapa del Sitio</h3>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nuestros Menus</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+                <ul>
+                    <li class="footer-menu-seguinos">
+                        <span>Seguínos: 
+                            <a href="https://www.instagram.com/nutriviandas_saludables/?hl=es-la" target="blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="blank"><i class="fab fa-facebook"></i></a>
+                            <a href="#" target="blank"><i class="fab fa-twitter-square"></i></a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </footer>
 </body>
 </html>
