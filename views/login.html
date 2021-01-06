@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>Nutriviandas - registro</title>
+    <title>Nutriviandas - login</title>
 </head>
 <body>
     <main>
@@ -14,25 +14,20 @@
                 <img class="logo-register-login" src="/images/logo_nutriviandas.jpeg" alt="Logo de Nutriviandas">
             </a>
         </div>
-        <div class="register-main">
-            <div class="register-box">
-                <h3 class="titulo-registrar">Ingresa tus datos</h3>
-                <form class="register-form">
-                    <input type="email" id="r-email" placeholder="E-mail" required><br>
-                    <input type="text" id="r-nombre" placeholder="Nombre" required><br>
-                    <input type="text" id="r-apellido" placeholder="Apellido" required><br>
-                    <input type="password" id="r-contraseña" placeholder="Contraseña" required><br>
-                    <input type="password" id="r-confirmar-c" placeholder="Confirmar Contraseña" required><br>
-                    <!--usandon un button solo para simular el error al introducir un dato erroneo. Luego lo cambiaremos a un type= submit-->
-                    <input type="button" value="Registrarse" id="registrar-b" onclick="alert('Por favor, verifique los datos')">
-                    <!--<input type="submit" value="Registrarse" id="registrar-b">-->
-                </form>
-            </div>
-            <div class="img-r">
-                <img class="imagen-registro" src="/images/food-registro.jpg" alt="Comida sección de registro">
+        <!-- seccion de login -->
+        <div class="box-login">
+            <h3 class="titulo-iniciar">Inicia sesión</h3>
+            <form class="login-form" autocomplete="on">
+                <input type="email" id="l-email" placeholder="E-mail" required><br>
+                <input type="password" id="l-contraseña" placeholder="Contraseña" required><br>
+                <!--usandon un button solo para simular el error al introducir un dato erroneo. Luego lo cambiaremos a un type= submit-->
+                <input type="button" value="Ingresar" id="login-b" onclick="alert('E-mail o contraseña son invalidos')">
+                <!--<input type="submit" value="Ingresar" id="login-b">-->
+            </form>
+            <div id="recuperar-contraseña">
+                <a class="link-normal" href="#">¿Olvidaste tu contraseña?</a>
             </div>
         </div>
-        
     </main>
     <footer>
         <nav class="footer_menu">
