@@ -9,33 +9,40 @@ body{
 }
 
 .container-logo{
-    margin: 20px 0;
-    height: 150px;
+    margin-top: 15px;
     text-align: center;
 }
 
 .logo-register-login{
-    height: 150px;
-    vertical-align: middle;
+    height: 120px;
 }
 
 .link-logo{
     text-decoration: none;
 }
-    
-main{
-    margin: 10px 10px;
-}
 
-.register-main{
-    display: inline-block;
+.register-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
 }
 
 .register-box{
-    margin-bottom: 10px;
+    display: flex;
+    width: 60vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
     border: 1px #ddd solid;
     border-radius: 4px;
-    width: 40%;
+    padding: 30px 0px;
+    box-shadow: 3px 3px 15px -5px rgba(0,0,0,0.8);
+}
+
+.inside-container-logo{
+    display: none;
 }
 
 .titulo-registrar{
@@ -45,50 +52,122 @@ main{
 
 .register-form{
     text-align: center;
-    margin-bottom: 10px;
 }
 
 #r-email, #r-nombre, #r-apellido, 
 #r-contraseña, #r-confirmar-c{
     margin-bottom: 10px;
+    border: solid 1px black;
 }
 
-#registrar-b{
+.registrar-b{
     padding: 5px;
+    background-color: #7ded75;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    transition: all 0.5s;
 }
 
-.imagen-registro{
-    width: 40%;
+.registrar-b:hover{
+    background-color: #5dc256;
 }
 
-footer{
+.main-footer{
+    display: flex;
+    flex-direction: column;
     background-color: #7ded75;
 }
 
-.footer-menu-centro{
-    text-align: center;
+.main-footer-menu-center{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5px;
 }
 
-ul.footer-menu-centro h3{
-    color: #343434;
-    font-weight: bold;
-    font-size: 14px;
+nav.main-footer-menu-center ul{
+    display: flex;
+    justify-content: space-around;
 }
 
-ul.footer-menu-centro li, .footer-menu-seguinos li{
-    display: inline-block;
+nav.main-footer-menu-center ul li{
+    list-style-type: none;
+    padding: 0px 5px;
+    transition: all 0.5s;
 }
 
-ul.footer-menu-centro li a{
+nav.main-footer-menu-center ul li a{
     text-decoration: none;
     color: white;
     font-size: 12px;
 }
 
+nav.main-footer-menu-center ul li a:hover{
+    color: rgb(228, 228, 228);
+}
+
+.main-footer-menu-seguinos{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
 .footer-menu-seguinos a{
     color: white;
+    padding: 0 2px;
 }
 
 .fa-instagram, .fa-facebook, .fa-twitter-square{
     font-size: 20px;
+    transition: all 0.5s;
+}
+
+.fa-instagram:hover, .fa-facebook:hover, .fa-twitter-square:hover{
+    color: teal;
+}
+
+
+/*MEDIA CONDITIONS*/
+
+/*PARA TABLETS*/
+@media (min-width:426px){
+    .register-box{
+        width: 60%;
+    }
+}
+
+@media (min-width:550px){
+    .register-box{
+        width: 400px;
+    }
+}
+
+/*PARA LAPTOPS Y DESKTOPS*/
+@media (min-width:770px){
+    .container-logo{
+        display: none;
+    }
+
+    .inside-container-logo{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .register-section{
+        justify-content: center;
+    }
+    .register-box{
+        width: 350px;
+        z-index: 1;
+    }
+
+    .main-register{
+        background-image: url('/images/food-registro.jpg');
+        background-color: #cccccc;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
 }

@@ -8,36 +8,78 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-main{
-    margin: 10px 10px;
-}
-
 .container-logo{
-    margin: 20px 0;
-    height: 150px;
+    margin-top: 15px;
     text-align: center;
 }
 
 .logo-register-login{
-    height: 150px;
-    vertical-align: middle;
+    height: 120px;
 }
 
-.box-login{
+.link-logo{
+    text-decoration: none;
+}
+
+.login-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+.background-image-login{
+    display: none;
+}
+
+.login-box{
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
     border: 1px #ddd solid;
     border-radius: 4px;
+    padding: 30px 0px;
+    box-shadow: 3px 3px 15px -5px rgba(0,0,0,0.8);
+}
+
+.inside-container-logo{
+    display: none;
 }
 
 .login-form{
     text-align: center;
 }
 
-#l-email, #l-contraseña, #ingresar-b{
-    margin-bottom: 5px;
+.crear-cuenta{
+    font-size: 12px;
 }
 
-#login-b{
+.medium-link{
+    text-decoration: none;
+    font-size: 12px;
+    color: #0066c0;
+}
+
+
+.l-email, .l-contraseña, .login-b{
+    margin-bottom: 10px;
+    border: solid 1px black;
+}
+
+.login-b{
     padding: 5px;
+    background-color: #7ded75;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    transition: all 0.5s;
+}
+
+.login-b:hover{
+    background-color: #5dc256;
 }
 
 .titulo-iniciar{
@@ -45,46 +87,115 @@ main{
     text-align: center;
 }
 
-.link-normal{
+.small-link{
     text-decoration: none;
     font-size: 12px;
     color: #0066c0;
 }
 
-#recuperar-contraseña{
+.recuperar-contraseña{
+    display: block;
     text-align: center;
 }
 
-footer{
+.main-footer{
+    display: flex;
+    flex-direction: column;
     background-color: #7ded75;
 }
 
-.footer-menu-centro{
-    text-align: center;
+.main-footer-menu-center{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5px;
 }
 
-ul.footer-menu-centro h3{
-    color: #343434;
-    font-weight: bold;
-    font-size: 14px;
+nav.main-footer-menu-center ul{
+    display: flex;
+    justify-content: space-around;
 }
 
-ul.footer-menu-centro li, .footer-menu-seguinos li{
-    display: inline-block;
+nav.main-footer-menu-center ul li{
+    list-style-type: none;
+    padding: 0px 5px;
 }
 
-ul.footer-menu-centro li a{
+nav.main-footer-menu-center ul li a{
     text-decoration: none;
     color: white;
     font-size: 12px;
 }
 
+nav.main-footer-menu-center ul li a:hover{
+    color: rgb(228, 228, 228);
+}
+
+.main-footer-menu-seguinos{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
 .footer-menu-seguinos a{
     color: white;
+    padding: 0 2px;
 }
 
 .fa-instagram, .fa-facebook, .fa-twitter-square{
     font-size: 20px;
+    transition: all 0.5s;
 }
 
+.fa-instagram:hover, .fa-facebook:hover, .fa-twitter-square:hover{
+    color: teal;
+}
 
+/*MEDIA CONDITIONS*/
+
+/*PARA TABLETS*/
+@media (min-width:426px){
+    .crear-cuenta{
+        font-size: 14px;
+    }
+
+    .login-box{
+        width: 60%;
+    }
+}
+
+@media (min-width:550px){
+    .login-box{
+        width: 400px;
+    }
+}
+
+/*PARA LAPTOPS Y DESKTOPS*/
+@media (min-width:770px){
+    .container-logo{
+        display: none;
+    }
+
+    .inside-container-logo{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .login-section{
+        justify-content: center;
+    }
+    .login-box{
+        width: 350px;
+        z-index: 1;
+    }
+
+    .main-login{
+        background-image: url('/images/food-login.jpg');
+        background-color: #cccccc;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+}
