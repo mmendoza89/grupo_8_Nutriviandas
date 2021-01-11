@@ -1,3 +1,133 @@
-h1{
-    color: #bada55;
+/* font-family: 'El Messiri', sans-serif;
+font-family: 'Shadows Into Light', cursive; */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --color-main: #7ded75;
+    --color-orange: #f49136;
+    --color-pink: #ec7aae;
+    --color-text: #353535;
+    --color-light-grey: #9c9c9c;
+    --html-font-size: 16px;
+    --font-headings: "Shadows Into Light", cursive;
+    --font-text: "El Messiri", sans-serif;
+  }
+  
+  html {
+    font-size: var(--html-font-size);
+  }
+  
+  body {
+    font-family: var(--font-text);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  h1 {
+    color: var(--color-text);
+    font-size: 2.5rem;
+  }
+  
+  h1,
+  h2 {
+    font-family: var(--font-headings);
+  }
+  
+.productAndDescription {
+    display: flex;
+    background-color: #f49136;
+}
+
+.productAndDescriptionPhoto {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding-right: 15px;
+}
+
+.productAndDescriptionPhoto img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+.productAndDescriptionText {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 15px;
+}
+
+.productAndDescriptionText p{
+    margin-top: 0;
+}
+
+.productExtraData {
+    display: flex;
+}
+
+.productExtraLeft {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding-right: 15px;
+}
+
+.productExtraRight {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding-left: 15px;
+}
+
+.productExtraLeft {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.productExtraLeftNutrition {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.productExtraLeftPriceDelivery {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.productExtraRightOptionsCart {
+    display: flex;
+}
+
+.productExtraOptions {
+    flex-basis: 0;
+    flex-grow: 1;
+    background-color: var(--color-light-grey);
+    padding: 10px;
+    text-align: center;
+}
+
+.productExtraCart {
+    flex-basis: 0;
+    flex-grow: 1;
+    background-color: #828282;
+}
+
+.productDetail section p {
+    margin-top: 0;
+}
+
+.productDetail section {
+    margin-bottom: 40px;
+}
+
+.productExtraOptions label {
+    display: block;
+}
+
+.productExtraOptions h2 {
+    margin-top: 10px;
 }

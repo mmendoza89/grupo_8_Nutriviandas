@@ -1,20 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/productDetail.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/productDetail.css" />
     <title>Nutriviandas - Detalle de producto</title>
-</head>
-<body>
+  </head>
+  <body class="productDetail">
     <header>
-        <h1>Este es el Detalle de producto</h1>
+      <h1>Detalle de Producto</h1>
     </header>
     <main>
-
+      <div class="container">
+        <section class="productAndDescription">
+          <div class="productAndDescriptionPhoto">
+            <img
+              src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
+              alt="Product Image"
+            />
+          </div>
+          <div class="productAndDescriptionText">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+              earum asperiores inventore ratione a tempore quaerat assumenda,
+              deserunt possimus labore nobis minima est ex modi impedit
+              perspiciatis vel ut pariatur?
+            </p>
+          </div>
+        </section>
+        <section class="productExtraData">
+          <div class="productExtraLeft">
+            <div class="productExtraLeftNutrition">Nutritional info</div>
+            <div class="productExtraLeftPriceDelivery">
+              Price and Delivery Options
+            </div>
+          </div>
+          <div class="productExtraRight">
+            <div class="productExtraRightRecommended">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Perferendis, eaque. Unde officiis voluptatibus, perspiciatis
+                sunt facilis quaerat labore itaque nulla, molestias reiciendis
+                iste, fugiat dignissimos natus? Rem sed nulla laborum.
+              </p>
+            </div>
+            <div class="productExtraRightOptionsCart">
+              <div class="productExtraOptions">
+                <!-- OPCIONES DE ENTREGA OBLIGATORIAS DE ELEGIR CON UN PUNTO DE TILDES -->
+                <form action="">
+                  <h2>Opciones de Entrega</h2>
+                  <label for="option1">
+                    <input type="radio" name="deliveryOptions" id="option1" />
+                    Opción 1
+                  </label>
+                  <label for="option2">
+                    <input type="radio" name="deliveryOptions" id="option2" />
+                    Opción 2
+                  </label>
+                  <label for="option3">
+                    <input type="radio" name="deliveryOptions" id="option3" />
+                    Opción 3
+                  </label>
+                  <label for="option4">
+                    <input type="radio" name="deliveryOptions" id="option4" />
+                    Opción 4
+                  </label>
+                  
+                </form>
+              </div>
+              <div class="productExtraCart">
+                <p>
+                  AGREGAR AL CARRITO QUE SE HABILITA SI EL CUADRO DE LA
+                  IZQUIERDA ESTA TILDADO, ALGUNA ANIMACIÓN BONITA.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
-    <footer>
-
-    </footer>
-</body>
+    <footer></footer>
+  </body>
 </html>
