@@ -1,20 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/productDetail.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/productDetail.css" />
     <title>Nutriviandas - Detalle de producto</title>
-</head>
-<body>
+  </head>
+  <body class="productDetail">
     <header>
-        <h1>Este es el Detalle de producto</h1>
+      <h1>Detalle de Producto</h1>
     </header>
     <main>
-
+      <div class="container">
+        <section class="productAndDescription">
+          <div class="productAndDescriptionPhoto">
+            <img
+              src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
+              alt="Product Image"
+            />
+          </div>
+          <div id="productAndDescriptionText">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              euismod ante eget neque laoreet gravida eu eget urna. Nunc
+              pretium, ex vel accumsan interdum, nisi erat euismod nisl, at
+              rhoncus enim lectus eu tortor. In nunc nunc, rhoncus vel enim in,
+              convallis porttitor erat. Maecenas quis sapien eget lacus eleifend
+              ornare eu vitae eros. Nunc lacinia ligula suscipit dapibus
+              malesuada. Praesent aliquam rutrum magna, a lacinia metus lobortis
+              nec. Phasellus tincidunt est a ligula varius, non porta odio
+              iaculis. Cras mattis arcu eget metus mattis sagittis eget vitae
+              dui. Aliquam id molestie ante, in bibendum sapien. Vestibulum
+              hendrerit ante at tempor consequat. Mauris id elit ex. Nam sit
+              amet mollis sapien.
+            </p>
+            <p>
+              Maecenas sit amet ullamcorper neque. Maecenas ut magna volutpat,
+              tincidunt enim id, rutrum tortor. Cras imperdiet turpis a
+              fermentum vulputate. Morbi sagittis tempor augue, ac congue ipsum
+              maximus ut. Nam in eleifend neque, at vestibulum tellus. Praesent
+              id massa felis. Maecenas arcu lacus, fringilla sed tempor nec,
+              scelerisque ut tortor.
+            </p>
+          </div>
+        </section>
+        <section class="productExtraData">
+          <div class="productExtraLeft">
+            <div class="productExtraLeftNutrition">
+              <h2>Información Nutricional</h2>
+              <!-- mockup delete -->
+              <table class="productNutritionalInfoTable">
+                <thead>
+                  <tr>
+                    <th colspan="5" scope="col">
+                      <p style="text-align: center"><strong>Example</strong></p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th colspan="2">One Serving of Lasagna</th>
+                    <th class="left" scope="col">%DV</th>
+                  </tr>
+                  <tr>
+                    <td><strong>Serving Size</strong></td>
+                    <td style="width: 177px"><span>1 cup</span></td>
+                    <td style="width: 37px"></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Calories</strong></td>
+                    <td style="width: 177px"><span>280</span></td>
+                    <td style="width: 37px"></td>
+                  </tr>
+                  <tr>
+                    <td>Total Fat</td>
+                    <td style="width: 177px">9g</td>
+                    <td style="width: 37px">12%</td>
+                  </tr>
+                  <tr>
+                    <td>Saturated Fat</td>
+                    <td style="width: 177px">4.5g</td>
+                    <td style="width: 37px">23%</td>
+                  </tr>
+                  <tr>
+                    <td><em>Trans</em> Fat</td>
+                    <td style="width: 177px">0g</td>
+                    <td style="width: 37px">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>Cholesterol</td>
+                    <td style="width: 177px">35mg</td>
+                    <td style="width: 37px">12%</td>
+                  </tr>
+                  <tr>
+                    <td>Sodium</td>
+                    <td style="width: 177px">850mg</td>
+                    <td style="width: 37px">37%</td>
+                  </tr>
+                  <tr>
+                    <td>Total Carbohydrate</td>
+                    <td style="width: 177px">34g</td>
+                    <td style="width: 37px">12%</td>
+                  </tr>
+                  <tr>
+                    <td>Dietary Fiber</td>
+                    <td style="width: 177px">4g</td>
+                    <td style="width: 37px">14%</td>
+                  </tr>
+                  <tr>
+                    <td>Total Sugars</td>
+                    <td style="width: 177px">6g</td>
+                    <td style="width: 37px">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>Added Sugars</td>
+                    <td style="width: 177px">0g</td>
+                    <td style="width: 37px">0%</td>
+                  </tr>
+                  <tr>
+                    <td>Protein</td>
+                    <td style="width: 177px">15g</td>
+                    <td style="width: 37px">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>Vitamin D</td>
+                    <td style="width: 177px">0mcg</td>
+                    <td style="width: 37px">0%</td>
+                  </tr>
+                  <tr>
+                    <td>Calcium</td>
+                    <td style="width: 177px">320mg</td>
+                    <td style="width: 37px">25%</td>
+                  </tr>
+                  <tr>
+                    <td>Iron</td>
+                    <td style="width: 177px">1.6mg</td>
+                    <td style="width: 37px">8%</td>
+                  </tr>
+                  <tr>
+                    <td>Potassium</td>
+                    <td style="width: 177px">510mg</td>
+                    <td style="width: 37px">10%</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- mockup delete -->
+            </div>
+            <div class="productExtraLeftPriceDelivery">
+              <h2>Precio</h2>
+              <div class="precioProducto">$ 200</div>
+              <h2>Opciones de pedido</h2>
+              <div class="opcionesDePedido">
+                <ul>
+                  <li>Opción 1</li>
+                  <li>Opción 2</li>
+                  <li>Opción 3</li>
+                  <li>Opción 4</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="productExtraRight">
+            <div class="productExtraRightOptionsCart">
+              <div class="productExtraOptions">
+                <!-- OPCIONES DE ENTREGA OBLIGATORIAS DE ELEGIR CON UN PUNTO DE TILDES -->
+                <form action="">
+                  <h2>Opciones de Entrega</h2>
+                  <label for="option1">
+                    <input type="radio" name="deliveryOptions" id="option1" />
+                    Opción 1
+                  </label>
+                  <label for="option2">
+                    <input type="radio" name="deliveryOptions" id="option2" />
+                    Opción 2
+                  </label>
+                  <label for="option3">
+                    <input type="radio" name="deliveryOptions" id="option3" />
+                    Opción 3
+                  </label>
+                  <label for="option4">
+                    <input type="radio" name="deliveryOptions" id="option4" />
+                    Opción 4
+                  </label>
+                </form>
+              </div>
+              <div class="productExtraCart">
+                <!-- AGREGAR AL CARRITO QUE SE HABILITA SI EL CUADRO DE LA
+                    IZQUIERDA ESTA TILDADO, ALGUNA ANIMACIÓN BONITA.-->
+                <h2>Agregar al carrito</h2>
+                <button id="buttonAddToCart"><i class="fas fa-cart-plus"></i></button>
+                
+              </div>
+            </div>
+            <div class="productExtraRightRecommended">
+              <h2>Otros platos recomendados</h2>
+              <p>Quienes pidieron este plato, también pidieron:</p>
+              <div class="productsRecommended">
+                <div>
+                  <img
+                    src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
+                    alt="Product Image"
+                  />
+                  <div class="productsRecommendedText">
+                    <p>Plato de Ejemplo</p>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
+                    alt="Product Image"
+                  />
+                  <div class="productsRecommendedText">
+                    <p>Plato de Ejemplo</p>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
+                    alt="Product Image"
+                  />
+                  <div class="productsRecommendedText">
+                    <p>Plato de Ejemplo</p>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
+                    alt="Product Image"
+                  />
+                  <div class="productsRecommendedText">
+                    <p>Plato de Ejemplo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
-    <footer>
+    <footer class="main-footer">
+        <nav class="main-footer-menu-center">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nuestros Menus</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
 
+        <div class="main-footer-menu-seguinos">
+            <span class="footer-menu-seguinos">
+                <a href="https://www.instagram.com/nutriviandas_saludables/?hl=es-la" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="blank"><i class="fab fa-twitter-square"></i></a>
+            </span>
+        </div>
     </footer>
-</body>
+  </body>
 </html>

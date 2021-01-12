@@ -1,3 +1,275 @@
-h1{
-    color: #bada55;
+/* font-family: 'El Messiri', sans-serif;
+font-family: 'Shadows Into Light', cursive; */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-main: #7ded75;
+  --color-orange: #f49136;
+  --color-pink: #ec7aae;
+  --color-text: #353535;
+  --color-light-grey: #9c9c9c;
+  --html-font-size: 16px;
+  --font-headings: "Shadows Into Light", cursive;
+  --font-text: "El Messiri", sans-serif;
+}
+
+html {
+  font-size: var(--html-font-size);
+}
+
+body {
+  font-family: var(--font-text);
+  background-image: url("/images/food-login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  color: var(--color-text);
+  font-size: 2.5rem;
+}
+
+h1,
+h2 {
+  font-family: var(--font-headings);
+}
+
+main {
+  padding-bottom: 60px;
+}
+
+.productAndDescription {
+  display: flex;
+  background-color: #f49136;
+}
+
+.productAndDescriptionPhoto {
+  flex-grow: 1;
+  flex-basis: 0;
+  line-height: 0;
+}
+
+.productAndDescriptionPhoto img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+#productAndDescriptionText {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+#productAndDescriptionText p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 40px;
+}
+
+.productExtraData {
+  display: flex;
+}
+
+.productExtraLeft {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.productExtraRight {
+  flex-basis: 0;
+  flex-grow: 1;
+  background-color: var(--color-light-grey);
+}
+
+.productExtraLeft {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.productExtraLeftNutrition {
+  flex-basis: 0;
+  flex-grow: 1;
+  background-color: var(--color-main);
+  padding: 0 10px 10px 10px;
+}
+
+.productExtraLeftPriceDelivery {
+  flex-basis: 0;
+  flex-grow: 1;
+  background-color: var(--color-pink);
+  padding: 0 10px 10px 10px;
+}
+
+.productExtraRightOptionsCart {
+  display: flex;
+}
+
+.productExtraRightRecommended {
+  margin-top: 40px;
+  border-top: 1px solid var(--color-main);
+  margin: 50px 20px 40px 20px;
+  padding-top: 20px;
+}
+
+.productExtraOptions {
+  flex-basis: 0;
+  flex-grow: 1;
+  background-color: var(--color-light-grey);
+  padding: 10px;
+  text-align: center;
+}
+
+.productExtraCart {
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.productDetail section p {
+  margin-top: 0;
+}
+
+.productExtraOptions label {
+  display: block;
+}
+
+.productDetail h2 {
+  text-align: center;
+}
+
+.productExtraOptions h2 {
+  margin-top: 10px;
+}
+
+/* Nutritional information */
+.productNutritionalInfoTable td:nth-child(2) {
+  text-align: center;
+}
+
+.productNutritionalInfoTable tbody td {
+  border-bottom: 1px solid var(--color-light-grey);
+  border-collapse: collapse;
+  margin: 0;
+}
+
+/*  recommended dishes */
+.productsRecommended {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productsRecommended img {
+  width: 100%;
+}
+
+.productsRecommended > div {
+  width: 48%;
+  position: relative;
+}
+
+.productsRecommended div:nth-child(2n + 1) {
+  margin-right: 4%;
+}
+
+.productsRecommendedText {
+  position: absolute;
+  bottom: 6px;
+  margin: 0px;
+  background-color: #35353587;
+  width: 100%;
+}
+
+.productsRecommendedText p {
+  margin: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* --- */
+
+.precioProducto {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--color-text);
+  text-align: center;
+}
+
+button#buttonAddToCart {
+  background-color: var(--color-text);
+  padding: 20px 50px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.productExtraCart i {
+  font-size: 3rem;
+  color: var(--color-main);
+}
+
+/* COPIED CSS FROM REGISTER > FOOTER */
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #7ded75;
+}
+
+.main-footer-menu-center {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 5px;
+}
+
+nav.main-footer-menu-center ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav.main-footer-menu-center ul li {
+  list-style-type: none;
+  padding: 0px 5px;
+  transition: all 0.5s;
+}
+
+nav.main-footer-menu-center ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+
+nav.main-footer-menu-center ul li a:hover {
+  color: rgb(228, 228, 228);
+}
+
+.main-footer-menu-seguinos {
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-menu-seguinos a {
+  color: white;
+  padding: 0 2px;
+}
+
+.fa-instagram,
+.fa-facebook,
+.fa-twitter-square {
+  font-size: 20px;
+  transition: all 0.5s;
+}
+
+.fa-instagram:hover,
+.fa-facebook:hover,
+.fa-twitter-square:hover {
+  color: teal;
 }

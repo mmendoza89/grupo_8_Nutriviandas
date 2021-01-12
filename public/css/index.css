@@ -7,3 +7,178 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+
+
+/** CSS del header**/
+
+
+
+
+.main-header-index{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #7ded75;
+}
+
+.logoIndex{
+    width: 180px; height: 150px;
+    float: left;
+	padding: 15px 20px 15px 20px;
+	text-decoration: none;
+
+}
+.leftMenu{
+    width: 100%;
+}
+
+.leftMenu ul {
+    justify-content: flex-end;
+    display: flex;
+  }
+
+  .leftMenu ul li {
+      
+    float: right;
+    list-style-type: none;
+    text-align: left;
+  }
+  
+  .leftMenu ul li a {
+    padding: 15px;
+    color: white;
+text-decoration: none;
+  }
+
+.leftMenu li a:hover {
+    color: rgb(228, 228, 228);
+
+}
+
+/*Fin del header*/
+
+
+
+/** CSS del footer**/
+.main-footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #7ded75;
+}
+
+.main-footer-menu-center{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5px;
+}
+
+nav.main-footer-menu-center ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav.main-footer-menu-center ul li{
+    list-style-type: none;
+    padding: 0px 5px;
+    transition: all 0.5s;
+}
+
+nav.main-footer-menu-center ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+nav.main-footer-menu-center ul li a:hover{
+    color: rgb(228, 228, 228);
+}
+
+.main-footer-menu-seguinos{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-menu-seguinos a{
+    color: white;
+    padding: 0 2px;
+}
+
+.fa-instagram, .fa-facebook, .fa-twitter-square{
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.fa-instagram:hover, .fa-facebook:hover, .fa-twitter-square:hover{
+    color: teal;
+}
+
+
+.backgroundImageToo {
+    background-image: url('/images/food-login.jpg');
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/*Fin del footer*/
+
+/*CSS del Body*/ 
+
+.containerArticle {
+
+    width: 100%;
+    max-width: 1400px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    background-color: rgba(240, 236, 236, 0.60);
+
+}
+
+.containerArticle .singleCard {
+
+    width: 400px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.35s;
+}
+
+.containerArticle .singleCard:hover {
+
+transform: translateY(-15px);
+box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
+}
+
+.containerArticle .singleCard img{
+    width: 280px;
+    height: 310px;
+
+}
+
+.containerArticle .singleCard h4 {
+    font-weight: 600;
+
+}
+
+.containerArticle .singleCard p {
+padding: 0;
+font-size: 18px;
+font-weight: 300;
+}
+
+.containerArticle .singleCard a {
+font-weight: 300;
+text-decoration: none;
+color:rgba(67, 202, 96, 0.815)
+}
