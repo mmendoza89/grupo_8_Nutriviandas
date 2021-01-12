@@ -29,3 +29,11 @@ app.get("/productCart", (req,res)=>{
 app.get("/productDetail",(req,res)=>{
     res.sendFile(__dirname + "/views/productDetail.html");
 });
+
+app.get("/recoverPassword",(req,res)=>{
+    res.sendFile(__dirname + "/views/recoverPassword.html");
+});
+
+app.get("/headerFooter",(req,res)=>{
+    res.sendFile(__dirname + "/views/headerFooter.html");
+});

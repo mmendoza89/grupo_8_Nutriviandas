@@ -6,14 +6,15 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
 }
 
 .container-logo{
-    margin-top: 15px;
     text-align: center;
 }
 
 .logo-register-login{
+    margin-top: 15px;
     height: 120px;
 }
 
@@ -73,6 +74,8 @@ body{
     background-color: #5dc256;
 }
 
+/*-----FOOTER-----*/
+
 .main-footer{
     display: flex;
     flex-direction: column;
@@ -123,7 +126,7 @@ nav.main-footer-menu-center ul li a:hover{
 }
 
 .fa-instagram:hover, .fa-facebook:hover, .fa-twitter-square:hover{
-    color: teal;
+    color: #f49136;
 }
 
 
@@ -132,7 +135,17 @@ nav.main-footer-menu-center ul li a:hover{
 /*PARA TABLETS*/
 @media (min-width:426px){
     .register-box{
-        width: 60%;
+        width: 70%;
+    }
+
+    .main-register{
+        background-image: url('/images/fresh-food.jpg');
+        background-color: #cccccc;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
     }
 }
 
@@ -156,18 +169,12 @@ nav.main-footer-menu-center ul li a:hover{
     .register-section{
         justify-content: center;
     }
-    .register-box{
-        width: 350px;
-        z-index: 1;
+
+    .logo-register-login{
+        margin-top: 0;
     }
 
-    .main-register{
-        background-image: url('/images/food-registro.jpg');
-        background-color: #cccccc;
-        height: 500px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
+    .register-box{
+        width: 350px;
     }
 }
