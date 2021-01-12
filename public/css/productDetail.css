@@ -47,24 +47,25 @@ font-family: 'Shadows Into Light', cursive; */
 .productAndDescriptionPhoto {
     flex-grow: 1;
     flex-basis: 0;
-    padding-right: 15px;
+    line-height: 0;
 }
 
 .productAndDescriptionPhoto img{
     width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
 
 }
 
-.productAndDescriptionText {
+#productAndDescriptionText {
     flex-grow: 1;
     flex-basis: 0;
-    padding: 15px;
 }
 
-.productAndDescriptionText p{
-    margin-top: 0;
+#productAndDescriptionText p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 40px;
 }
 
 .productExtraData {
@@ -74,13 +75,12 @@ font-family: 'Shadows Into Light', cursive; */
 .productExtraLeft {
     flex-basis: 0;
     flex-grow: 1;
-    padding-right: 15px;
 }
 
 .productExtraRight {
     flex-basis: 0;
     flex-grow: 1;
-    padding-left: 15px;
+    background-color: var(--color-light-grey);
 }
 
 .productExtraLeft {
@@ -91,15 +91,26 @@ font-family: 'Shadows Into Light', cursive; */
 .productExtraLeftNutrition {
     flex-basis: 0;
     flex-grow: 1;
+    background-color: var(--color-main);
+    padding: 0 10px 10px 10px;
 }
 
 .productExtraLeftPriceDelivery {
     flex-basis: 0;
     flex-grow: 1;
+    background-color: var(--color-pink);
+    padding: 0 10px 10px 10px;
 }
 
 .productExtraRightOptionsCart {
     display: flex;
+}
+
+.productExtraRightRecommended {
+    margin-top: 40px;
+    border-top: 1px solid var(--color-main);
+    margin: 50px 20px 40px 20px;
+    padding-top: 20px;
 }
 
 .productExtraOptions {
@@ -113,21 +124,88 @@ font-family: 'Shadows Into Light', cursive; */
 .productExtraCart {
     flex-basis: 0;
     flex-grow: 1;
-    background-color: #828282;
+    text-align: center;
 }
 
 .productDetail section p {
     margin-top: 0;
 }
 
-.productDetail section {
-    margin-bottom: 40px;
-}
-
 .productExtraOptions label {
     display: block;
 }
 
+.productDetail h2 {
+    text-align: center;
+}
+
 .productExtraOptions h2 {
     margin-top: 10px;
+}
+
+/* Nutritional information */
+.productNutritionalInfoTable td:nth-child(2) {
+    text-align: center;
+}
+
+.productNutritionalInfoTable tbody td {
+    border-bottom: 1px solid var(--color-light-grey);
+    border-collapse: collapse;
+    margin: 0;
+}
+
+/*  recommended dishes */
+.productsRecommended {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productsRecommended img {
+    width: 100%;
+}
+
+.productsRecommended > div{
+    width: 48%;
+    position: relative;
+}
+
+.productsRecommended div:nth-child(2n+1) {
+    margin-right: 4%;
+}
+
+.productsRecommendedText {
+    position: absolute;
+    bottom: 6px;
+    margin: 0px;
+    background-color: #35353587;
+    width: 100%;
+}
+
+.productsRecommendedText p{
+    margin: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* --- */
+
+.precioProducto {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--color-text);
+    text-align: center;
+}
+
+button#buttonAddToCart {
+    background-color: var(--color-text);
+    padding: 20px 50px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.productExtraCart i {
+    font-size: 3rem;
+    color: var(--color-main);
 }
