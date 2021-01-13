@@ -1,3 +1,11 @@
+/*
+    Este CSS fue creado unicamente para como base de estilos para el header y footer. De esta manera, una sola persona 
+    puede trabajar en ellos sin interferir en el codigo de los demas y los integrantes del grupo pueden copiar y pegar
+    el contenido en sus hojas de estilo sin temor a algun tipo de conflicto.
+
+    Luego será eliminado.
+*/
+
 *{
     margin: 0px;
     padding: 0px;
@@ -90,10 +98,11 @@ nav.main-footer-menu-center ul li a{
     text-decoration: none;
     color: white;
     font-size: 12px;
+    transition: all 0.5s;
 }
 
 nav.main-footer-menu-center ul li a:hover{
-    color: rgb(228, 228, 228);
+    color: #f49136;
 }
 
 .main-footer-menu-seguinos{
@@ -210,5 +219,11 @@ nav.main-footer-menu-center ul li a:hover{
 
     #crear-cuenta:hover, #crear-cuenta:focus, #crear-cuenta:active{
         border-radius: 33px;
+    }
+
+    /*-----FOOTER-----*/
+
+    nav.main-footer-menu-center ul li a{
+        font-size: 14px;
     }
 }

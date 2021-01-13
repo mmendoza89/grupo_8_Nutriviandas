@@ -10,7 +10,6 @@ body{
 }
 
 .container-logo{
-    margin-top: 1500px;
     text-align: center;
 }
 
@@ -103,11 +102,12 @@ nav.main-footer-menu-center ul li{
 nav.main-footer-menu-center ul li a{
     text-decoration: none;
     color: white;
-    font-size: 12px;
+    font-size: 12px;    
+    transition: all 0.5s;
 }
 
 nav.main-footer-menu-center ul li a:hover{
-    color: rgb(228, 228, 228);
+    color: #f49136;
 }
 
 .main-footer-menu-seguinos{
@@ -177,5 +177,11 @@ nav.main-footer-menu-center ul li a:hover{
 
     .register-box{
         width: 350px;
+    }
+
+    /*-----FOOTER-----*/
+
+    nav.main-footer-menu-center ul li a{
+        font-size: 14px;
     }
 }
