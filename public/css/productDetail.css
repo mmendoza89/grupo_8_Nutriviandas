@@ -14,6 +14,7 @@ font-family: 'Shadows Into Light', cursive; */
   --html-font-size: 16px;
   --font-headings: "Shadows Into Light", cursive;
   --font-text: "El Messiri", sans-serif;
+  --box-shadow-main: 5px 5px 10px 0px #0000008f;
 }
 
 html {
@@ -27,9 +28,18 @@ body {
   background-size: cover;
 }
 
+body.productDetail {
+  background-image: url(/images/fresh-food.jpg);
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
+  /* box-shadow: var(--box-shadow-main); */
 }
 
 h1 {
@@ -49,17 +59,19 @@ main {
 .productAndDescription {
   display: flex;
   background-color: #f49136;
+  box-shadow: var(--box-shadow-main);
+  margin-top: 20px;
 }
 
 .productAndDescriptionPhoto {
-  flex-grow: 1;
+  flex-grow: 2;
   flex-basis: 0;
   line-height: 0;
 }
 
 .productAndDescriptionPhoto img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -76,6 +88,7 @@ main {
 
 .productExtraData {
   display: flex;
+  margin-top: 20px;
 }
 
 .productExtraLeft {
@@ -87,11 +100,15 @@ main {
   flex-basis: 0;
   flex-grow: 1;
   background-color: var(--color-light-grey);
+  margin-left: 10px;
+  box-shadow: var(--box-shadow-main);
 }
 
 .productExtraLeft {
   display: flex;
   flex-wrap: nowrap;
+  margin-right: 10px;
+  box-shadow: var(--box-shadow-main);
 }
 
 .productExtraLeftNutrition {
@@ -104,8 +121,7 @@ main {
 .productExtraLeftPriceDelivery {
   flex-basis: 0;
   flex-grow: 1;
-  background-color: var(--color-pink);
-  padding: 0 10px 10px 10px;
+  border-left: 1px solid #fdbb7e;
 }
 
 .productExtraRightOptionsCart {
@@ -113,16 +129,12 @@ main {
 }
 
 .productExtraRightRecommended {
-  margin-top: 40px;
-  border-top: 1px solid var(--color-main);
-  margin: 50px 20px 40px 20px;
-  padding-top: 20px;
+  margin: 5px 20px 40px 20px;
 }
 
 .productExtraOptions {
   flex-basis: 0;
   flex-grow: 1;
-  background-color: var(--color-light-grey);
   padding: 10px;
   text-align: center;
 }
@@ -143,14 +155,24 @@ main {
 
 .productDetail h2 {
   text-align: center;
+  margin: 20px 0 10px 0;
 }
 
 .productExtraOptions h2 {
   margin-top: 10px;
 }
 
+#form-deliveryOptions p {
+  margin-bottom: 15px;
+}
+
 /* Nutritional information */
-.productNutritionalInfoTable td:nth-child(2) {
+table.productNutritionalInfoTable {
+  width: 100%;
+}
+
+.productNutritionalInfoTable td:nth-child(2),
+.productNutritionalInfoTable td:nth-child(3) {
   text-align: center;
 }
 
@@ -200,20 +222,23 @@ main {
 .precioProducto {
   font-size: 4rem;
   font-weight: bold;
-  color: var(--color-text);
+  color: white;
   text-align: center;
 }
 
 button#buttonAddToCart {
-  background-color: var(--color-text);
-  padding: 20px 50px;
-  border-radius: 8px;
+  padding: 10px 50px;
+  border: none;
   outline: none;
+  background-color: var(--color-main);
+  border-radius: 7px;
+  cursor: pointer;
+  /* box-shadow: var(--box-shadow-main); */
 }
 
 .productExtraCart i {
   font-size: 3rem;
-  color: var(--color-main);
+  color: white;
 }
 
 /* COPIED CSS FROM REGISTER > FOOTER */

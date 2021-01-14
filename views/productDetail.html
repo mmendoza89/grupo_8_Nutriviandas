@@ -17,12 +17,43 @@
     />
 
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/headerFooter.css" />
     <link rel="stylesheet" href="css/productDetail.css" />
+    <link
+      rel="icon"
+      href="images/logo_nutriviandas.jpeg"
+      type="image/gif"
+      sizes="16x16"
+    />
     <title>Nutriviandas - Detalle de producto</title>
   </head>
   <body class="productDetail">
-    <header>
-      <h1>Detalle de Producto</h1>
+    <!-- header cloned from headerFooter.html -->
+    <header class="main-header">
+      <a href="/">
+        <div class="main-header-image">
+          <img
+            class="logo"
+            src="/images/logo_nutriviandas.jpeg"
+            alt="Logo de Nutriviandas"
+          />
+        </div>
+      </a>
+      <nav class="main-navbar">
+        <ul class="navbar-left">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="#">Nuestros Menús</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+
+        <ul class="navbar-right">
+          <li><a id="crear-cuenta" href="/register">Creá tu cuenta </a></li>
+          <li><a id="ingresar" href="/login">Ingresá </a></li>
+        </ul>
+      </nav>
+      <a class="burger-button">
+        <i class="fas fa-bars"></i>
+      </a>
     </header>
     <main>
       <div class="container">
@@ -34,28 +65,49 @@
             />
           </div>
           <div id="productAndDescriptionText">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-              euismod ante eget neque laoreet gravida eu eget urna. Nunc
-              pretium, ex vel accumsan interdum, nisi erat euismod nisl, at
-              rhoncus enim lectus eu tortor. In nunc nunc, rhoncus vel enim in,
-              convallis porttitor erat. Maecenas quis sapien eget lacus eleifend
-              ornare eu vitae eros. Nunc lacinia ligula suscipit dapibus
-              malesuada. Praesent aliquam rutrum magna, a lacinia metus lobortis
-              nec. Phasellus tincidunt est a ligula varius, non porta odio
-              iaculis. Cras mattis arcu eget metus mattis sagittis eget vitae
-              dui. Aliquam id molestie ante, in bibendum sapien. Vestibulum
-              hendrerit ante at tempor consequat. Mauris id elit ex. Nam sit
-              amet mollis sapien.
-            </p>
+            <h2>Saltado vegetariano</h2>
             <p>
               Maecenas sit amet ullamcorper neque. Maecenas ut magna volutpat,
               tincidunt enim id, rutrum tortor. Cras imperdiet turpis a
-              fermentum vulputate. Morbi sagittis tempor augue, ac congue ipsum
-              maximus ut. Nam in eleifend neque, at vestibulum tellus. Praesent
-              id massa felis. Maecenas arcu lacus, fringilla sed tempor nec,
-              scelerisque ut tortor.
+              fermentum vulputate.
             </p>
+            <p>
+              Morbi sagittis tempor augue, ac congue ipsum maximus ut. Nam in
+              eleifend neque, at vestibulum tellus. Praesent id massa felis.
+              Maecenas arcu lacus, fringilla sed tempor nec, scelerisque ut
+              tortor.
+            </p>
+          </div>
+          <div class="productExtraLeftPriceDelivery">
+            <h2>Precio</h2>
+            <div class="precioProducto">$ 200</div>
+            <div class="productExtraOptions">
+              <!-- OPCIONES DE ENTREGA OBLIGATORIAS DE ELEGIR CON UN PUNTO DE TILDES -->
+              <form id="form-deliveryOptions">
+                <h2>Opciones de Entrega</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <label for="option1">
+                  <input type="radio" name="deliveryOptions" id="option1" />
+                  Opción 1
+                </label>
+                <label for="option2">
+                  <input type="radio" name="deliveryOptions" id="option2" />
+                  Opción 2
+                </label>
+                <label for="option3">
+                  <input type="radio" name="deliveryOptions" id="option3" />
+                  Opción 3
+                </label>
+                <div class="productExtraCart">
+                  <!-- AGREGAR AL CARRITO QUE SE HABILITA SI EL CUADRO DE LA
+                      IZQUIERDA ESTA TILDADO, ALGUNA ANIMACIÓN BONITA.-->
+                  <h2>Agregar al carrito</h2>
+                  <button id="buttonAddToCart">
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </section>
         <section class="productExtraData">
@@ -66,146 +118,103 @@
               <table class="productNutritionalInfoTable">
                 <thead>
                   <tr>
-                    <th colspan="5" scope="col">
+                    <th colspan="3" scope="col">
                       <p style="text-align: center"><strong>Example</strong></p>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th colspan="2">One Serving of Lasagna</th>
-                    <th class="left" scope="col">%DV</th>
+                    <th colspan="2">One Serving</th>
+                    <th scope="col">%DV</th>
                   </tr>
                   <tr>
                     <td><strong>Serving Size</strong></td>
-                    <td style="width: 177px"><span>1 cup</span></td>
-                    <td style="width: 37px"></td>
+                    <td><span>1 cup</span></td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><strong>Calories</strong></td>
-                    <td style="width: 177px"><span>280</span></td>
-                    <td style="width: 37px"></td>
+                    <td><span>280</span></td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Total Fat</td>
-                    <td style="width: 177px">9g</td>
-                    <td style="width: 37px">12%</td>
+                    <td>9g</td>
+                    <td>12%</td>
                   </tr>
                   <tr>
                     <td>Saturated Fat</td>
-                    <td style="width: 177px">4.5g</td>
-                    <td style="width: 37px">23%</td>
+                    <td>4.5g</td>
+                    <td>23%</td>
                   </tr>
                   <tr>
                     <td><em>Trans</em> Fat</td>
-                    <td style="width: 177px">0g</td>
-                    <td style="width: 37px">&nbsp;</td>
+                    <td>0g</td>
+                    <td>&nbsp;</td>
                   </tr>
                   <tr>
                     <td>Cholesterol</td>
-                    <td style="width: 177px">35mg</td>
-                    <td style="width: 37px">12%</td>
+                    <td>35mg</td>
+                    <td>12%</td>
                   </tr>
                   <tr>
                     <td>Sodium</td>
-                    <td style="width: 177px">850mg</td>
-                    <td style="width: 37px">37%</td>
+                    <td>850mg</td>
+                    <td>37%</td>
                   </tr>
                   <tr>
                     <td>Total Carbohydrate</td>
-                    <td style="width: 177px">34g</td>
-                    <td style="width: 37px">12%</td>
+                    <td>34g</td>
+                    <td>12%</td>
                   </tr>
                   <tr>
                     <td>Dietary Fiber</td>
-                    <td style="width: 177px">4g</td>
-                    <td style="width: 37px">14%</td>
+                    <td>4g</td>
+                    <td>14%</td>
                   </tr>
                   <tr>
                     <td>Total Sugars</td>
-                    <td style="width: 177px">6g</td>
-                    <td style="width: 37px">&nbsp;</td>
+                    <td>6g</td>
+                    <td>&nbsp;</td>
                   </tr>
                   <tr>
                     <td>Added Sugars</td>
-                    <td style="width: 177px">0g</td>
-                    <td style="width: 37px">0%</td>
+                    <td>0g</td>
+                    <td>0%</td>
                   </tr>
                   <tr>
                     <td>Protein</td>
-                    <td style="width: 177px">15g</td>
-                    <td style="width: 37px">&nbsp;</td>
+                    <td>15g</td>
+                    <td>&nbsp;</td>
                   </tr>
                   <tr>
                     <td>Vitamin D</td>
-                    <td style="width: 177px">0mcg</td>
-                    <td style="width: 37px">0%</td>
+                    <td>0mcg</td>
+                    <td>0%</td>
                   </tr>
                   <tr>
                     <td>Calcium</td>
-                    <td style="width: 177px">320mg</td>
-                    <td style="width: 37px">25%</td>
+                    <td>320mg</td>
+                    <td>25%</td>
                   </tr>
                   <tr>
                     <td>Iron</td>
-                    <td style="width: 177px">1.6mg</td>
-                    <td style="width: 37px">8%</td>
+                    <td>1.6mg</td>
+                    <td>8%</td>
                   </tr>
                   <tr>
                     <td>Potassium</td>
-                    <td style="width: 177px">510mg</td>
-                    <td style="width: 37px">10%</td>
+                    <td>510mg</td>
+                    <td>10%</td>
                   </tr>
                 </tbody>
               </table>
               <!-- mockup delete -->
             </div>
-            <div class="productExtraLeftPriceDelivery">
-              <h2>Precio</h2>
-              <div class="precioProducto">$ 200</div>
-              <h2>Opciones de pedido</h2>
-              <div class="opcionesDePedido">
-                <ul>
-                  <li>Opción 1</li>
-                  <li>Opción 2</li>
-                  <li>Opción 3</li>
-                  <li>Opción 4</li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div class="productExtraRight">
-            <div class="productExtraRightOptionsCart">
-              <div class="productExtraOptions">
-                <!-- OPCIONES DE ENTREGA OBLIGATORIAS DE ELEGIR CON UN PUNTO DE TILDES -->
-                <form action="">
-                  <h2>Opciones de Entrega</h2>
-                  <label for="option1">
-                    <input type="radio" name="deliveryOptions" id="option1" />
-                    Opción 1
-                  </label>
-                  <label for="option2">
-                    <input type="radio" name="deliveryOptions" id="option2" />
-                    Opción 2
-                  </label>
-                  <label for="option3">
-                    <input type="radio" name="deliveryOptions" id="option3" />
-                    Opción 3
-                  </label>
-                  <label for="option4">
-                    <input type="radio" name="deliveryOptions" id="option4" />
-                    Opción 4
-                  </label>
-                </form>
-              </div>
-              <div class="productExtraCart">
-                <!-- AGREGAR AL CARRITO QUE SE HABILITA SI EL CUADRO DE LA
-                    IZQUIERDA ESTA TILDADO, ALGUNA ANIMACIÓN BONITA.-->
-                <h2>Agregar al carrito</h2>
-                <button id="buttonAddToCart"><i class="fas fa-cart-plus"></i></button>
-                
-              </div>
-            </div>
+            <div class="productExtraRightOptionsCart"></div>
             <div class="productExtraRightRecommended">
               <h2>Otros platos recomendados</h2>
               <p>Quienes pidieron este plato, también pidieron:</p>
@@ -252,22 +261,28 @@
         </section>
       </div>
     </main>
-    <footer class="main-footer">
-        <nav class="main-footer-menu-center">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nuestros Menus</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
 
-        <div class="main-footer-menu-seguinos">
-            <span class="footer-menu-seguinos">
-                <a href="https://www.instagram.com/nutriviandas_saludables/?hl=es-la" target="blank"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="blank"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="blank"><i class="fab fa-twitter-square"></i></a>
-            </span>
-        </div>
+    <!-- footer cloned from headerFooter.html -->
+    <footer class="main-footer">
+      <nav class="main-footer-menu-center">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="#">Nuestros Menús</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="main-footer-menu-seguinos">
+        <span class="footer-menu-seguinos">
+          <a
+            href="https://www.instagram.com/nutriviandas_saludables/?hl=es-la"
+            target="blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" target="blank"><i class="fab fa-facebook"></i></a>
+          <a href="#" target="blank"><i class="fab fa-twitter-square"></i></a>
+        </span>
+      </div>
     </footer>
   </body>
 </html>

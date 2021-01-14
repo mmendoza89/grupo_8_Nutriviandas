@@ -18,14 +18,38 @@
     />
 
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/headerFooter.css" />
     <link rel="stylesheet" href="css/productCart.css" />
+    <link rel="icon" href="images/logo_nutriviandas.jpeg" type="image/gif" sizes="16x16">
     <title>Carrito de compras</title>
   </head>
   <body class="body-productCart">
-    <header>
-      <div class="container">
-        <h1>Carrito de compras</h1>
-      </div>
+    <!-- header cloned from headerFooter.html -->
+    <header class="main-header">
+      <a href="/">
+        <div class="main-header-image">
+          <img
+            class="logo"
+            src="/images/logo_nutriviandas.jpeg"
+            alt="Logo de Nutriviandas"
+          />
+        </div>
+      </a>
+      <nav class="main-navbar">
+        <ul class="navbar-left">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="#">Nuestros Menús</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+
+        <ul class="navbar-right">
+          <li><a id="crear-cuenta" href="/register">Creá tu cuenta </a></li>
+          <li><a id="ingresar" href="/login">Ingresá </a></li>
+        </ul>
+      </nav>
+      <a class="burger-button">
+        <i class="fas fa-bars"></i>
+      </a>
     </header>
     <main>
       <div class="container">
@@ -47,7 +71,8 @@
           </header>
           <section class="productCart_productsDetail_products">
             <div class="product" id="productId1">
-              <img class="wider"
+              <img
+                class="wider"
                 src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
                 alt="Product Image"
               />
@@ -73,7 +98,8 @@
               </form>
             </div>
             <div class="product" id="productId2">
-              <img class="wider"
+              <img
+                class="wider"
                 src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
                 alt="Product Image"
               />
@@ -99,7 +125,8 @@
               </form>
             </div>
             <div class="product" id="productId3">
-              <img class="wider"
+              <img
+                class="wider"
                 src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
                 alt="Product Image"
               />
@@ -125,7 +152,8 @@
               </form>
             </div>
             <div class="product" id="productId4">
-              <img class="wider"
+              <img
+                class="wider"
                 src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
                 alt="Product Image"
               />
@@ -151,7 +179,8 @@
               </form>
             </div>
             <div class="product" id="productId5">
-              <img class="wider"
+              <img
+                class="wider"
                 src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
                 alt="Product Image"
               />
@@ -177,7 +206,8 @@
               </form>
             </div>
             <div class="product" id="productId6">
-              <img class="wider"
+              <img
+                class="wider"
                 src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
                 alt="Product Image"
               />
@@ -232,22 +262,28 @@
         </nav>
       </div>
     </main>
+
+    <!-- footer cloned from headerFooter.html -->
     <footer class="main-footer">
       <nav class="main-footer-menu-center">
-          <ul>
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Nuestros Menus</a></li>
-              <li><a href="#">Contacto</a></li>
-          </ul>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="#">Nuestros Menús</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
       </nav>
 
       <div class="main-footer-menu-seguinos">
-          <span class="footer-menu-seguinos">
-              <a href="https://www.instagram.com/nutriviandas_saludables/?hl=es-la" target="blank"><i class="fab fa-instagram"></i></a>
-              <a href="#" target="blank"><i class="fab fa-facebook"></i></a>
-              <a href="#" target="blank"><i class="fab fa-twitter-square"></i></a>
-          </span>
+        <span class="footer-menu-seguinos">
+          <a
+            href="https://www.instagram.com/nutriviandas_saludables/?hl=es-la"
+            target="blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" target="blank"><i class="fab fa-facebook"></i></a>
+          <a href="#" target="blank"><i class="fab fa-twitter-square"></i></a>
+        </span>
       </div>
-  </footer>
+    </footer>
   </body>
 </html>
