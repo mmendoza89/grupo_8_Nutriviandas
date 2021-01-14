@@ -67,6 +67,15 @@ main {
 }
 
 /* products details headings */
+
+section.productCart-productsDetail header {
+  position: sticky;
+  top: 0;
+  background-color: whitesmoke;
+  margin-bottom: 7px;
+  padding: 10px 0;
+}
+
 .productCart_productsDetail_headings {
   display: flex;
   list-style: none;
