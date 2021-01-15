@@ -57,7 +57,6 @@ main {
 }
 
 .productAndDescription {
-  display: flex;
   background-color: #f49136;
   box-shadow: var(--box-shadow-main);
   margin-top: 20px;
@@ -87,7 +86,6 @@ main {
 }
 
 .productExtraData {
-  display: flex;
   margin-top: 20px;
 }
 
@@ -100,14 +98,12 @@ main {
   flex-basis: 0;
   flex-grow: 1;
   background-color: var(--color-light-grey);
-  margin-left: 10px;
   box-shadow: var(--box-shadow-main);
 }
 
 .productExtraLeft {
   display: flex;
   flex-wrap: nowrap;
-  margin-right: 10px;
   box-shadow: var(--box-shadow-main);
 }
 
@@ -297,4 +293,30 @@ nav.main-footer-menu-center ul li a:hover {
 .fa-facebook:hover,
 .fa-twitter-square:hover {
   color: teal;
+}
+
+/*MEDIA CONDITIONS*/
+
+/*PARA TABLETS*/
+@media (min-width: 768px) {
+  .productAndDescription {
+    display: flex;
+  }
+
+  .productExtraData {
+    display: flex;
+  }
+
+  .productExtraLeft {
+    margin-right: 10px;
+  }
+
+  .productExtraRight {
+    margin-left: 10px;
+  }
+
+
+}
+
+@media (min-width: 950px) {
 }
