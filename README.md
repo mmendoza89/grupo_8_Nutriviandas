@@ -7,7 +7,7 @@
 <hr>
 <h1> Logo </h1>
 
-Podrán ver el logo en nuestra carpeta "Design" o haciendo click [aquí](https://github.com/mmendoza89/grupo_8_Nutriviandas/tree/main/Design)
+Podrán ver el logo en nuestra carpeta "Design" o haciendo click [aquí](https://github.com/mmendoza89/grupo_8_Nutriviandas/tree/main/design "Design")
 
 
 <br>
