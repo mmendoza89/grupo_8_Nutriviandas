@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %> 
+    <body>
+        <main class="main-register">
+            <div class="container-logo">
+                <a href="/">
+                    <img class="logo-register-login" src="/images/logo_nutriviandas.jpeg" alt="Logo de Nutriviandas">
+                </a>
+            </div>
+            <!-- Formulario de Registro -->
+            <div class="register-section">
+                <div class="register-box">
+                    <div class="inside-container-logo">
+                        <a href="/">
+                            <img class="logo-register-login" src="/images/logo_nutriviandas.jpeg" alt="Logo de Nutriviandas">
+                        </a>
+                    </div>
+                    <h3 class="titulo-registrar">Creá tu cuenta</h3>
+                    <form class="register-form"  autocomplete="on">
+                        <input type="email" id="r-email" placeholder="E-mail" required><br>
+                        <input type="text" id="r-nombre" placeholder="Nombre" required><br>
+                        <input type="text" id="r-apellido" placeholder="Apellido" required><br>
+                        <input type="password" id="r-contraseña" placeholder="Contraseña" required><br>
+                        <input type="password" id="r-confirmar-c" placeholder="Confirmar Contraseña" required><br>
+                        <!-- Este boton solo simula el error que deberia aparecer en pantalla al introducir un dato erroneo -->
+                        <button type="submit" value="Registrarse" class="registrar-b" onclick="alert('Por favor, llene todos los campos requeridos')">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <%- include('../partials/footer.ejs') %> 
+    </body>
+</html>

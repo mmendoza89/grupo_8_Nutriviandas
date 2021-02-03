@@ -6,15 +6,15 @@
     Luego será eliminado.
 */
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
+/*-----HEADER-----*/
 
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: whitesmoke;
+:root {
+    --color-light-green: #8BA651;
+    --color-brown: #BF7B54;
+    --color-olive: #445925;
+    --color-dark-green: #314035;
+    --color-orange: #F26D3D;
+    --html-font-size: 16px;
 }
 
 .main-header{
@@ -74,7 +74,7 @@ body{
 .main-footer{
     display: flex;
     flex-direction: column;
-    background-color: #7ded75;
+    background-color:var(--color-light-green);
 }
 
 .main-footer-menu-center{
@@ -97,12 +97,12 @@ nav.main-footer-menu-center ul li{
 nav.main-footer-menu-center ul li a{
     text-decoration: none;
     color: white;
-    font-size: 12px;
-    transition: all 0.5s;
+    font-size: 12px;    
+    transition: all 0.3s;
 }
 
 nav.main-footer-menu-center ul li a:hover{
-    color: #f49136;
+    color: var(--color-dark-green);
 }
 
 .main-footer-menu-seguinos{
@@ -118,11 +118,11 @@ nav.main-footer-menu-center ul li a:hover{
 
 .fa-instagram, .fa-facebook, .fa-twitter-square{
     font-size: 20px;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .fa-instagram:hover, .fa-facebook:hover, .fa-twitter-square:hover{
-    color: #f49136;
+    color: var(--color-dark-green);
 }
 
 /*MEDIA CONDITIONS*/

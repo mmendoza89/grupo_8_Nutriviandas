@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-light-green: #8BA651;
+    --color-brown: #BF7B54;
+    --color-olive: #445925;
+    --color-dark-green: #314035;
+    --color-orange: #F26D3D;
+    --html-font-size: 16px;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: whitesmoke;
@@ -22,15 +31,20 @@ body{
     text-decoration: none;
 }
 
-.login-section{
+.main-login{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 0px;
+    padding: 20px 0;
 }
 
 .background-image-login{
     display: none;
+}
+
+.login-section {
+    padding-top: 10px;
 }
 
 .login-box{
@@ -42,7 +56,7 @@ body{
     background-color: white;
     border: 1px #ddd solid;
     border-radius: 4px;
-    padding: 30px 0px;
+    padding: 20px 0px;
     box-shadow: 3px 3px 15px -5px rgba(0,0,0,0.8);
 }
 
@@ -52,6 +66,7 @@ body{
 
 .login-form{
     text-align: center;
+    width: 80%;
 }
 
 .crear-cuenta{
@@ -66,22 +81,28 @@ body{
 
 
 .l-email, .l-contraseña{
+    height: 25px;
+    width: 100%;
     margin-bottom: 10px;
     border: solid 1px black;
 }
 
+input{
+    padding-left: 5px;
+}
+
 .login-b{
     margin-bottom: 10px;
-    padding: 5px;
-    background-color: #7ded75;
+    padding: 10px;
+    background-color: var(--color-brown);
     color: white;
     border: none;
-    border-radius: 10%;
-    transition: all 0.5s;
+    border-radius: 7px;
+    transition: all 0.3s;
 }
 
 .login-b:hover{
-    background-color: #5dc256;
+    background-color: #9c6444;
 }
 
 .titulo-iniciar{
@@ -100,90 +121,41 @@ body{
     text-align: center;
 }
 
-.main-footer{
-    display: flex;
-    flex-direction: column;
-    background-color: #7ded75;
-}
-
-.main-footer-menu-center{
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 5px;
-}
-
-nav.main-footer-menu-center ul{
-    display: flex;
-    justify-content: space-around;
-}
-
-nav.main-footer-menu-center ul li{
-    list-style-type: none;
-    padding: 0px 5px;
-}
-
-nav.main-footer-menu-center ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-    transition: all 0.5s;
-}
-
-nav.main-footer-menu-center ul li a:hover{
-    color: #f49136;
-}
-
-.main-footer-menu-seguinos{
-    padding-bottom: 5px;
-    display: flex;
-    justify-content: center;
-}
-
-.footer-menu-seguinos a{
-    color: white;
-    padding: 0 2px;
-}
-
-.fa-instagram, .fa-facebook, .fa-twitter-square{
-    font-size: 20px;
-    transition: all 0.5s;
-}
-
-.fa-instagram:hover, .fa-facebook:hover, .fa-twitter-square:hover{
-    color: #f49136;
-}
-
 /*-----MEDIA CONDITIONS-----*/
 
 /*PARA TABLETS*/
-@media (min-width:426px){
+@media (min-width:425px){
     .crear-cuenta{
         font-size: 14px;
-    }
-
-    .login-box{
-        width: 70%;
     }
     
     .main-login{
         background-image: url('/images/fresh-food.jpg');
         background-color: #cccccc;
-        height: 500px;
+        height: 550px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
     }
+
+    .login-box{
+        width: 70vw;
+    }
+
+    .l-email, .l-contraseña{
+        width: 80%;
+    }
 }
 
-@media (min-width:550px){
-    .register-box{
-        width: 400px;
+@media (min-width:500px){
+    .login-box{
+        width: 60vw;
     }
 }
 
 /*PARA LAPTOPS Y DESKTOPS*/
-@media (min-width:770px){
+@media (min-width:768px){
     .container-logo{
         display: none;
     }
@@ -205,10 +177,11 @@ nav.main-footer-menu-center ul li a:hover{
         width: 350px;
     }
 
-    /*-----FOOTER-----*/
-
-    nav.main-footer-menu-center ul li a{
-        font-size: 14px;
+    .l-email, .l-contraseña{
+        height: 22px;
     }
 
+    .login-b{
+        font-size: 15px;
+    }
 }

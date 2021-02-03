@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %> 
+    <body>
+        <main class="main-login">
+            <div class="container-logo">
+                <a href="/">
+                    <img class="logo-register-login" src="/images/logo_nutriviandas.jpeg" alt="Logo de Nutriviandas">
+                </a>
+            </div>
+            <!-- seccion de login -->
+            <div class="login-section">
+                <div class="login-box">
+                    <div class="inside-container-logo">
+                        <a href="/">
+                            <img class="logo-register-login" src="/images/logo_nutriviandas.jpeg" alt="Logo de Nutriviandas">
+                        </a>
+                    </div>
+                    <h3 class="titulo-iniciar">Inicia sesión</h3>
+                    <form class="login-form"  autocomplete="on">
+                        <input type="email" class="l-email" placeholder="E-mail" required><br>
+                        <input type="password" class="l-contraseña" placeholder="Contraseña" required><br>
+                        <!-- Este boton solo simula el error que deberia aparecer en pantalla al introducir un dato erroneo -->
+                        <button type="submit" value="Ingresar" class="login-b" onclick="alert('Por favor, verifique los datos')">Ingresar</button>
+                    </form>
+                    <div class="crear-cuenta">
+                        <span>¿Aún no tienes una cuenta? <a class="medium-link" href="/register">Crea tu cuenta</a></span>
+                    </div>
+                    <div class="recuperar-contraseña">
+                        <a class="small-link" href="/recoverPassword" target="blank">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include('../partials/footer.ejs') %> 
+    </body>
+</html>
