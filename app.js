@@ -26,13 +26,17 @@ const registerRouter = require('./routes/registerRoutes'); // Rutas /register
 const recoverPassRouter = require('./routes/recoverPassRoutes'); // Rutas /recoverPassword
 const productCartRouter = require(path.join(__dirname, './routes/productCart'));
 const productDetailRouter = require(path.join(__dirname, './routes/productDetail'));
+const productCreateRouter = require(path.join(__dirname, './routes/productCreate'));
+const productEditRouter = require(path.join(__dirname, './routes/productEdit'));
 
 //app.use('/', mainRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/recoverPassword', recoverPassRouter);
 app.use('/productCart', productCartRouter);
-app.use('/productDetail', productDetailRouter)
+app.use('/productDetail', productDetailRouter);
+app.use('/productCreate', productCreateRouter);
+app.use('/productEdit', productEditRouter);
 
 app.listen(3000, (req, res)=>{
     console.log("Server running on port 3000");
