@@ -1,0 +1,30 @@
+<div class="product" id="<%= productId %>">
+    <img
+      class="wide"
+      src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
+      alt="Product Image"
+    />
+    <div class="wider">
+      <h2>Lorem plato veggie</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Blanditiis perspiciatis nihil.
+      </p>
+    </div>
+    <div>
+      <span class="tag-mobile" id="quantity_<%= productId %>">Cantidad: </span>1
+      <div class="quantityButtons">
+        <button id="quantityIncrease"><i class="fas fa-plus"></i></button>
+        <button id="quantityDecrease"><i class="fas fa-minus"></i></button>
+      </div>
+    </div>
+    <div><span class="tag-mobile">$ Unidad: </span>$100</div>
+    <div><span class="tag-mobile">$ Subtotal: </span>$100</div>
+    <div><span class="tag-mobile">$ Total: </span>$100</div>
+    <form>
+      <label for="check_<%= productId%>" class="sr-only">Incluir:</label>
+      <span class="tag-mobile">Incluir: </span>
+      <input type="checkbox" name="includeProductCheck" id="check_<%= productId%>" checked/>
+
+    </form>
+  </div>

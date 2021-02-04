@@ -4,14 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous"
     />
@@ -28,33 +23,9 @@
     <title>Nutriviandas - Detalle de producto</title>
   </head>
   <body class="productDetail">
-    <!-- header cloned from headerFooter.html -->
-    <header class="main-header">
-      <a href="/">
-        <div class="main-header-image">
-          <img
-            class="logo"
-            src="/images/logo_nutriviandas.jpeg"
-            alt="Logo de Nutriviandas"
-          />
-        </div>
-      </a>
-      <nav class="main-navbar">
-        <ul class="navbar-left">
-          <li><a href="/">Inicio</a></li>
-          <li><a href="#">Nuestros Menús</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
 
-        <ul class="navbar-right">
-          <li><a id="crear-cuenta" href="/register">Creá tu cuenta </a></li>
-          <li><a id="ingresar" href="/login">Ingresá </a></li>
-        </ul>
-      </nav>
-      <a class="burger-button">
-        <i class="fas fa-bars"></i>
-      </a>
-    </header>
+    <%- include('../partials/header.ejs') %> 
+
     <main>
       <div class="container">
         <section class="productAndDescription">
@@ -262,27 +233,7 @@
       </div>
     </main>
 
-    <!-- footer cloned from headerFooter.html -->
-    <footer class="main-footer">
-      <nav class="main-footer-menu-center">
-        <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="#">Nuestros Menús</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
+    <%- include('../partials/footer.ejs') %> 
 
-      <div class="main-footer-menu-seguinos">
-        <span class="footer-menu-seguinos">
-          <a
-            href="https://www.instagram.com/nutriviandas_saludables/?hl=es-la"
-            target="blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="#" target="blank"><i class="fab fa-facebook"></i></a>
-          <a href="#" target="blank"><i class="fab fa-twitter-square"></i></a>
-        </span>
-      </div>
-    </footer>
   </body>
 </html>

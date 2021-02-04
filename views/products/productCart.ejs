@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet"/>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/headerFooter.css" />
+    <link rel="stylesheet" href="css/productCart.css" />
+    <link
+      rel="icon"
+      href="images/logo_nutriviandas.jpeg"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <title>Carrito de compras</title>
+  </head>
+  <body class="body-productCart">
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+      <div class="container">
+        <nav class="contextNavigationTop contextNavigation">
+          <a href="/" class="contextNavigationButton"
+            >&lt; Volver a productos</a
+          >
+          <a href="" class="contextNavigationButton"
+            >Continuar a finalizar &gt;</a
+          >
+        </nav>
+        <section class="productCart-productsDetail">
+          <header>
+            <ul class="productCart_productsDetail_headings">
+              <li class="wide">Producto</li>
+              <li class="wider">Descripción</li>
+              <li>Cantidad</li>
+              <li>$ Unidad</li>
+              <li>$ Subtotal</li>
+              <li>$ Total</li>
+              <li>Incluir</li>
+            </ul>
+          </header>
+          <div class="spacer"></div>
+          <section class="productCart_productsDetail_products">
+            <% for(let i = 1; i < 7; i++) { %> <%-
+            include('../partials/productInCart', {productId: "productId" + i})
+            %> <% } %>
+          </section>
+          <aside>
+            <div class="totalSelectedProducts">
+              <h2>Tu Selección</h2>
+              <div class="productsQuantityTotal">
+                <h3>Productos</h3>
+                <span>6</span>
+              </div>
+              <div class="productsMoneySubTotal">
+                <h3>Subtotal</h3>
+                <span>$ 750</span>
+              </div>
+              <div class="productsDeliveryCostTotal">
+                <h3>Envío</h3>
+                <span>$ 0</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+              <div class="productsTotal">
+                <h3>Total</h3>
+                <span>$ 750</span>
+              </div>
+            </div>
+          </aside>
+        </section>
+        <nav class="contextNavigationBottom contextNavigation">
+          <a href="/" class="contextNavigationButton"
+            >&lt; Volver a productos</a
+          >
+          <a href="" class="contextNavigationButton"
+            >Continuar a finalizar &gt;</a
+          >
+        </nav>
+      </div>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>

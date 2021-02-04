@@ -6,14 +6,11 @@ font-family: 'Shadows Into Light', cursive; */
 }
 
 :root {
-  --color-main: #7ded75;
-  --color-orange: #f49136;
+  --color-main: var(--color-light-green);
   --color-pink: #ec7aae;
   --color-text: #353535;
   --color-light-grey: #9c9c9c;
-  --html-font-size: 16px;
-  --font-headings: "Shadows Into Light", cursive;
-  --font-text: "El Messiri", sans-serif;
+  --color-lighter-grey: #cccccc;
   --box-shadow-main: 5px 5px 10px 0px #0000008f;
 }
 
@@ -30,7 +27,7 @@ body {
 
 body.productDetail {
   background-image: url(/images/fresh-food.jpg);
-  background-color: #cccccc;
+  background-color: var(--color-lighter-grey);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -235,64 +232,6 @@ button#buttonAddToCart {
 .productExtraCart i {
   font-size: 3rem;
   color: white;
-}
-
-/* COPIED CSS FROM REGISTER > FOOTER */
-.main-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: #7ded75;
-}
-
-.main-footer-menu-center {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 5px;
-}
-
-nav.main-footer-menu-center ul {
-  display: flex;
-  justify-content: space-around;
-}
-
-nav.main-footer-menu-center ul li {
-  list-style-type: none;
-  padding: 0px 5px;
-  transition: all 0.5s;
-}
-
-nav.main-footer-menu-center ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 12px;
-}
-
-nav.main-footer-menu-center ul li a:hover {
-  color: rgb(228, 228, 228);
-}
-
-.main-footer-menu-seguinos {
-  padding-bottom: 5px;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-menu-seguinos a {
-  color: white;
-  padding: 0 2px;
-}
-
-.fa-instagram,
-.fa-facebook,
-.fa-twitter-square {
-  font-size: 20px;
-  transition: all 0.5s;
-}
-
-.fa-instagram:hover,
-.fa-facebook:hover,
-.fa-twitter-square:hover {
-  color: teal;
 }
 
 /* MEDIA CONDITIONS */

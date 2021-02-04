@@ -17,33 +17,30 @@ app.use(methodOverride('_method'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine','ejs');
 
+// Mapping the EJS template engine to ".html" files (para que poder renderizar HTMLs además de ejs)
+app.engine('html', require('ejs').renderFile);
+
 //const mainRouter = require('./routes/index'); // Rutas main
 const loginRouter = require('./routes/loginRoutes'); // Rutas /login
 const registerRouter = require('./routes/registerRoutes'); // Rutas /register
 const recoverPassRouter = require('./routes/recoverPassRoutes'); // Rutas /recoverPassword
+const productCartRouter = require(path.join(__dirname, './routes/productCart'));
+const productDetailRouter = require(path.join(__dirname, './routes/productDetail'));
 
 //app.use('/', mainRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/recoverPassword', recoverPassRouter);
+app.use('/productCart', productCartRouter);
+app.use('/productDetail', productDetailRouter)
 
 app.listen(3000, (req, res)=>{
     console.log("Server running on port 3000");
 });
 
-// ************ exports app ************
-module.exports = app;
 
 app.get("/", (req, res) => {
     res.render(path.resolve(__dirname, ("./views/index.html")));
-});
-
-app.get("/productCart", (req,res)=>{
-    res.render(__dirname + "/views/productCart.html");
-});
-
-app.get("/productDetail",(req,res)=>{
-    res.render(__dirname + "/views/productDetail.html");
 });
 
 app.get("/recoverPassword",(req,res)=>{
@@ -54,3 +51,5 @@ app.get("/headerFooter",(req,res)=>{
     res.render(__dirname + "/views/headerFooter.html");
 });
 
+// ************ exports app ************
+module.exports = app;

@@ -6,14 +6,12 @@ font-family: 'Shadows Into Light', cursive; */
 }
 
 :root {
-  --color-main: #7ded75;
-  --color-orange: #f49136;
+  --color-main: var(--color-light-green);
   --color-pink: #ec7aae;
   --color-text: #353535;
   --color-light-grey: #9c9c9c;
-  --html-font-size: 16px;
-  --font-headings: "Shadows Into Light", cursive;
-  --font-text: "El Messiri", sans-serif;
+  --color-lighter-grey: #cccccc;
+  --transparent-white: #ffffff33;
 }
 
 html {
@@ -26,7 +24,7 @@ body {
 
 body.body-productCart {
   background-image: url(/images/fresh-food.jpg);
-  background-color: #cccccc;
+  background-color: var(--color-lighter-grey);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -65,7 +63,7 @@ main {
   display: flex;
   justify-content: space-between;
   margin: 15px 0;
-  background-color: #ffffff33;
+  background-color: var(--transparent-white);
 }
 
 .contextNavigation a {
@@ -105,7 +103,6 @@ section.productCart-productsDetail header,
 section.productCart-productsDetail div.spacer {
   position: sticky;
   top: 0;
-  background-color: whitesmoke;
   margin-bottom: 7px;
   padding: 10px 0;
 }
@@ -121,6 +118,7 @@ section.productCart-productsDetail div.spacer {
 }
 
 /* product detail */
+
 .productCart_productsDetail_products .product {
   border-bottom: 1px solid var(--color-light-grey);
   margin-bottom: 20px;
@@ -137,6 +135,28 @@ section.productCart-productsDetail div.spacer {
 .productCart_productsDetail_products .product p {
   margin: 0;
   padding: 6px;
+}
+
+.productCart_productsDetail_products .quantityButtons {
+  display: flex;
+  justify-content: center;
+}
+
+.productCart_productsDetail_products .quantityButtons button {
+  border: none;
+  background-color: var(--color-main);
+  max-width: 50px;
+  padding: 6px 10px 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.productCart_productsDetail_products .quantityButtons #quantityDecrease {
+  margin-left: 5px;
+}
+
+.productCart_productsDetail_products .product .tag-mobile {
+  display: block;
 }
 
 /* side bar */
@@ -207,68 +227,14 @@ div.productsTotal {
   padding-right: 10px;
 }
 
-/* COPIED CSS FROM REGISTER > FOOTER */
-.main-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: #7ded75;
-}
-
-.main-footer-menu-center {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 5px;
-}
-
-nav.main-footer-menu-center ul {
-  display: flex;
-  justify-content: space-around;
-}
-
-nav.main-footer-menu-center ul li {
-  list-style-type: none;
-  padding: 0px 5px;
-  transition: all 0.5s;
-}
-
-nav.main-footer-menu-center ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 12px;
-}
-
-nav.main-footer-menu-center ul li a:hover {
-  color: rgb(228, 228, 228);
-}
-
-.main-footer-menu-seguinos {
-  padding-bottom: 5px;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-menu-seguinos a {
-  color: white;
-  padding: 0 2px;
-}
-
-.fa-instagram,
-.fa-facebook,
-.fa-twitter-square {
-  font-size: 20px;
-  transition: all 0.5s;
-}
-
-.fa-instagram:hover,
-.fa-facebook:hover,
-.fa-twitter-square:hover {
-  color: teal;
-}
-
 /*MEDIA CONDITIONS*/
 
 /*PARA TABLETS*/
 @media (min-width: 768px) {
+  .productCart_productsDetail_products .product .tag-mobile {
+    display: none;
+  }
+
   section.productCart-productsDetail header,
   section.productCart-productsDetail div.spacer {
     display: block;
