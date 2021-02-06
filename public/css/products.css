@@ -1,0 +1,111 @@
+/* font-family: 'El Messiri', sans-serif;
+font-family: 'Shadows Into Light', cursive; */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-main: var(--color-light-green);
+  --color-pink: var(--color-orange);
+}
+
+html {
+  font-size: var(--html-font-size);
+}
+
+body {
+  font-family: var(--font-text);
+}
+
+body.body-products {
+  background-image: url(/images/fresh-food.jpg);
+  background-color: var(--color-lighter-grey);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: var(--color-text);
+  font-size: 2.5rem;
+  font-family: var(--font-headings);
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+main {
+  padding-bottom: 60px;
+}
+
+/* products details headings */
+
+.listOfProducts .product div,
+.listOfProducts .product form {
+  padding-top: 15px;
+}
+
+/* product detail */
+
+.buttonAddToCartInProduct {
+  display: flex;
+}
+
+.buttonAddToCartInProduct #buttonAddToCart {
+  margin: 0 50px;
+}
+
+.buttonAddToCartInProduct #buttonAddToCart i {
+  font-size: 1.5rem;
+}
+
+/* Menu semanal */
+
+.itemsMenuSemanal {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+section.menuSemanal header {
+  display: flex;
+  align-items: center;
+}
+
+/*MEDIA CONDITIONS*/
+
+/*PARA TABLETS*/
+@media (min-width: 768px) {
+  section.productCart-productsDetail header,
+  section.productCart-productsDetail div.spacer {
+    display: block;
+  }
+
+  section.productCart-productsDetail {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  section.productCart-productsDetail header,
+  section.productCart-productsDetail section {
+    width: 78%;
+  }
+
+  section.productCart-productsDetail section {
+    margin-right: 2%;
+  }
+}
+
+@media (min-width: 950px) {
+}

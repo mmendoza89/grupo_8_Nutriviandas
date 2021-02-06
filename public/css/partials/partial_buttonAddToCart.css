@@ -1,0 +1,10 @@
+#buttonAddToCart {
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    background-color: var(--color-main);
+    border-radius: 7px;
+    cursor: pointer;
+    text-align: center;
+    /* box-shadow: var(--box-shadow-main); */
+  }

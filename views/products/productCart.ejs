@@ -16,6 +16,10 @@
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/headerFooter.css" />
+    <!-- partials -->
+    <link rel="stylesheet" href="css/partials/partial_productInCart.css" />
+    <link rel="stylesheet" href="css/partials/partial_shoppingSteps.css" />
+    <!-- this css -->
     <link rel="stylesheet" href="css/productCart.css" />
     <link
       rel="icon"
@@ -30,14 +34,9 @@
 
     <main>
       <div class="container">
-        <nav class="contextNavigationTop contextNavigation">
-          <a href="/" class="contextNavigationButton"
-            >&lt; Volver a productos</a
-          >
-          <a href="" class="contextNavigationButton"
-            >Continuar a finalizar &gt;</a
-          >
-        </nav>
+
+        <%- include('../partials/shoppingSteps') %>
+
         <section class="productCart-productsDetail">
           <header>
             <ul class="productCart_productsDetail_headings">
@@ -53,7 +52,7 @@
           <div class="spacer"></div>
           <section class="productCart_productsDetail_products">
             <% for(let i = 1; i < 7; i++) { %> <%-
-            include('../partials/productInCart', {productId: "productId" + i})
+            include('../partials/productInCart', {productId: "productInCartId" + i})
             %> <% } %>
           </section>
           <aside>
@@ -79,14 +78,9 @@
             </div>
           </aside>
         </section>
-        <nav class="contextNavigationBottom contextNavigation">
-          <a href="/" class="contextNavigationButton"
-            >&lt; Volver a productos</a
-          >
-          <a href="" class="contextNavigationButton"
-            >Continuar a finalizar &gt;</a
-          >
-        </nav>
+
+        <%- include('../partials/shoppingSteps') %>
+        
       </div>
     </main>
 

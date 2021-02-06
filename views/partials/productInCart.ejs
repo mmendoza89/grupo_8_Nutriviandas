@@ -1,4 +1,4 @@
-<div class="product" id="<%= productId %>">
+<div class="partial_productInCart product" id="<%= productId %>">
     <img
       class="wide"
       src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
@@ -12,7 +12,7 @@
       </p>
     </div>
     <div>
-      <span class="tag-mobile" id="quantity_<%= productId %>">Cantidad: </span>1
+      <span class="tag-mobile">Cantidad: <span id="productInCartQuantity_<%= productId %>">1</span></span>
       <div class="quantityButtons">
         <button id="quantityIncrease"><i class="fas fa-plus"></i></button>
         <button id="quantityDecrease"><i class="fas fa-minus"></i></button>

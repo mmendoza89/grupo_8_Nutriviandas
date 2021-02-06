@@ -58,24 +58,6 @@ main {
   padding-bottom: 60px;
 }
 
-/* top and bottom context nav */
-.contextNavigation {
-  display: flex;
-  justify-content: space-between;
-  margin: 15px 0;
-  background-color: var(--transparent-white);
-}
-
-.contextNavigation a {
-  color: var(--color-text);
-  text-decoration: none;
-  background-color: var(--color-orange);
-  padding: 10px 24px 5px;
-  border-radius: 4px;
-  font-weight: bolder;
-  text-transform: uppercase;
-}
-
 /* products details headings */
 
 .productCart_productsDetail_headings {
@@ -90,14 +72,7 @@ main {
   flex-basis: 0;
 }
 
-.productCart_productsDetail_products .product div,
-.productCart_productsDetail_products .product form {
-  padding-top: 15px;
-}
-
 /* main two columns */
-section.productCart-productsDetail {
-}
 
 section.productCart-productsDetail header,
 section.productCart-productsDetail div.spacer {
@@ -115,48 +90,6 @@ section.productCart-productsDetail header,
 section.productCart-productsDetail div.spacer {
   background-color: var(--color-main);
   display: none;
-}
-
-/* product detail */
-
-.productCart_productsDetail_products .product {
-  border-bottom: 1px solid var(--color-light-grey);
-  margin-bottom: 20px;
-  background-color: white;
-}
-
-.productCart_productsDetail_products .product * {
-  flex-grow: 1;
-  width: 100%;
-  text-align: center;
-  flex-basis: 0;
-}
-
-.productCart_productsDetail_products .product p {
-  margin: 0;
-  padding: 6px;
-}
-
-.productCart_productsDetail_products .quantityButtons {
-  display: flex;
-  justify-content: center;
-}
-
-.productCart_productsDetail_products .quantityButtons button {
-  border: none;
-  background-color: var(--color-main);
-  max-width: 50px;
-  padding: 6px 10px 3px;
-  outline: none;
-  cursor: pointer;
-}
-
-.productCart_productsDetail_products .quantityButtons #quantityDecrease {
-  margin-left: 5px;
-}
-
-.productCart_productsDetail_products .product .tag-mobile {
-  display: block;
 }
 
 /* side bar */
@@ -217,23 +150,11 @@ div.productsTotal {
   border: 0;
 }
 
-.wide {
-  flex-grow: 1.5 !important;
-}
-
-.wider {
-  flex-grow: 3 !important;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 /*MEDIA CONDITIONS*/
 
 /*PARA TABLETS*/
 @media (min-width: 768px) {
-  .productCart_productsDetail_products .product .tag-mobile {
-    display: none;
-  }
+
 
   section.productCart-productsDetail header,
   section.productCart-productsDetail div.spacer {
@@ -258,20 +179,11 @@ div.productsTotal {
     margin-right: 2%;
   }
 
-  section.productCart_productsDetail_products {
-    background-color: white;
-  }
-
   section.productCart-productsDetail aside {
     width: 20%;
     position: sticky;
     top: 0;
     align-self: flex-start;
-  }
-
-  .productCart_productsDetail_products .product img {
-    width: 150px;
-    object-fit: cover;
   }
 }
 
