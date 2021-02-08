@@ -13,6 +13,10 @@
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/headerFooter.css" />
+
+    <!-- partials -->
+    <link rel="stylesheet" href="css/partials/partial_buttonAddToCart.css" />
+    
     <link rel="stylesheet" href="css/productDetail.css" />
     <link
       rel="icon"
@@ -70,12 +74,8 @@
                   Opción 3
                 </label>
                 <div class="productExtraCart">
-                  <!-- AGREGAR AL CARRITO QUE SE HABILITA SI EL CUADRO DE LA
-                      IZQUIERDA ESTA TILDADO, ALGUNA ANIMACIÓN BONITA.-->
                   <h2>Agregar al carrito</h2>
-                  <button id="buttonAddToCart">
-                    <i class="fas fa-cart-plus"></i>
-                  </button>
+                  <%- include('../partials/buttonAddToCart') %>
                 </div>
               </form>
             </div>

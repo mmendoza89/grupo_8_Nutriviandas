@@ -1,0 +1,14 @@
+
+
+.partial_productMenuSemanal img {
+    width: 100%;
+}
+
+.partial_productMenuSemanal.product{
+    border: 1px solid var(--color-text);
+    background-color: white;
+}
+
+.partial_productMenuSemanal_data{
+    padding: 0 15px 15px 15px;
+}

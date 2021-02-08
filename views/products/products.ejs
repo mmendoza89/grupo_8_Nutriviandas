@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/headerFooter.css" />
+
+    <!-- partials -->
+    <link rel="stylesheet" href="css/partials/partial_product.css" />
+    <link rel="stylesheet" href="css/partials/partial_buttonAddToCart.css" />
+    <link rel="stylesheet" href="css/partials/partial_productMenuSemanal.css" />
+
+    <link rel="stylesheet" href="css/products.css" />
+
+    <title>Productos</title>
+  </head>
+  <body class="body-products">
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+      <div class="container">
+        <%- include ('../partials/shoppingSteps') %>
+        <h1 class="sr-only">Productos</h1>
+        <section class="menuSemanal">
+          <header>
+            <h2>Menu Semanal</h2>
+            <div class="buttonAddToCartInProduct">
+              <%- include('../partials/buttonAddToCart') %>
+            </div>
+          </header>
+
+          <div class="itemsMenuSemanal">
+            <% for(let i = 1; i < 6; i++) { %> <%-
+            include('../partials/productInMenuSemanal', {productId: "productId"
+            + i});%> <% } %>
+          </div>
+        </section>
+        <section class="listOfProducts">
+          <header>
+          <h2>Nuestros platos</h2>
+          </header>
+          <% for(let i = 1; i < 37; i++) { %> <%- include('../partials/product',
+          {productId: "productId" + i}) %> <% } %>
+        </section>
+        <%- include ('../partials/shoppingSteps') %>
+      </div>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>

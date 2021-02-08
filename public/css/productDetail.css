@@ -219,16 +219,6 @@ table.productNutritionalInfoTable {
   text-align: center;
 }
 
-button#buttonAddToCart {
-  padding: 10px 50px;
-  border: none;
-  outline: none;
-  background-color: var(--color-main);
-  border-radius: 7px;
-  cursor: pointer;
-  /* box-shadow: var(--box-shadow-main); */
-}
-
 .productExtraCart i {
   font-size: 3rem;
   color: white;

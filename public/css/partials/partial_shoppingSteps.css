@@ -1,0 +1,16 @@
+.contextNavigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    background-color: var(--transparent-white);
+  }
+  
+  .contextNavigation a {
+    color: var(--color-text);
+    text-decoration: none;
+    background-color: var(--color-orange);
+    padding: 10px 24px 5px;
+    border-radius: 4px;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }

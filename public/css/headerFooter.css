@@ -1,9 +1,7 @@
 /*
-    Este CSS fue creado unicamente para como base de estilos para el header y footer. De esta manera, una sola persona 
-    puede trabajar en ellos sin interferir en el codigo de los demas y los integrantes del grupo pueden copiar y pegar
-    el contenido en sus hojas de estilo sin temor a algun tipo de conflicto.
+    Este CSS fue creado como base de estilos para el header y footer. De esta manera, una sola persona 
+    puede trabajar en ellos sin interferir en el codigo de los demas.
 
-    Luego será eliminado.
 */
 
 /*-----HEADER-----*/
@@ -14,7 +12,14 @@
     --color-olive: #445925;
     --color-dark-green: #314035;
     --color-orange: #F26D3D;
+<<<<<<< HEAD
     --color-dark-orange: #bb532d;
+=======
+    --color-light-grey: #9c9c9c;
+    --color-lighter-grey: #cccccc;
+    --transparent-white: #ffffff33;
+    --color-text: #353535;
+>>>>>>> b545a169915911af2167a68187b6f178e8f9d407
     --html-font-size: 16px;
     --font-headings: "Shadows Into Light", cursive;
     --font-text: "El Messiri", sans-serif;
@@ -127,6 +132,25 @@ nav.main-footer-menu-center ul li a:hover{
 .fa-instagram:hover, .fa-facebook:hover, .fa-twitter-square:hover{
     color: var(--color-orange);
 }
+
+/* top and bottom shopping steps nav */
+.contextNavigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    background-color: var(--transparent-white);
+  }
+  
+  .contextNavigation a {
+    color: var(--color-text);
+    text-decoration: none;
+    background-color: var(--color-orange);
+    padding: 10px 24px 5px;
+    border-radius: 4px;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+  /* ---- */
 
 /*MEDIA CONDITIONS*/
 
