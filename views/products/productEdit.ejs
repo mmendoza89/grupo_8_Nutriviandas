@@ -1,39 +1,71 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet"/>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"
-    />
-
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/headerFooter.css" />
-    <link rel="stylesheet" href="css/productEditCreate.css" />
-    <link
-      rel="icon"
-      href="images/logo_nutriviandas.jpeg"
-      type="image/gif"
-      sizes="16x16"
-    />
-    <title>Editar Producto</title>
-  </head>
-  <body class="body-productEditCreate">
+  <%- include('../partials/head.ejs') %> 
+  <body>
     <%- include('../partials/header.ejs') %>
+    <main class="main-product-create">
+      <div class="createP-section">
+        <form class="createP-form">
+          <h2 class="titulo-agregarP">Editar Producto</h2>
+          <div class="createP-all">
+            <div class="createP-form-left">
+              <label class="titulo-form" for="product-name">Nombre </label>
+              <input type="text" name="product-name" id="product-name" value="hamburguesa de carne">
+              <label class="titulo-form" for="product-description">Descripción </label>
+              <textarea name="product-desc" id="product-desc" cols="50" rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit.Vitae pariatur, aliquid illum impedit dicta animi harum ab voluptates maxime exercitationem corporis odit eveniet ut dolorem fuga eaque quae labore deserunt.</textarea>
+              <label class="titulo-form" for="product-price">Precio </label>
+              <input type="text" name="product-price" id="product-price" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" 
+              value="$1.500" placeholder="$1.000,00">
+              
+              <p class="titulo-form">Categorías</p>
+              <div>
+                <input type="checkbox" name="product-categ-1" id="product-categ-1" checked>
+                <label for="product-categ-1">Carnes rojas </label>
+              </div>
+              <div>
+                <input type="checkbox" name="product-categ-2" id="product-categ-2">
+                <label for="product-categ-2">Pollo </label>
+              </div>
+              <div>
+                <input type="checkbox" name="product-categ-3" id="product-categ-3">
+                <label for="product-categ-3">Vegetariano </label>
+              </div>
+              <div>
+                <input type="checkbox" name="product-categ-4" id="product-categ-4">
+                <label for="product-categ-4">Vegano </label>
+              </div>
+              <div>
+                <input type="checkbox" name="product-categ-5" id="product-categ-5">
+                <label for="product-categ-5">Bajo en calorias </label>
+              </div>
+              <div>
+                <input type="checkbox" name="product-categ-6" id="product-categ-6">
+                <label for="product-categ-6">Postre </label>
+              </div>
+              <div>
+                <input type="checkbox" name="product-categ-7" id="product-categ-7">
+                <label for="product-categ-7">Bajo en sodio </label>
+              </div>
+            </div>
 
-    <main>
-      <div class="container">
-        <h1>Editar producto</h1>
+          <div class="createP-form-right">
+            <div class="img-dummy">
+              <i class="fas fa-cloud-upload-alt img-dummy-icon"></i>
+            </div>
+            <div class="upload-image-button">
+              <input type="file" name="upload-img" id="upload-img">
+              <input type="button" class="upload-button" value="CARGAR IMAGEN">
+            </div>
+          </div>
+
+          <div class="save-button-section">
+            <button type="submit" class="save-product-button">GUARDAR PRODUCTO</button>
+          </div>
+        </div>
+        </form>
       </div>
     </main>
 
     <%- include('../partials/footer.ejs') %>
+
   </body>
 </html>

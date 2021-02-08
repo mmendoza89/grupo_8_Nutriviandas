@@ -14,6 +14,7 @@
     --color-olive: #445925;
     --color-dark-green: #314035;
     --color-orange: #F26D3D;
+    --color-dark-orange: #bb532d;
     --html-font-size: 16px;
     --font-headings: "Shadows Into Light", cursive;
     --font-text: "El Messiri", sans-serif;
@@ -32,7 +33,7 @@
 }
 
 .burger-button{
-    background-color: #7ded75;
+    background-color: var(--color-orange);
     color: white;
     text-decoration: none;
     display: flex;
@@ -45,11 +46,11 @@
 }
 
 .burger-button:active{
-    background-color: #6ed466;
+    background-color: var(--color-dark-orange);
 }
 
 .burger-button:after{
-    background-color: #6ed466;
+    background-color: var(--color-dark-orange);
 
 }
 
@@ -76,7 +77,7 @@
 .main-footer{
     display: flex;
     flex-direction: column;
-    background-color:var(--color-light-green);
+    background-color:var(--color-dark-green);
 }
 
 .main-footer-menu-center{
@@ -104,7 +105,7 @@ nav.main-footer-menu-center ul li a{
 }
 
 nav.main-footer-menu-center ul li a:hover{
-    color: var(--color-dark-green);
+    color: var(--color-orange);
 }
 
 .main-footer-menu-seguinos{
@@ -124,7 +125,7 @@ nav.main-footer-menu-center ul li a:hover{
 }
 
 .fa-instagram:hover, .fa-facebook:hover, .fa-twitter-square:hover{
-    color: var(--color-dark-green);
+    color: var(--color-orange);
 }
 
 /*MEDIA CONDITIONS*/
@@ -161,13 +162,13 @@ nav.main-footer-menu-center ul li a:hover{
     }
 
     #ingresar{
-        background-color: #f49136;
+        background-color: var(--color-light-green);
         color: white;
         padding: 10px;
     }
 
     #crear-cuenta{
-        border: 1px #f49136 solid;
+        border: 1px var(--color-light-green) solid;
         padding: 9px;
     }
 }
@@ -188,7 +189,7 @@ nav.main-footer-menu-center ul li a:hover{
         left: 0;
         right: 0;
         bottom: 0;
-        background: #f49136;
+        background: var(--color-light-green);
         height: 3px;
         transform: translateY(4px);
         transition: all 500ms;
@@ -209,12 +210,11 @@ nav.main-footer-menu-center ul li a:hover{
     }
 
     #ingresar:hover, #ingresar:focus, #ingresar:active{
-        background-color: #db8330;
+        background-color: var(--color-olive);
         border-radius: 33px;
     }
 
     #crear-cuenta{
-        border: 1px #f49136 solid;
         padding: 9px;
         transition: all 700ms;
     }
