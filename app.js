@@ -29,6 +29,8 @@ const productDetailRouter = require(path.join(__dirname, './routes/productDetail
 const productCreateRouter = require(path.join(__dirname, './routes/productCreate'));
 const productEditRouter = require(path.join(__dirname, './routes/productEdit'));
 const productsRouter = require(path.join(__dirname, './routes/products'));
+const indexRouter = require('./routes/indexRoutes.js') //ruta index regular, provisoria, ya sabemos que está el mainRouter
+
 
 //app.use('/', mainRouter);
 app.use('/login', loginRouter);
@@ -39,14 +41,16 @@ app.use('/productDetail', productDetailRouter);
 app.use('/productCreate', productCreateRouter);
 app.use('/productEdit', productEditRouter);
 app.use('/products', productsRouter);
+app.use('/', indexRouter)
+
+/*app.use("/", (req, res) => {
+    res.render(path.resolve(__dirname, ("./views/index.ejs")));
+});
+*/
+
 
 app.listen(3000, (req, res)=>{
     console.log("Server running on port 3000");
-});
-
-
-app.get("/", (req, res) => {
-    res.render(path.resolve(__dirname, ("./views/index.html")));
 });
 
 app.get("/recoverPassword",(req,res)=>{
