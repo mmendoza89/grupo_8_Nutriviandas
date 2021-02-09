@@ -5,59 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/headerFooter.css" />
+    <link
+    rel="icon"
+    href="images/logov2.jpeg"
+    type="image/gif"
+    sizes="16x16"
+  />
     <title>Nutriviandas</title>
+
 </head>
 
 <body class="backgroundImageToo">
 
-    <header class="main-header-index">
-
-
-        <a title="Nutriviandas" img style="float:left" href="/"><img src="/images/logo_nutriviandas.jpeg" alt="Logo" class="logoIndex"></a>
-
-        <nav class="leftMenu">
-
-
-
-            <ul> 
-
-                  <li><a href="/login">Iniciar sesión</a> </li>
-                  <li><a href="/productDetail">Nuestros productos</a> </li>
-                  <li><a href="/productCart">Carrito de compras</a></li>
-        </nav>
-            </ul>
-
-    </header>
-
-
+    <%- include('./partials/header.ejs') %>
     <main>
 <br><br><br> <article class="containerArticle">
 
     <div class="singleCard">  
-        <a href="/productDetail"><img src="/images/sample2.jpeg" alt="MenuExample"> </a>
+        <a href="/productDetail"><img src="/images/sample2.jpeg" alt="MenuExample"> 
         <h4>Menús</h4> <br> 
         <p>Contamos con una gran variedad de opciones semanales para llevar una buena alimentación comiendo cosas ricas y saludables!</p>  
-        <a href="#"><b>Nuestras opciones</b></a></div>
+        <a href="#"><b>Nuestras opciones</b></a></a></div>
 
     
     <div class="singleCard">  
-       <a href="http://www.instagram.com/nutriviandas_saludables"><img src="/images/us.jpeg" alt="Nosotros"></a>
+       <a href="http://www.instagram.com/nutriviandas_saludables"><img src="/images/us.jpeg" alt="Nosotros">
         <h4>Nosotros</h4> <br> 
         <p>Contactate con nosotros a través de nuestro Instagram, seguinos para estar al día con las novedades que tenemos para vos!.</p>  
-        <a href="http://www.instagram.com/nutriviandas_saludables"><b>Nuestras redes</b></a></div>
+        <a href="http://www.instagram.com/nutriviandas_saludables"><b>Nuestras redes</b></a></a></div>
 
     <div class="singleCard">  
-           <a href="/shipping"><img src="/images/shipping-sample.jpg" alt="Envíos"></a> 
+           <a href="#"></a><img src="/images/zona-entrega.jpg" alt="Envíos">
             <h4>Zonas de entregas</h4> <br> 
             <p>Hace click para conocer las zonas de entregas y franjas horarias.</p>  
-            <a href="/shipping"><b>Mapa!</b></a></div>
+            <a href="#"><b>¡Mapa y franjas horarias!</b></a></a></div>
 
 
 </article>
-<br><br>
-<article> este es otro articulo</article>
-
 <br><br>
 
     
@@ -67,23 +54,7 @@
 
     
     
-    <footer class="main-footer">
-        <nav class="main-footer-menu-center">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nuestros Menus</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-
-        <div class="main-footer-menu-seguinos">
-            <span class="footer-menu-seguinos">
-                <a href="https://www.instagram.com/nutriviandas_saludables/?hl=es-la" target="blank"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="blank"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="blank"><i class="fab fa-twitter-square"></i></a>
-            </span>
-        </div>
-    </footer>
+    <%- include('./partials/footer.ejs') %> 
 
 
 </body>
