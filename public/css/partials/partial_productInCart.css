@@ -41,7 +41,11 @@
 }
 
 .partial_productInCart.product .tag-mobile {
-  display: block;
+  display: inline;
+}
+
+.partial_productInCart.product div, .partial_productInCart.product form {
+  margin-top: 15px;
 }
 
 .wide {
@@ -52,6 +56,10 @@
   flex-grow: 3 !important;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+button{
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -67,5 +75,9 @@
     width: 150px;
     object-fit: cover;
     align-self: stretch;
+  }
+
+  .partial_productInCart.product div, .partial_productInCart.product form {
+    margin-top: 0;
   }
 }
