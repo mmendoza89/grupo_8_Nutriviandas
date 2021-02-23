@@ -53,10 +53,6 @@ app.listen(3000, (req, res)=>{
     console.log("Server running on port 3000");
 });
 
-app.get("/recoverPassword",(req,res)=>{
-    res.render(__dirname + "/views/recoverPassword.html");
-});
-
 app.get("/headerFooter",(req,res)=>{
     res.render(__dirname + "/views/headerFooter.html");
 });

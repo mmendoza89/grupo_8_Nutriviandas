@@ -1,0 +1,255 @@
+/*
+    Este CSS fue creado como base de estilos para el header y footer. De esta manera, una sola persona 
+    puede trabajar en ellos sin interferir en el codigo de los demas.
+
+*/
+
+/*-----HEADER-----*/
+
+:root {
+    --color-light-green: #8BA651;
+    --color-brown: #BF7B54;
+    --color-olive: #445925;
+    --color-dark-green: #314035;
+    --color-orange: #F26D3D;
+<<<<<<< HEAD
+    --color-dark-orange: #bb532d;
+=======
+    --color-light-grey: #9c9c9c;
+    --color-lighter-grey: #cccccc;
+    --transparent-white: #ffffff33;
+    --color-text: #353535;
+>>>>>>> b545a169915911af2167a68187b6f178e8f9d407
+    --html-font-size: 16px;
+    --font-headings: "Shadows Into Light", cursive;
+    --font-text: "El Messiri", sans-serif;
+}
+
+.main-header{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 80px;
+}
+
+.burger-button{
+    background-color: var(--color-orange);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 15px 0;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 50px;
+}
+
+.burger-button:active{
+    background-color: var(--color-dark-orange);
+}
+
+.burger-button:after{
+    background-color: var(--color-dark-orange);
+
+}
+
+.main-navbar {
+    display: none;
+  }
+
+.main-navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar a{
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+/*-----FOOTER-----*/
+
+.main-footer{
+    display: flex;
+    flex-direction: column;
+    background-color:var(--color-dark-green);
+}
+
+.main-footer-menu-center{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5px;
+}
+
+nav.main-footer-menu-center ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav.main-footer-menu-center ul li{
+    list-style-type: none;
+    padding: 0px 5px;
+    transition: all 0.5s;
+}
+
+nav.main-footer-menu-center ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;    
+    transition: all 0.3s;
+}
+
+nav.main-footer-menu-center ul li a:hover{
+    color: var(--color-orange);
+}
+
+.main-footer-menu-seguinos{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-menu-seguinos a{
+    color: white;
+    padding: 0 2px;
+}
+
+.fa-instagram, .fa-facebook, .fa-twitter-square{
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.fa-instagram:hover, .fa-facebook:hover, .fa-twitter-square:hover{
+    color: var(--color-orange);
+}
+
+/* top and bottom shopping steps nav */
+.contextNavigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    background-color: var(--transparent-white);
+  }
+  
+  .contextNavigation a {
+    color: var(--color-text);
+    text-decoration: none;
+    background-color: var(--color-orange);
+    padding: 10px 24px 5px;
+    border-radius: 4px;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+  /* ---- */
+
+/*MEDIA CONDITIONS*/
+
+/*PARA TABLETS*/
+@media (min-width: 768px){
+    .main-navbar{
+        display: flex;
+        width: 70vw;
+        justify-content: space-between;
+        margin-right: 10px;
+    }
+
+    .navbar-left{
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        width: 30vw;
+    }
+
+    .navbar-right{
+        display: flex;
+        align-self: center;
+        justify-content: space-around;
+        width: 24vw;
+    }
+
+    .navbar-left li a, .navbar-right li a{
+        font-size: 14px;
+    }
+
+    .burger-button{
+        display: none;
+    }
+
+    #ingresar{
+        background-color: var(--color-light-green);
+        color: white;
+        padding: 10px;
+    }
+
+    #crear-cuenta{
+        border: 1px var(--color-light-green) solid;
+        padding: 9px;
+    }
+}
+
+@media (min-width:950px){
+    .navbar-left{
+        width: 330px;
+    }
+
+    .navbar-left li{
+        transform: perspective(1px);
+        overflow: hidden;
+    }
+
+    .navbar-left li:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--color-light-green);
+        height: 3px;
+        transform: translateY(4px);
+        transition: all 500ms;
+    }
+
+    .navbar-left li:hover:before, .navbar-left li:focus:before, .navbar-left li:active:before{
+        transform: translateY(0);
+    }
+
+    .navbar-right{
+        width: 230px;
+    }
+
+    #ingresar{
+        color: white;
+        padding: 10px;
+        transition: all 500ms;
+    }
+
+    #ingresar:hover, #ingresar:focus, #ingresar:active{
+        background-color: var(--color-olive);
+        border-radius: 33px;
+    }
+
+    #crear-cuenta{
+        padding: 9px;
+        transition: all 700ms;
+    }
+
+    #crear-cuenta:hover, #crear-cuenta:focus, #crear-cuenta:active{
+        border-radius: 33px;
+    }
+
+    /*-----FOOTER-----*/
+
+    nav.main-footer-menu-center ul li a{
+        font-size: 14px;
+    }
+}

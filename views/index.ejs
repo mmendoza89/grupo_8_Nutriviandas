@@ -1,61 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/headerFooter.css" />
-    <link
-    rel="icon"
-    href="images/logov2.jpeg"
-    type="image/gif"
-    sizes="16x16"
-  />
-    <title>Nutriviandas</title>
 
-</head>
+<%- include('./partials/head.ejs') %>
 
-<body class="backgroundImageToo">
+<body>
+    <!--TOP NAV-->
+    <div class="nav">
+        <div class="menu-wrap">
+            <a href="#inicio">
+                <div class="logo">
+                    NUTRIVIANDAS
+                </div>
+            </a>
+            <div class="menu">
+                <a href="#inicio">
+                    <div class="menu-item active">
+                        Inicio
+                    </div>
+                </a>
+                <a href="#nosotros">
+                    <div class="menu-item">
+                        Nosotros
+                    </div>
+                </a>
+                <a href="#seccion-menu">
+                    <div class="menu-item">
+                        Menús
+                    </div>
+                </a>
+                <a href="#contacto">
+                    <div class="menu-item">
+                        Contacto
+                    </div>
+                </a>
+            </div>
+            <div class="right-menu">
+                <div class="cart-button">
+                    <i class='bx bx-cart-alt cart-icon' ></i>
+                </div>
+                <a href="#ingresar">
+                    <div class="menu-item">
+                        Ingresar
+                    </div>
+                </a>
+                <a href="#registrate">
+                    <div class="menu-item">
+                        Registrate
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 
-    <%- include('./partials/header.ejs') %>
-    <main>
-<br><br><br> <article class="containerArticle">
-
-    <div class="singleCard">  
-        <a href="/productDetail"><img src="/images/sample2.jpeg" alt="MenuExample"> 
-        <h4>Menús</h4> <br> 
-        <p>Contamos con una gran variedad de opciones semanales para llevar una buena alimentación comiendo cosas ricas y saludables!</p>  
-        <a href="#"><b>Nuestras opciones</b></a></a></div>
-
+    <!--SECCION INICIO-->
+    <section id="inicio" class="fullheight align-item-center big-img big-img-fixed">
+        <div class="container">
+            <div class="row inicio-content">
+                <div class="col-lg-6 col-xs-10">
+                    <div class="slogan">
+                        <h1>Nutriviandas</h1>
+                        <p>En nutriviandas queremos que comas mas sano y rico. Por eso te ofrecemos menus semanales variados y 
+                            nutritivos incluyendo todos los grupos de alimentos.</p>
+                        <button>Ordenar Ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <div class="singleCard">  
-       <a href="http://www.instagram.com/nutriviandas_saludables"><img src="/images/us.jpeg" alt="Nosotros">
-        <h4>Nosotros</h4> <br> 
-        <p>Contactate con nosotros a través de nuestro Instagram, seguinos para estar al día con las novedades que tenemos para vos!.</p>  
-        <a href="http://www.instagram.com/nutriviandas_saludables"><b>Nuestras redes</b></a></a></div>
+    <!--SECCION NOSOTROS-->
+    <section class="align-item-center" id="nosotros">
+        <div class="container">
+            <div class="row nosotros-center" id="nosotros-row">
+                <div class="img-nosotros-xl col-lg-6 col-7 col-xs-8 nosotros-img-padding">
+                    <img src="/images/us.jpeg" alt="" class="fullwidth">
+                </div>
+                <div class="col-lg-6 col-11 col-xs-11">
+                    
+                        <div class="align-items-center">
+                            <div class="nosotros-slogan">
+                                <h3>
+                                    Deliciosas recetas
+                                </h3>
+                                <p>Nuestras recetas las preparamos con la porcion justa para tener una 
+                                    alimentacion completa, saludable y equilibrada que permita cubrir los requerimientos nutricionales. 
+                                    Contactate con nosotros a través de nuestro Instagram, seguinos para estar al día con las 
+                                    novedades que tenemos para vos!</p>
+                            </div>
+                        </div>
 
-    <div class="singleCard">  
-           <a href="#"></a><img src="/images/zona-entrega.jpg" alt="Envíos">
-            <h4>Zonas de entregas</h4> <br> 
-            <p>Hace click para conocer las zonas de entregas y franjas horarias.</p>  
-            <a href="#"><b>¡Mapa y franjas horarias!</b></a></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!--SECCION MENU-->
+    <section class="big-img big-img-fixed" id="seccion-menu">
+        <div class="container">
+            <div class="menu-group">
+                <h1><span class="highlighted-text">Disfruta</span> tu tiempo libre con los que más quieres</h1>
+                <h1>¿Qué <span class="highlighted-text">querés</span> comer hoy?</h1>
 
-</article>
-<br><br>
+                <div class="food-item-container">
+                    <div class="food-item">
+                        <div class="item-container">
+                            <div class="item-image big-img">
+                                <div class="image-container"></div>
+                            </div>
+                            <div class="info-container">
+                                <div class="item-info">
+                                    <div class="info-food-item">
+                                        <h4>
+                                            Menu 1
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="cart-button-menu">
+                                    <i class='bx bx-cart-alt cart-icon' ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    
-    </main>
+                    <div class="food-item">
+                        <div class="item-container">
+                            <div class="item-image big-img">
+                                <div class="image-container"></div>
+                            </div>
+                            <div class="info-container">
+                                <div class="item-info">
+                                    <div class="info-food-item">
+                                        <h4>
+                                            Menu 2
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="cart-button-menu">
+                                    <i class='bx bx-cart-alt cart-icon' ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="food-item">
+                        <div class="item-container">
+                            <div class="item-image big-img">
+                                <div class="image-container"></div>
+                            </div>
+                            <div class="info-container">
+                                <div class="item-info">
+                                    <div class="info-food-item">
+                                        <h4>
+                                            Pizzas
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="cart-button-menu">
+                                    <i class='bx bx-cart-alt cart-icon' ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="food-item">
+                        <div class="item-container">
+                            <div class="item-image big-img">
+                                <div class="image-container"></div>
+                            </div>
+                            <div class="info-container">
+                                <div class="item-info">
+                                    <div class="info-food-item">
+                                        <h4>
+                                            Hamburguesas
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="cart-button-menu">
+                                    <i class='bx bx-cart-alt cart-icon' ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    
-    
+                    <div class="food-item">
+                        <div class="item-container">
+                            <div class="item-image big-img">
+                                <div class="image-container"></div>
+                            </div>
+                            <div class="info-container">
+                                <div class="item-info">
+                                    <div class="info-food-item">
+                                        <h4>
+                                            Tartas
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="cart-button-menu">
+                                    <i class='bx bx-cart-alt cart-icon' ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="food-item">
+                        <div class="item-container">
+                            <div class="item-image big-img">
+                                <div class="image-container"></div>
+                            </div>
+                            <div class="info-container">
+                                <div class="item-info">
+                                    <div class="info-food-item">
+                                        <h4>
+                                            Personalizado
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="cart-button-menu">
+                                    <i class='bx bx-cart-alt cart-icon' ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!--SECCION CONTACTO-->
+    <section class="align-item-center" id="contacto">
+        <div class="container">
+            <div class="row contacto-row">
+                <div class="contactanos-left col-xs-10 col-xl-5">
+                    <h1>Contactanos</h1>
+                    <p>Siempre estamos para escucharte. Por favor, contactanos via e-mail, 
+                    WhatsApp o por nuestras redes sociales.</p>
+                    <p class="contact-info"><i class='bx bxl-whatsapp contact-icon'></i>+54 9 11 5882 5009</p>
+                    <p class="contact-info"><i class='bx bx-mail-send contact-icon'></i>nutriviandas.info@gmail.com</p>
+                    <p class="contact-info"><i class='bx bxl-instagram contact-icon'></i>Instagram</p>
+                </div>
+                <div class="contactanos-right col-xs-10 col-xl-6">
+                    <h1 class="escribenos-titulo">ESCRIBENOS</h1>
+                    <form action="" class="escribenos-form">
+                        <label for="nombre-contacto"> Nomber</label>
+                        <input type="text" name="nombre-contacto" id="nombre-contacto" placeholder="Ingrese su nombre">
+                        <label for="email-contacto"> E-mail</label>
+                        <input type="text" name="email-contacto" id="email-contacto" placeholder="Ingrese e-mail">
+                        <textarea name="escribenos-text" id="escribenos-text" cols="30" rows="10" placeholder="Cómo podemos ayudar?"></textarea>
+                        <button id="contact-button" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <%- include('./partials/footer.ejs') %> 
-
-
 </body>
 </html>

@@ -1,0 +1,196 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-main: var(--color-light-green);
+    --color-pink: #ec7aae;
+    --color-text: #353535;
+    --color-light-grey: #9c9c9c;
+    --color-lighter-grey: #cccccc;
+    --box-shadow-main: 5px 5px 10px 0px #0000008f;
+  }
+  
+  body {
+    font-family: var(--font-text);
+background-color:#eee;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+/** CSS del header**/
+
+
+
+
+.main-header-index{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #7ded75;
+}
+
+.logoIndex{
+    width: 180px; height: 150px;
+    float: left;
+	padding: 15px 20px 15px 20px;
+	text-decoration: none;
+    border-radius: 90%;
+
+}
+.leftMenu{
+    width: 100%;
+}
+
+.leftMenu ul {
+    justify-content: flex-end;
+    display: flex;
+  }
+
+  .leftMenu ul li {
+      
+    float: right;
+    list-style-type: none;
+    text-align: left;
+  }
+  
+  .leftMenu ul li a {
+    padding: 15px;
+    color: white;
+text-decoration: none;
+  }
+
+.leftMenu li a:hover {
+    color: rgb(228, 228, 228);
+
+}
+
+/*Fin del header*/
+
+
+
+/** CSS del footer**/
+.main-footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #7ded75;
+}
+
+.main-footer-menu-center{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5px;
+}
+
+nav.main-footer-menu-center ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav.main-footer-menu-center ul li{
+    list-style-type: none;
+    padding: 0px 5px;
+    transition: all 0.5s;
+}
+
+nav.main-footer-menu-center ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+nav.main-footer-menu-center ul li a:hover{
+    color: rgb(228, 228, 228);
+}
+
+.main-footer-menu-seguinos{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-menu-seguinos a{
+    color: white;
+    padding: 0 2px;
+}
+
+.fa-instagram, .fa-facebook, .fa-twitter-square{
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.fa-instagram:hover, .fa-facebook:hover, .fa-twitter-square:hover{
+    color: teal;
+}
+
+
+.backgroundImageToo {
+background-color:#eee;
+    height: 500px;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+    
+}
+
+/*Fin del footer*/
+
+/*CSS del Body*/ 
+
+.containerArticle{
+    width: 950px;
+    max-width: 950px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content: center;
+    margin:0 auto;
+    background-color:white;
+}
+
+.containerArticle .singleCard {
+    width: 900px;
+    height: 650px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(201, 191, 191, 0.911);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    flex-direction:column;
+    transition: all 0.35s;
+    background-color: rgba(194, 179, 179, 0.644);
+}
+
+.containerArticle .singleCard:hover {
+
+transform: translateY(-15px);
+box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
+}
+
+.containerArticle .singleCard img{
+    width: 480px;
+    height: 410px;
+
+}
+
+.containerArticle .singleCard h4 {
+    font-weight: 600;
+
+}
+
+.containerArticle .singleCard p {
+padding: 150;
+font-size: 18px;
+font-weight: 300;
+}
+
+.containerArticle .singleCard a {
+font-weight: bolder;
+text-decoration: none;
+font-size:30px;
+color:rgb(230, 98, 201)
+}

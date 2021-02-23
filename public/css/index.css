@@ -1,196 +1,605 @@
-*{
-    margin: 0px;
-    padding: 0px;
+:root {
+    --color-light-green: #8BA651;
+    --color-brown: #BF7B54;
+    --color-olive: #445925;
+    --color-dark-green: #314035;
+    --color-orange: #F26D3D;
+    --color-dark-orange: #bb532d;
+    --html-font-size: 16px;
+    --background-color: #f0f3f7;
+    --white: #ffff;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
     box-sizing: border-box;
 }
 
-:root {
-    --color-main: var(--color-light-green);
-    --color-pink: #ec7aae;
-    --color-text: #353535;
-    --color-light-grey: #9c9c9c;
-    --color-lighter-grey: #cccccc;
-    --box-shadow-main: 5px 5px 10px 0px #0000008f;
-  }
-  
-  body {
-    font-family: var(--font-text);
-background-color:#eee;
-    background-repeat:no-repeat;
-    background-size:cover;
-  }
+a {
+    color: unset;
+    text-decoration: none;
+}
 
-/** CSS del header**/
+body, html {
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
+}
 
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: var(--background-color);
+    box-shadow: rgba(99, 99, 9, 0.2) 0px 2px 8px 0px;
+}
 
-
-
-.main-header-index{
+.menu-wrap {
+    margin: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
-    background-color: #7ded75;
+    justify-content: space-between;
+    padding: 1rem 2rem;
 }
 
-.logoIndex{
-    width: 180px; height: 150px;
-    float: left;
-	padding: 15px 20px 15px 20px;
-	text-decoration: none;
-    border-radius: 90%;
-
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-light-green);
 }
-.leftMenu{
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    margin-left: 1rem;
+    padding: .5rem .5rem;
+    font-weight: 600;
+    color: var(--color-dark-green);
+    transition: 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.menu-item:hover, .menu-item.active {
+    color: var(--white);
+    background-color: var(--color-light-green);
+    border-radius: 1rem;
+}
+
+.right-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-button {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-light-green);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+
+.cart-button:hover {
+    background-color: var(--color-light-green);
+    color: var(--white);
+    border-radius: 1rem;
+}
+
+.fullheight {
+    height: 100vh;
+}
+
+.align-item-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.big-img-fixed {
+    background-attachment: fixed;
+}
+
+#inicio {
+    background-image: url(/images/background-mobile.png);
+}
+
+.container {
     width: 100%;
 }
 
-.leftMenu ul {
-    justify-content: flex-end;
-    display: flex;
-  }
-
-  .leftMenu ul li {
-      
-    float: right;
-    list-style-type: none;
-    text-align: left;
-  }
-  
-  .leftMenu ul li a {
-    padding: 15px;
-    color: white;
-text-decoration: none;
-  }
-
-.leftMenu li a:hover {
-    color: rgb(228, 228, 228);
-
+section {
+    padding: 9rem 0;
 }
 
-/*Fin del header*/
-
-
-
-/** CSS del footer**/
-.main-footer{
-    display: flex;
-    flex-direction: column;
-    background-color: #7ded75;
-}
-
-.main-footer-menu-center{
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 5px;
-}
-
-nav.main-footer-menu-center ul{
-    display: flex;
-    justify-content: space-around;
-}
-
-nav.main-footer-menu-center ul li{
-    list-style-type: none;
-    padding: 0px 5px;
-    transition: all 0.5s;
-}
-
-nav.main-footer-menu-center ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-}
-
-nav.main-footer-menu-center ul li a:hover{
-    color: rgb(228, 228, 228);
-}
-
-.main-footer-menu-seguinos{
-    padding-bottom: 5px;
-    display: flex;
-    justify-content: center;
-}
-
-.footer-menu-seguinos a{
-    color: white;
-    padding: 0 2px;
-}
-
-.fa-instagram, .fa-facebook, .fa-twitter-square{
-    font-size: 20px;
-    transition: all 0.5s;
-}
-
-.fa-instagram:hover, .fa-facebook:hover, .fa-twitter-square:hover{
-    color: teal;
-}
-
-
-.backgroundImageToo {
-background-color:#eee;
-    height: 500px;
-    background-position: center;
-    background-repeat: repeat;
-    background-size: 100%;
-    
-}
-
-/*Fin del footer*/
-
-/*CSS del Body*/ 
-
-.containerArticle{
-    width: 950px;
-    max-width: 950px;
-    height: 100%;
+.inicio-content {
     display: flex;
     flex-wrap: wrap;
-    flex-direction:column;
+    align-items: center;
     justify-content: center;
-    margin:0 auto;
-    background-color:white;
 }
 
-.containerArticle .singleCard {
-    width: 900px;
-    height: 650px;
-    border-radius: 10px;
-    box-shadow: 0 2px 2px rgba(201, 191, 191, 0.911);
-    overflow: hidden;
-    margin: 20px;
+.slogan {
     text-align: center;
-    flex-direction:column;
-    transition: all 0.35s;
-    background-color: rgba(194, 179, 179, 0.644);
 }
 
-.containerArticle .singleCard:hover {
-
-transform: translateY(-15px);
-box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
+.slogan h1 {
+    font-size: 2rem;
+    color: var(--color-light-green);
 }
 
-.containerArticle .singleCard img{
-    width: 480px;
-    height: 410px;
-
-}
-
-.containerArticle .singleCard h4 {
+.slogan button {
+    padding: 1rem 5rem;
+    outline: none;
+    border: none;
+    background-color: var(--background-color);
+    border: .1rem solid var(--color-brown);
+    border-radius: 2rem;
+    color: var(--color-brown);
+    margin: 3rem 0;
+    cursor: pointer;
     font-weight: 600;
+    transition: 500ms ease-in-out;
+}
+
+.slogan button:hover {
+    background-color: var(--color-brown);
+    color: var(--white);
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.nosotros-center {
+    align-items: center;
+    justify-content: center;
+}
+
+#nosotros img {
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.nosotros-slogan {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
 }
 
-.containerArticle .singleCard p {
-padding: 150;
-font-size: 18px;
-font-weight: 300;
+.nosotros-slogan h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark-green);
 }
 
-.containerArticle .singleCard a {
-font-weight: bolder;
-text-decoration: none;
-font-size:30px;
-color:rgb(230, 98, 201)
+#seccion-menu {
+    background-image: url(/images/brooke-lark-unsplash.jpg);
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.menu-group {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.menu-group h1 {
+    color: var(--color-dark-green);
+    padding: .5rem 2rem;
+}
+
+.highlighted-text {
+    color: var(--color-light-green);
+}
+
+.food-item-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.food-item {
+    width: 100%;
+    height: 20rem;
+    padding: 1rem;
+    flex: 1 0 51%;
+}
+
+.item-container {
+    height: 100%;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: 400ms ease-in-out;
+}
+
+.item-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+}
+
+.item-image {
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container {
+    background-image: url(/images/eaters-collective-pLKgCsBOiw4-unsplash.jpg);
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    transition: 400ms ease-in-out;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+    margin: 0 2rem;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+}
+
+.item-info h4 {
+    color: var(--color-olive);
+}
+
+.info-food-item {
+    text-align: left;
+}
+
+.cart-button-menu {
+    display: flex;
+    align-items: center;
+    color: var(--color-light-green);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+
+.cart-icon {
+    font-size: 2rem;
+}
+
+#contacto {
+    padding: 7rem 0;
+}
+
+.contacto-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactanos-left {
+    padding: 8rem 0;
+}
+
+.contactanos-left h1 {
+    font-size: 2rem;
+    color: var(--color-light-green);
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem 0 0 2rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-icon {
+    margin-right: 2rem;
+    font-size: 2rem;
+    color: var(--color-orange);
+}
+
+.contactanos-right {
+    background-color: var(--white);
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+}
+
+.escribenos-titulo {
+    color: var(--color-light-green);
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.escribenos-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+}
+
+.escribenos-form label {
+    text-align: left;
+}
+
+#nombre-contacto, #email-contacto {
+    margin-bottom: 1rem;
+}
+
+#escribenos-text {
+    margin: 1rem 0;
+}
+
+#escribenos-text {
+    resize: none;
+}
+
+#contact-button {
+    height: 3rem;
+    width: 6rem;
+    color: var(--white);
+    background-color: var(--color-light-green);
+    border: none;
+    border-radius: 1rem;
+}
+
+#contact-button:hover {
+    background-color: var(--color-olive);
+}
+
+input, textarea {
+    padding: 5px;
+}
+
+/* GRID SYSTEM PHONES */
+
+[class*="col-xs-"] {
+    padding: .5rem;
+}
+
+.col-xs-1 {
+    width: 8.33%;
+}
+
+.col-xs-2 {
+    width: 16.66%;
+}
+
+.col-xs-3 {
+    width: 25%;
+}
+
+.col-xs-4 {
+    width: 33.33%;
+}
+
+.col-xs-5 {
+    width: 41.66%;
+}
+
+.col-xs-6 {
+    width: 50%;
+}
+
+.col-xs-7 {
+    width: 58.33%;
+}
+
+.col-xs-8 {
+    width: 66.66%;
+}
+
+.col-xs-9 {
+    width: 75%;
+}
+
+.col-xs-10 {
+    width: 83.33%;
+}
+
+.col-xs-11 {
+    width: 91.66%;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+.h-xs {
+    display: none;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* MEDIA PARA TABLETS */
+/* GRID SYSTEM */
+
+@media (min-width: 425px) {
+
+    .nosotros-slogan {
+        padding: 2rem;
+        background-color: var(--white);
+        border-radius: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    
+    }
+    
+    .menu-group h1, .menu-group span {
+        font-size: 1.3rem;
+    }
+
+    [class*="col-"] {
+        padding: 1rem;
+    }
+    
+    .col-1 {
+        width: 8.33%;
+    }
+    
+    .col-2 {
+        width: 16.66%;
+    }
+    
+    .col-3 {
+        width: 25%;
+    }
+    
+    .col-4 {
+        width: 33.33%;
+    }
+    
+    .col-5 {
+        width: 41.66%;
+    }
+    
+    .col-6 {
+        width: 50%;
+    }
+    
+    .col-7 {
+        width: 58.33%;
+    }
+    
+    .col-8 {
+        width: 66.66%;
+    }
+    
+    .col-9 {
+        width: 75%;
+    }
+    
+    .col-10 {
+        width: 83.33%;
+    }
+    
+    .col-11 {
+        width: 91.66%;
+    }
+    
+    .col-12 {
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) {
+
+    .col-lg-6 {
+        width: 50%;
+    }
+
+    .col-lg-5 {
+        width: 41.66%;
+    }
+
+    .col-lg-4 {
+        width: 33.33%;
+    }
+
+    #inicio {
+        background-image: url(/images/pexels-elle-hughes-1660030.jpg);
+    }
+
+    .inicio-content {
+        justify-content: left;
+        padding-left: 2rem;
+    }
+
+    .slogan {
+        text-align: left;
+    }
+
+    #nosotros {
+        height: 100vh;
+        padding: 4rem 0;
+    }
+
+    .nosotros-center {
+        padding-top: 0;
+    }
+
+    .nosotros-img-padding {
+        padding-left: 3rem;
+    }
+
+    .nosotros-slogan {
+        transform: translateX(-5rem);
+    }
+
+    .menu-group h1, .menu-group span {
+        font-size: 1.6rem;
+    }
+
+    .food-item {
+        flex: 1 0 26%;
+    }
+}
+
+@media (min-width: 1024px) {
+    
+    .col-xl-5 {
+        width: 41.66%;
+    }
+
+    .col-xl-6 {
+        width: 50%;
+    }
+
+    .img-nosotros-xl {
+        width: 36%;
+    }
+
+    .nosotros-center {
+        padding-top: 2rem;
+    }
+
+    .menu-group {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .contacto-row {
+        flex-direction: row;
+        margin: 0 8rem;
+        justify-content: space-around;
+    }
+
+    .contactanos-right {
+        margin-top: 0;
+    }
+
 }
