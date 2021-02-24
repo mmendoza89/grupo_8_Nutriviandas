@@ -26,56 +26,73 @@
     --font-text: "El Messiri", sans-serif;
 }
 
-.main-header{
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
     background-color: white;
-    padding: 20px;
+    box-shadow: rgba(99, 99, 9, 0.2) 0px 2px 8px 0px;
+}
+
+.menu-wrap {
+    margin: auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    padding: 1rem 2rem;
 }
 
-.logo{
-    width: 80px;
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-light-green);
 }
 
-.burger-button{
-    background-color: var(--color-orange);
-    color: white;
-    text-decoration: none;
+.menu {
     display: flex;
-    align-self: center;
+    align-items: center;
     justify-content: center;
-    padding: 15px 0;
-    border-radius: 8px;
-    font-size: 18px;
-    width: 50px;
 }
 
-.burger-button:active{
-    background-color: var(--color-dark-orange);
+.menu-item {
+    margin-left: 1rem;
+    padding: .5rem .5rem;
+    font-weight: 600;
+    color: var(--color-dark-green);
+    transition: 500ms ease-in-out;
+    cursor: pointer;
 }
 
-.burger-button:after{
-    background-color: var(--color-dark-orange);
-
+.menu-item:hover, .menu-item.active {
+    color: var(--white);
+    background-color: var(--color-light-green);
+    border-radius: 1rem;
 }
 
-.main-navbar {
-    display: none;
-  }
-
-.main-navbar ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.right-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.main-navbar a{
-    text-decoration: none;
-    color: #222222;
-    display: inline-block;
-    padding: 5px 0;
-    font-size: 17px;
+.cart-button {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-light-green);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+}
+
+.cart-button:hover {
+    background-color: var(--color-light-green);
+    color: var(--white);
+    border-radius: 1rem;
 }
 
 /*-----FOOTER-----*/

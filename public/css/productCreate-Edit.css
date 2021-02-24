@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-size: 13px;
     box-sizing: border-box;
 }
   
@@ -11,17 +12,28 @@
     --color-dark-green: #314035;
     --color-orange: #F26D3D;
     --color-dark-orange: #bb532d;
+    --background-color: #f0f3f7;
     --html-font-size: 16px;
+}
+
+body, html {
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
 }
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: whitesmoke;
 }
 
 .main-product-create{
     width: 100%;
     align-items: center;
+}
+
+section {
+    padding: 7rem 0;
 }
 
 .createP-section{
@@ -44,9 +56,11 @@ body{
 }
 
 .titulo-agregarP{
-    padding-bottom: 20px;
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
     width: 100%;
     text-align: center;
+    color: var(--color-light-green);
 }
 
 .createP-all{
