@@ -4,8 +4,8 @@
     <%- include('../partials/header.ejs') %>
     <main class="main-product-create">
       <section class="createP-section">
-        <form class="createP-form">
-          <h2 class="titulo-agregarP">Editar Producto</h2>
+        <form class="createP-form" action="/products/<%= productId %>?_method=PUT" method="POST">
+          <h2 class="titulo-agregarP">Editar Producto <br><%= productId %> </h2>
           <div class="createP-all">
             <div class="createP-form-left">
               <label class="titulo-form" for="product-name">Nombre </label>

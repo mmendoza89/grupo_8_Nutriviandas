@@ -1,6 +1,7 @@
 const productDetailController = {
     index: (req, res) => {
-        res.render('products/productDetail');
+        let id = req.query.id;
+        res.render('products/productDetail',{productId: id});
     }
 }
 

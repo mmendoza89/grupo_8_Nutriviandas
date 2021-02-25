@@ -45,6 +45,7 @@ h1 {
 h1,
 h2 {
   font-family: var(--font-headings);
+  font-size: 2rem;
 }
 
 main {
