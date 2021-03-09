@@ -17,15 +17,16 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/headerFooter.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/headerFooter.css" />
 
     <!-- partials -->
-    <link rel="stylesheet" href="css/partials/partial_product.css" />
-    <link rel="stylesheet" href="css/partials/partial_buttonAddToCart.css" />
-    <link rel="stylesheet" href="css/partials/partial_productMenuSemanal.css" />
+    <link rel="stylesheet" href="/css/partials/partial_product.css" />
+    <link rel="stylesheet" href="/css/partials/partial_buttonAddToCart.css" />
+    <link rel="stylesheet" href="/css/partials/partial_productMenuSemanal.css" />
+    <link rel="stylesheet" href="/css/partials/partial_shoppingSteps.css" />
 
-    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="/css/products.css" />
 
     <title>Productos</title>
   </head>
@@ -57,7 +58,7 @@
           </header>
           <% for(let producto of productos) { %> 
             <%- include('../partials/product', {product: producto}) %> 
-          <% } %> -->
+          <% } %> 
         </section>
 
         <%- include ('../partials/shoppingSteps') %>
