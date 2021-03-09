@@ -1,5 +1,5 @@
 :root {
-    --color-light-green: #8BA651;
+    --color-light-green: #8ba651;
     --color-brown: #BF7B54;
     --color-olive: #445925;
     --color-dark-green: #314035;
@@ -77,7 +77,7 @@ section {
     color: var(--color-light-green);
 }
 
-.slogan button {
+#button-slogan {
     padding: 1rem 5rem;
     outline: none;
     border: none;
@@ -91,7 +91,7 @@ section {
     transition: 500ms ease-in-out;
 }
 
-.slogan button:hover {
+#button-slogan:hover {
     background-color: var(--color-brown);
     color: var(--white);
 }

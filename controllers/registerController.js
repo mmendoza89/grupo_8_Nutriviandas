@@ -3,7 +3,7 @@ const path = require('path');
 
 const registerController = {
     register: (req, res) => {
-        return res.render('users/register');
+        return res.render('users/register', {css:'register.css'});
     }
 }
 

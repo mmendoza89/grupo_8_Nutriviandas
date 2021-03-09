@@ -31,7 +31,7 @@ const productCartRouter = require(path.join(__dirname, './routes/productCart'));
 const productCreateRouter = require(path.join(__dirname, './routes/productCreate'));
 const productEditRouter = require(path.join(__dirname, './routes/productEdit'));
 const productsRouter = require(path.join(__dirname, './routes/products'));
-const indexRouter = require('./routes/indexRoutes.js') //ruta index regular, provisoria, ya sabemos que está el mainRouter
+const indexRouter = require(path.join(__dirname, './routes/indexRoutes.js')); //ruta index regular, provisoria, ya sabemos que está el mainRouter
 
 
 //app.use('/', mainRouter);
@@ -43,12 +43,7 @@ app.use('/productCart', productCartRouter);
 app.use('/productCreate', productCreateRouter);
 app.use('/productEdit', productEditRouter);
 app.use('/products', productsRouter);
-app.use('/', indexRouter)
-
-/*app.use("/", (req, res) => {
-    res.render(path.resolve(__dirname, ("./views/index.ejs")));
-});
-*/
+app.use('/', indexRouter);
 
 
 app.listen(3000, (req, res)=>{

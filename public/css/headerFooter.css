@@ -6,25 +6,6 @@
 
 /*-----HEADER-----*/
 
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-    box-sizing: border-box;
-}
-
-:root {
-    --color-light-green: #8BA651;
-    --color-brown: #BF7B54;
-    --color-olive: #445925;
-    --color-dark-green: #314035;
-    --color-orange: #F26D3D;
-    --color-dark-orange: #bb532d;
-    --html-font-size: 16px;
-    --font-headings: "Shadows Into Light", cursive;
-    --font-text: "El Messiri", sans-serif;
-}
 
 .nav {
     position: fixed;
@@ -44,55 +25,74 @@
     padding: 1rem 2rem;
 }
 
+.logo-link {
+    display: flex;
+}
+
 .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--color-light-green);
+    width: 11rem;
+    height: 4rem;
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.menu, .right-menu {
+    display: none
 }
 
-.menu-item {
-    margin-left: 1rem;
-    padding: .5rem .5rem;
-    font-weight: 600;
-    color: var(--color-dark-green);
-    transition: 500ms ease-in-out;
-    cursor: pointer;
-}
-
-.menu-item:hover, .menu-item.active {
-    color: var(--white);
-    background-color: var(--color-light-green);
-    border-radius: 1rem;
-}
-
-.right-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cart-button {
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-light-green);
+.nav-mobile i {
     font-size: 2rem;
-    cursor: pointer;
-    transition: 500ms ease-in-out;
+    color: var(--color-olive);
 }
 
-.cart-button:hover {
-    background-color: var(--color-light-green);
-    color: var(--white);
-    border-radius: 1rem;
+@media (min-width: 1024px) {
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menu-item {
+        margin-left: 1rem;
+        padding: .5rem .5rem;
+        font-weight: 600;
+        color: var(--color-dark-green);
+        transition: 500ms ease-in-out;
+        cursor: pointer;
+    }
+    
+    .menu-item:hover, .menu-item.active {
+        color: var(--white);
+        background-color: var(--color-light-green);
+        border-radius: 1rem;
+    }
+    
+    .right-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .cart-button {
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-light-green);
+        font-size: 2rem;
+        cursor: pointer;
+        transition: 500ms ease-in-out;
+    }
+    
+    .cart-button:hover {
+        background-color: var(--color-light-green);
+        color: var(--white);
+        border-radius: 1rem;
+    }
 }
 
 /*-----FOOTER-----*/

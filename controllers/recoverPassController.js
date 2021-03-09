@@ -3,7 +3,7 @@ const path = require('path');
 
 const recoverPassController = {
     recover: (req, res) => {
-        return res.render('users/recoverPassword');
+        return res.render('users/recoverPassword', {css:'recoverPassword.css'});
     }
 }
 
