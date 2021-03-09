@@ -1,4 +1,4 @@
-.partial_product h2{
+.partial_product h2 {
   margin-top: 5px;
 }
 
@@ -19,6 +19,12 @@
   width: 100%;
   text-align: center;
   flex-basis: 0;
+}
+
+.partial_product.product a {
+  display: grid;
+  width: 100%;
+  height: 100%;
 }
 
 .partial_product.product p {
@@ -54,7 +60,7 @@
 }
 
 /* product Tags */
-.productTags ul{
+.productTags ul {
   display: flex;
   list-style-type: none;
 }

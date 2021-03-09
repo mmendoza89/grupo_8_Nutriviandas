@@ -1,10 +1,14 @@
+const Products = require('../models/Product');
+
 const productsController = {
     index: (req, res) => {
-        res.render('products/products');
+        let productos = Products.findAll();
+        res.render('products/products',{productos: productos});
     },
     detail: function(req, res){
         let prodId = req.params.id;
-        res.render('products/productDetail',{productId: prodId});
+        let producto = Products.findByPk(prodId);
+        res.render('products/productDetail',{product: producto});
     },
     create: function (req, res) {
         res.render("products/productCreate");

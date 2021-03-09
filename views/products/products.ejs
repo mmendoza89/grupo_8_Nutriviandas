@@ -50,13 +50,16 @@
             + i});%> <% } %>
           </div>
         </section>
+
         <section class="listOfProducts">
           <header>
-          <h2>Nuestros platos</h2>
+            <h2>Nuestros platos</h2>
           </header>
-          <% for(let i = 1; i < 37; i++) { %> <%- include('../partials/product',
-          {productId: "productId" + i}) %> <% } %>
+          <% for(let producto of productos) { %> 
+            <%- include('../partials/product', {product: producto}) %> 
+          <% } %> -->
         </section>
+
         <%- include ('../partials/shoppingSteps') %>
       </div>
     </main>

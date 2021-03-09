@@ -40,22 +40,14 @@
             />
           </div>
           <div id="productAndDescriptionText">
-            <h2>Saltado vegetariano  <br>(id: <%= productId %>) </h2>
+            <h2><%= product.product_name %>  <br>(id: <%= product.id %>) </h2>
             <p>
-              Maecenas sit amet ullamcorper neque. Maecenas ut magna volutpat,
-              tincidunt enim id, rutrum tortor. Cras imperdiet turpis a
-              fermentum vulputate.
-            </p>
-            <p>
-              Morbi sagittis tempor augue, ac congue ipsum maximus ut. Nam in
-              eleifend neque, at vestibulum tellus. Praesent id massa felis.
-              Maecenas arcu lacus, fringilla sed tempor nec, scelerisque ut
-              tortor.
+              <%= product.product_description %>
             </p>
           </div>
           <div class="productExtraLeftPriceDelivery">
             <h2>Precio</h2>
-            <div class="precioProducto">$ 200</div>
+            <div class="precioProducto"><%= product.product_price %></div>
             <div class="productExtraOptions">
               <!-- OPCIONES DE ENTREGA OBLIGATORIAS DE ELEGIR CON UN PUNTO DE TILDES -->
               <form id="form-deliveryOptions">
