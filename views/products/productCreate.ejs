@@ -1,5 +1,5 @@
 <html lang="en">
-  <%- include('../partials/head.ejs' %> 
+  <%- include('../partials/head.ejs') %> 
   <body>
     <%- include('../partials/header.ejs') %>
     <main class="main-product-create">
@@ -8,12 +8,12 @@
           <h2 class="titulo-agregarP">Agregar Producto</h2>
           <div class="createP-all">
             <div class="createP-form-left">
-              <label class="titulo-form" for="product-name">Nombre </label>
-              <input type="text" name="product-name" id="product-name">
-              <label class="titulo-form" for="product-description">Descripción </label>
-              <textarea name="product-desc" id="product-desc" cols="50" rows="5"></textarea>
-              <label class="titulo-form" for="product-price">Precio </label>
-              <input type="text" name="product-price" id="product-price" xpattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" 
+              <label class="titulo-form" for="product_name">Nombre </label>
+              <input type="text" name="product_name" id="product_name">
+              <label class="titulo-form" for="product_description">Descripción </label>
+              <textarea name="product_desc" id="product_description" cols="50" rows="5"></textarea>
+              <label class="titulo-form" for="product_price">Precio </label>
+              <input type="text" name="product_price" id="product_price" xpattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" 
               value="" placeholder="$1.000,00">
 
               <p class="titulo-form">Categorías</p>
@@ -52,7 +52,7 @@
               <i class="fas fa-cloud-upload-alt img-dummy-icon"></i>
             </div>
             <div class="upload-image-button">
-              <input type="file" name="upload-img" id="upload-img">
+              <input type="file" name="product_image" id="product_image">
               <input type="button" class="upload-button" value="CARGAR IMAGEN">
             </div>
           </div>

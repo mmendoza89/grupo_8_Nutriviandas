@@ -78,7 +78,7 @@ main {
 section.productCart-productsDetail header,
 section.productCart-productsDetail div.spacer {
   position: sticky;
-  top: 0;
+  top: var(--header-height);
   margin-bottom: 7px;
   padding: 10px 0;
 }
@@ -183,7 +183,7 @@ div.productsTotal {
   section.productCart-productsDetail aside {
     width: 20%;
     position: sticky;
-    top: 0;
+    top: var(--header-height);
     align-self: flex-start;
   }
 }

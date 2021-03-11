@@ -1,13 +1,13 @@
-const Products = require('../models/Product');
+const Product = require('../models/Product');
 
 const productsController = {
     index: (req, res) => {
-        let productos = Products.findAll();
+        let productos = Product.findAll();
         res.render('products/products',{productos: productos});
     },
     detail: function(req, res){
         let prodId = req.params.id;
-        let producto = Products.findByPk(prodId);
+        let producto = Product.findByPk(prodId);
         res.render('products/productDetail',{product: producto});
     },
     create: function (req, res) {
@@ -15,28 +15,23 @@ const productsController = {
     },
     upload: function (req, res){
         let prod = req.body;
-        console.log("producto a crear___________-");
-        console.log(prod);
-
-        res.send("Producto a crear: " + prod["product-name"]);
+        prod['id'] = Date.now()*1;
+        Product.create(prod);
+        res.redirect("/products");
     },
     edit: function(req, res){
-        let prodId = req.params.id;
-        res.render('products/productEdit',{productId: prodId});
+        let producto = Product.findByPk(req.params.id);
+        res.render('products/productEdit',{producto: producto});
     },
     update: function (req, res){
-        let prod = req.body;
-        console.log("producto a actualizar/modificar/editar___________-");
-        console.log(prod);
-
-        res.send("Producto a actualizar/modificar/editar: " + prod["product-name"]);
+        let product = req.body;
+        product['id'] = req.params.id;
+        Product.update(product);
+        res.redirect("/products");
     },
     delete: function (req, res){
-        let prod = req.body;
-        console.log("producto a BORRAR___________-");
-        console.log(prod);
-
-        res.send("Producto a BORRAR: " + prod["product-name"]);
+        Product.destroy(req.params.id);
+        res.redirect("/products");
     }
 }
 

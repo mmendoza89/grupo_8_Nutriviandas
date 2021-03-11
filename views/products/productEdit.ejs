@@ -1,71 +1,137 @@
 <html lang="en">
-  <%- include('../partials/head.ejs') %> 
+  <%- include('../partials/head.ejs') %>
   <body>
     <%- include('../partials/header.ejs') %>
-    <main class="main-product-create">
+    <main class="main-product_create">
       <section class="createP-section">
-        <form class="createP-form" action="/products/<%= productId %>?_method=PUT" method="POST">
-          <h2 class="titulo-agregarP">Editar Producto <br><%= productId %> </h2>
+        <form
+          class="createP-form"
+          action="/products/<%= producto.id %>?_method=PUT"
+          method="POST"
+        >
+          <h2 class="titulo-agregarP">
+            Editar Producto <br /><%= producto.id %>
+          </h2>
           <div class="createP-all">
             <div class="createP-form-left">
-              <label class="titulo-form" for="product-name">Nombre </label>
-              <input type="text" name="product-name" id="product-name" value="hamburguesa de carne">
-              <label class="titulo-form" for="product-description">Descripción </label>
-              <textarea name="product-desc" id="product-desc" cols="50" rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit.Vitae pariatur, aliquid illum impedit dicta animi harum ab voluptates maxime exercitationem corporis odit eveniet ut dolorem fuga eaque quae labore deserunt.</textarea>
-              <label class="titulo-form" for="product-price">Precio </label>
-              <input type="text" name="product-price" id="product-price" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" 
-              value="$1.500" placeholder="$1.000,00">
+              <label class="titulo-form" for="product_name">Nombre </label>
+              <input
+                type="text"
+                name="product_name"
+                id="product_name"
+                value="<%= producto.product_name %>"
+              />
+              <label class="titulo-form" for="product_description"
+                >Descripción
+              </label>
+              <textarea
+                name="product_description"
+                id="product_description"
+                cols="50"
+                rows="5"><%= producto.product_description %></textarea>
+            
               
+              <label class="titulo-form" for="product_price">Precio </label>
+              <input
+                type="text"
+                name="product_price"
+                id="product_price"
+                xpattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+                value="<%= producto.product_price %>"
+                placeholder="$1.000,00"
+              />
+
               <p class="titulo-form">Categorías</p>
               <div>
-                <input type="checkbox" name="product-categ-1" id="product-categ-1" checked>
-                <label for="product-categ-1">Carnes rojas </label>
+                <input
+                  type="checkbox"
+                  name="product_categ-1"
+                  id="product_categ-1"
+                  checked
+                />
+                <label for="product_categ-1">Carnes rojas </label>
               </div>
               <div>
-                <input type="checkbox" name="product-categ-2" id="product-categ-2">
-                <label for="product-categ-2">Pollo </label>
+                <input
+                  type="checkbox"
+                  name="product_categ-2"
+                  id="product_categ-2"
+                />
+                <label for="product_categ-2">Pollo </label>
               </div>
               <div>
-                <input type="checkbox" name="product-categ-3" id="product-categ-3">
-                <label for="product-categ-3">Vegetariano </label>
+                <input
+                  type="checkbox"
+                  name="product_categ-3"
+                  id="product_categ-3"
+                />
+                <label for="product_categ-3">Vegetariano </label>
               </div>
               <div>
-                <input type="checkbox" name="product-categ-4" id="product-categ-4">
-                <label for="product-categ-4">Vegano </label>
+                <input
+                  type="checkbox"
+                  name="product_categ-4"
+                  id="product_categ-4"
+                />
+                <label for="product_categ-4">Vegano </label>
               </div>
               <div>
-                <input type="checkbox" name="product-categ-5" id="product-categ-5">
-                <label for="product-categ-5">Bajo en calorias </label>
+                <input
+                  type="checkbox"
+                  name="product_categ-5"
+                  id="product_categ-5"
+                />
+                <label for="product_categ-5">Bajo en calorias </label>
               </div>
               <div>
-                <input type="checkbox" name="product-categ-6" id="product-categ-6">
-                <label for="product-categ-6">Postre </label>
+                <input
+                  type="checkbox"
+                  name="product_categ-6"
+                  id="product_categ-6"
+                />
+                <label for="product_categ-6">Postre </label>
               </div>
               <div>
-                <input type="checkbox" name="product-categ-7" id="product-categ-7">
-                <label for="product-categ-7">Bajo en sodio </label>
+                <input
+                  type="checkbox"
+                  name="product_categ-7"
+                  id="product_categ-7"
+                />
+                <label for="product_categ-7">Bajo en sodio </label>
               </div>
             </div>
 
-          <div class="createP-form-right">
-            <div class="img-dummy">
-              <i class="fas fa-cloud-upload-alt img-dummy-icon"></i>
+            <div class="createP-form-right">
+              <div class="img-dummy">
+                <i class="fas fa-cloud-upload-alt img-dummy-icon"></i>
+              </div>
+              <div class="upload-image-button">
+                <input type="file" name="upload-img" id="upload-img" />
+                <input
+                  type="button"
+                  class="upload-button"
+                  value="CARGAR IMAGEN"
+                />
+              </div>
             </div>
-            <div class="upload-image-button">
-              <input type="file" name="upload-img" id="upload-img">
-              <input type="button" class="upload-button" value="CARGAR IMAGEN">
-            </div>
-          </div>
 
-          <div class="save-button-section">
-            <button type="submit" class="save-product-button">GUARDAR PRODUCTO</button>
+            <div class="save-button-section">
+              <button type="submit" class="save-product_button">
+                GUARDAR PRODUCTO
+              </button>
+            </div>
           </div>
-        </div>
         </form>
+        <form
+        class="createP-form"
+        action="/products/<%= producto.id %>/delete?_method=DELETE"
+        method="POST" style="text-align: center;">
+        <span>Admin only: </span>
+        <button>Delete this Product</button>
+      </form>
       </section>
     </main>
 
     <%- include('../partials/footer.ejs') %>
-
   </body>
 </html>
