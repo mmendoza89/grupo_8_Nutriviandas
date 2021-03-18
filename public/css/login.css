@@ -6,17 +6,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --color-light-green: #8BA651;
-    --color-brown: #BF7B54;
-    --color-olive: #445925;
-    --color-dark-green: #314035;
-    --color-orange: #F26D3D;
-    --color-dark-orange: #bb532d;
-    --background-color: #f0f3f7;
-    --white: #ffff;
-}
-
 body{
     font-family: 'Roboto', sans-serif;
     background-color: whitesmoke;
@@ -102,6 +91,7 @@ input{
 }
 
 .titulo-iniciar{
+    font-size: 1.3rem;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -169,9 +159,5 @@ input{
 
     .l-email, .l-contraseña{
         height: 22px;
-    }
-
-    .login-b{
-        font-size: 15px;
     }
 }
