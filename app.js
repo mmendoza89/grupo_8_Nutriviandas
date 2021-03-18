@@ -1,7 +1,7 @@
 // ************ Require's ************
 const express = require("express");
 const path = require('path');
-const mainRoutes = require('./routes/mainRoutes');
+const indexRoutes = require('./routes/mainRoutes');
 const methodOverride =  require('method-override');
 
 // ************ express() ************
@@ -22,7 +22,6 @@ app.set('view engine','ejs');
 // Mapping the EJS template engine to ".html" files (para que poder renderizar HTMLs además de ejs)
 app.engine('html', require('ejs').renderFile);
 
-//const mainRouter = require('./routes/index'); // Rutas main
 const loginRouter = require('./routes/loginRoutes'); // Rutas /login
 const registerRouter = require('./routes/registerRoutes'); // Rutas /register
 const recoverPassRouter = require('./routes/recoverPassRoutes'); // Rutas /recoverPassword
@@ -34,7 +33,7 @@ const productsRouter = require(path.join(__dirname, './routes/products'));
 const indexRouter = require(path.join(__dirname, './routes/indexRoutes.js')); //ruta index regular, provisoria, ya sabemos que está el mainRouter
 
 
-//app.use('/', mainRouter);
+app.use('/', indexRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/recoverPassword', recoverPassRouter);
@@ -43,7 +42,6 @@ app.use('/productCart', productCartRouter);
 app.use('/productCreate', productCreateRouter);
 app.use('/productEdit', productEditRouter);
 app.use('/products', productsRouter);
-app.use('/', indexRouter);
 
 
 app.listen(3000, (req, res)=>{

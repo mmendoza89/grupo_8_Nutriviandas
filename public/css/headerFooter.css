@@ -103,6 +103,10 @@ html{
         cursor: pointer;
         transition: 500ms ease-in-out;
     }
+
+    .cart-icon {
+        font-size: 2rem;
+    }
     
     .cart-button:hover {
         background-color: var(--color-light-green);

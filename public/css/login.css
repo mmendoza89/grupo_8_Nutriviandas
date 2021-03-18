@@ -1,6 +1,8 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
     box-sizing: border-box;
 }
 
@@ -12,6 +14,7 @@
     --color-orange: #F26D3D;
     --color-dark-orange: #bb532d;
     --background-color: #f0f3f7;
+    --white: #ffff;
 }
 
 body{
@@ -19,16 +22,8 @@ body{
     background-color: whitesmoke;
 }
 
-.container-logo{
-    text-align: center;
-}
-
-.logo-register-login{
-    margin-top: 15px;
-    height: 120px;
-}
-
-.link-logo{
+a {
+    color: unset;
     text-decoration: none;
 }
 
@@ -37,7 +32,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 0;
+    padding: 10rem 0 5rem;
 }
 
 .background-image-login{
@@ -70,13 +65,13 @@ body{
     width: 80%;
 }
 
-.crear-cuenta{
-    font-size: 12px;
+.crear-cuenta span{
+    font-size: .8rem;
 }
 
 .medium-link{
     text-decoration: none;
-    font-size: 12px;
+    font-size: .9rem;
     color: #0066c0;
 }
 
@@ -94,7 +89,7 @@ input{
 
 .login-b{
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 6px 10px;
     background-color: var(--color-brown);
     color: white;
     border: none;
@@ -113,7 +108,7 @@ input{
 
 .small-link{
     text-decoration: none;
-    font-size: 12px;
+    font-size: .9rem;
     color: #0066c0;
 }
 
@@ -124,8 +119,13 @@ input{
 
 /*-----MEDIA CONDITIONS-----*/
 
-/*PARA TABLETS*/
-@media (min-width:425px){
+/* LARGE PHONES */
+@media (min-width:426px){
+    .container-logo{
+        box-shadow: rgba(99, 99, 9, 0.2) 0px 2px 8px 0px;
+        background-color: var(--white);
+    }
+
     .crear-cuenta{
         font-size: 14px;
     }
@@ -138,6 +138,7 @@ input{
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+        
     }
 
     .login-box{
@@ -157,22 +158,10 @@ input{
 
 /*PARA LAPTOPS Y DESKTOPS*/
 @media (min-width:768px){
-    .container-logo{
-        display: none;
-    }
-
-    .inside-container-logo{
-        display: block;
-        margin-bottom: 20px;
-    }
-
     .login-section{
         justify-content: center;
     }
 
-    .logo-register-login{
-        margin-top: 0;
-    }
 
     .login-box{
         width: 350px;
