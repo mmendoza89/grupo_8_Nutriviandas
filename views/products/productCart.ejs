@@ -16,11 +16,18 @@
 
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/headerFooter.css" />
+
+    <!-- from head -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- partials -->
     <link rel="stylesheet" href="/css/partials/partial_productInCart.css" />
     <link rel="stylesheet" href="/css/partials/partial_shoppingSteps.css" />
+    
     <!-- this css -->
     <link rel="stylesheet" href="/css/productCart.css" />
+    
     <link
       rel="icon"
       href="images/logo_nutriviandas.jpeg"
@@ -34,9 +41,6 @@
 
     <main>
       <div class="container">
-
-        <%- include('../partials/shoppingSteps') %>
-
         <section class="productCart-productsDetail">
           <header>
             <ul class="productCart_productsDetail_headings">
@@ -77,10 +81,7 @@
               </div>
             </div>
           </aside>
-        </section>
-
-        <%- include('../partials/shoppingSteps') %>
-        
+        </section>        
       </div>
     </main>
 

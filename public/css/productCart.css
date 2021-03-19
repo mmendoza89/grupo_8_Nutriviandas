@@ -19,15 +19,11 @@ html {
 }
 
 body {
-  font-family: var(--font-text);
+  font-family: var(--font-text-2);
 }
 
 body.body-productCart {
-  background-image: url(/images/fresh-food-background.jpg);
-  background-color: var(--color-lighter-grey);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: var(--background-color);
   padding-top: 80px;
 }
 
@@ -57,6 +53,14 @@ h2 {
 
 main {
   padding-bottom: 60px;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
 }
 
 /* products details headings */
@@ -113,7 +117,7 @@ section.productCart-productsDetail div.spacer {
 .totalSelectedProducts div {
   margin-bottom: 15px;
   padding-bottom: 15px;
-  border-bottom: 1px solid var(--color-light-grey);
+  /* border-bottom: 1px solid var(--color-light-grey); */
 }
 
 .productsDeliveryCostTotal {
@@ -138,7 +142,7 @@ section.productCart-productsDetail div.spacer {
 .totalSelectedProducts {
   background-color: var(--color-main);
   padding: 5px 10px;
-  border-radius: 3px;
+  border-radius: 8px;
 }
 
 .totalSelectedProducts h2 {
@@ -149,6 +153,7 @@ section.productCart-productsDetail div.spacer {
 
 div.productsTotal {
   border: 0;
+  border-radius: 6px;
 }
 
 /*MEDIA CONDITIONS*/
