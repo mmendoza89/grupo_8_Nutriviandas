@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/headerFooter.css" />
 
+    <!-- from head -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- partials -->
     <link rel="stylesheet" href="/css/partials/partial_product.css" />
     <link rel="stylesheet" href="/css/partials/partial_buttonAddToCart.css" />
@@ -35,7 +39,6 @@
 
     <main>
       <div class="container">
-        <%- include ('../partials/shoppingSteps') %>
         <h1 class="sr-only">Productos</h1>
         <section class="menuSemanal">
           <header>
@@ -60,8 +63,6 @@
             <%- include('../partials/product', {product: producto}) %> 
           <% } %> 
         </section>
-
-        <%- include ('../partials/shoppingSteps') %>
       </div>
     </main>
 

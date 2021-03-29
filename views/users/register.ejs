@@ -2,29 +2,72 @@
 <html lang="en">
     <%- include('../partials/head.ejs') %> 
     <body>
+        <!--TOP NAV-->
+        <%- include('../partials/header.ejs') %>
+
         <main class="main-register">
-            <div class="container-logo">
-                <a href="/">
-                    <img class="logo-register-login" src="/images/logo_nutriviandas.jpeg" alt="Logo de Nutriviandas">
-                </a>
-            </div>
             <!-- Formulario de Registro -->
             <div class="register-section">
                 <div class="register-box">
-                    <div class="inside-container-logo">
-                        <a href="/">
-                            <img class="logo-register-login" src="/images/logo_nutriviandas.jpeg" alt="Logo de Nutriviandas">
-                        </a>
-                    </div>
                     <h3 class="titulo-registrar">Creá tu cuenta</h3>
-                    <form class="register-form"  autocomplete="on">
-                        <input type="email" id="r-email" placeholder="E-mail" required><br>
-                        <input type="text" id="r-nombre" placeholder="Nombre" required><br>
-                        <input type="text" id="r-apellido" placeholder="Apellido" required><br>
-                        <input type="password" id="r-contraseña" placeholder="Contraseña" required><br>
-                        <input type="password" id="r-confirmar-c" placeholder="Confirmar Contraseña" required><br>
-                        <!-- Este boton solo simula el error que deberia aparecer en pantalla al introducir un dato erroneo -->
-                        <button type="submit" value="Registrarse" class="registrar-b" onclick="alert('Por favor, llene todos los campos requeridos')">Registrarse</button>
+                    
+
+                    <form action="/users/register" method="POST" enctype="multipart/form-data" class="register-form"  autocomplete="on">
+                        <div class="form-element">
+                            <label for="email" class="form-label">E-mail:</label>
+                            <input type="email" id="r-email" name="email" value="<%= locals.oldData ? oldData.email : '' %>">
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %> 
+                                </div>
+                            <% } %>
+                        </div>
+                        
+                        <div class="form-element">
+                            <label for="firstName" class="form-label">Nombre:</label>
+                            <input type="text" id="r-nombre" name="firstName" value="<%= locals.oldData ? oldData.firstName : null %>">
+                            <% if (locals.errors && errors.firstName) { %>
+                                <div class="text-danger">
+                                    <%= errors.firstName.msg %> 
+                                </div>
+                            <% } %>
+                        </div>
+                        
+                        <div class="form-element">
+                            <label for="lastName" class="form-label">Apellido:</label>
+                            <input type="text" id="r-apellido" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %>">
+                            <% if (locals.errors && errors.lastName) { %>
+                                <div class="text-danger">
+                                    <%= errors.lastName.msg %> 
+                                </div>
+                            <% } %>
+                        </div>
+
+                        <div class="form-element">
+                            <label for="password" class="form-label">Contraseña:</label>
+                            <input type="password" id="r-contraseña" name="password">
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="text-danger">
+                                    <%= errors.password.msg %> 
+                                </div>
+                            <% } %>
+                        </div>
+                        
+                        <div class="form-element">
+                            <label for="confirmPass" class="form-label">Confirma Contraseña:</label>
+                            <input type="password" id="r-confirmar-c" name="confirmPass">
+                            <% if (locals.errors && errors.confirmPass) { %>
+                                <div class="text-danger">
+                                    <%= errors.confirmPass.msg %> 
+                                </div>
+                            <% } %>
+                        </div>
+
+                        <div class="form-element">
+                            <label for="avatar" class="form-label">Imagen de perfil:</label>
+                            <input type="file" name="avatar" id="upload-file" value="<%= locals.oldData ? oldData.avatar : null %>">
+                        </div>
+                        <button type="submit" value="Registrarse" class="registrar-b">Registrarse</button>
                     </form>
                 </div>
             </div>

@@ -17,7 +17,7 @@ const productsController = {
         let prod = req.body;
         prod['id'] = Date.now()*1;
         Product.create(prod);
-        res.redirect("/products");
+        return res.redirect("/products");
     },
     edit: function(req, res){
         let producto = Product.findByPk(req.params.id);
@@ -27,11 +27,11 @@ const productsController = {
         let product = req.body;
         product['id'] = req.params.id;
         Product.update(product);
-        res.redirect("/products");
+        return res.redirect("/products");
     },
     delete: function (req, res){
         Product.destroy(req.params.id);
-        res.redirect("/products");
+        return res.redirect("/products");
     }
 }
 

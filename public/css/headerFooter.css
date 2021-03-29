@@ -11,14 +11,24 @@
     --color-dark-green: #314035;
     --color-orange: #F26D3D;
     --color-dark-orange: #bb532d;
+    --color-red: #f95858;
+    --background-color: #f0f3f7;
+    --white: #ffff;
     --html-font-size: 16px;
     --font-headings: "Shadows Into Light", cursive;
     --font-text: "El Messiri", sans-serif;
+    --font-text-2: 'Poppins', sans-serif;
     --header-height: 96px;
+    --site-width: 1200px;
 }
 
 html{
     scroll-behavior: smooth
+}
+
+.container {
+    max-width: var(--site-width);
+    margin: auto;
 }
 
 /*-----HEADER-----*/
@@ -91,6 +101,65 @@ html{
         align-items: center;
         justify-content: center;
     }
+
+    .rightMenuItems {
+        padding: 0 1rem;
+    }
+
+    .loggedUserAvatar {
+        border-radius: 100%;
+        width: 40px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdownContent li, .dropdownContent li ul{
+        list-style-type: none;
+    }
+
+    .dropdownContent {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdownContent a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdownBtn{
+        display: flex;
+        margin: 1rem 0;
+        padding: .6rem 1.4rem;
+        background-color: var(--color-light-green);
+        color: white;
+        border: none;
+        border-radius: 7px;
+        transition: all 0.3s;
+    }
+
+    .buttonElement {
+        flex: 1 0 50%;
+        padding: 0 .3rem;
+    }
+
+    .down-arrow {
+        font-size: 4rem;
+    }
+
+    .dropdownContent a:hover {background-color: #f1f1f1;}
+    .dropdown:hover .dropdownContent {display: block;}
+    .dropdown:hover .dropdownBtn {background-color: var(--color-olive)}
     
     .cart-button {
         width: 3rem;
@@ -102,6 +171,10 @@ html{
         font-size: 2rem;
         cursor: pointer;
         transition: 500ms ease-in-out;
+    }
+
+    .cart-icon {
+        font-size: 2rem;
     }
     
     .cart-button:hover {

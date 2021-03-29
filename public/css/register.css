@@ -1,22 +1,19 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
     box-sizing: border-box;
-}
-
-:root {
-    --color-light-green: #8BA651;
-    --color-brown: #BF7B54;
-    --color-olive: #445925;
-    --color-dark-green: #314035;
-    --color-orange: #F26D3D;
-    --color-dark-orange: #bb532d;
-    --background-color: #f0f3f7;
 }
 
 body{
     font-family: 'Roboto', sans-serif;
     background-color: whitesmoke;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
 }
 
 .container-logo{
@@ -37,7 +34,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 0;
+    padding: 9rem 0 4rem 0;
 }
 
 .register-section{
@@ -46,7 +43,7 @@ body{
 
 .register-box{
     display: flex;
-    width: 80vw;
+    width: 90vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -62,6 +59,7 @@ body{
 }
 
 .titulo-registrar{
+    font-size: 1.3rem;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -71,21 +69,39 @@ body{
     width: 80%;
 }
 
+.form-element {
+    padding-bottom: .5rem;
+}
+
+.form-label {
+    font-weight: 600;
+    display: block;
+    text-align: left;
+}
+
+.text-danger {
+    color: #dc3545;
+    text-align: left;
+}
+
 #r-email, #r-nombre, #r-apellido, 
 #r-contraseña, #r-confirmar-c{
-    height: 25px;
-    margin-bottom: 10px;
-    width: 80%;
+    width: 100%;
     border: solid 1px black;
 }
 
+#upload-file {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
 input{
-    padding-left: 5px;
+    padding: .3rem;
 }
 
 .registrar-b{
-    margin-bottom: 10px;
-    padding: 10px;
+    margin: 1rem 0;
+    padding: .6rem 1.4rem;
     background-color: var(--color-brown);
     color: white;
     border: none;
@@ -108,16 +124,10 @@ input{
     .main-register{
         background-image: url('/images/fresh-food.jpg');
         background-color: #cccccc;
-        height: 550px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-    }
-
-    .registrar-b{
-        font-size: 15px;
-        padding: 10px;
     }
 }
 

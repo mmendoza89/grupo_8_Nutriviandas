@@ -1,14 +1,3 @@
-:root {
-    --color-light-green: #8ba651;
-    --color-brown: #BF7B54;
-    --color-olive: #445925;
-    --color-dark-green: #314035;
-    --color-orange: #F26D3D;
-    --color-dark-orange: #bb532d;
-    --background-color: #f0f3f7;
-    --white: #ffff;
-}
-
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -220,10 +209,6 @@ section {
     font-size: 2rem;
     cursor: pointer;
     transition: 500ms ease-in-out;
-}
-
-.cart-icon {
-    font-size: 2rem;
 }
 
 #contacto {

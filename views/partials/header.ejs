@@ -1,52 +1,69 @@
 <div class="nav">
-    <div class="menu-wrap">
-        <a class="logo-link" href="/">
-            <img class="logo" src="/images/nutriviandas-logo.svg" alt="Logo de Nutriviandas">
-        </a>
-        <div class="nav-mobile">
-            <i class='bx bx-menu'></i>
-        </div>
-        <div class="menu">
-            <a href="/">
-                <div class="menu-item active">
-                    Inicio
-                </div>
-            </a>
-            <a href="#nosotros">
-                <div class="menu-item">
-                    Nosotros
-                </div>
-            </a>
-            <a href="#seccion-menu">
-                <div class="menu-item">
-                    Menús
-                </div>
-            </a>
-            <a href="/products">
-                <div class="menu-item">
-                    Productos
-                </div>
-            </a>
-            <a href="#contacto">
-                <div class="menu-item">
-                    Contacto
-                </div>
-            </a>
-        </div>
-        <div class="right-menu">
-            <div class="cart-button">
-                <i class='bx bx-cart-alt cart-icon' ></i>
-            </div>
-            <a href="/login">
-                <div class="menu-item">
-                    Ingresar
-                </div>
-            </a>
-            <a href="/register">
-                <div class="menu-item">
-                    Registrate
-                </div>
-            </a>
-        </div>
+  <div class="menu-wrap">
+    <a class="logo-link" href="/">
+      <img
+        class="logo"
+        src="/images/nutriviandas-logo.svg"
+        alt="Logo de Nutriviandas"
+      />
+    </a>
+    <div class="nav-mobile">
+      <i class="bx bx-menu"></i>
     </div>
+    <div class="menu">
+      <a href="/#inicio">
+        <div class="menu-item">Inicio</div>
+      </a>
+      <a href="/#nosotros">
+        <div class="menu-item">Nosotros</div>
+      </a>
+      <a href="/#seccion-menu">
+        <div class="menu-item">Menús</div>
+      </a>
+      <a href="/products">
+        <div class="menu-item">Productos</div>
+      </a>
+      <a href="/#contacto">
+        <div class="menu-item">Contacto</div>
+      </a>
+    </div>
+
+    <% if (locals.isLogged) { %>
+      <div class="right-menu">
+        <div class="rightMenuItems">
+          <a href="/productCart">
+            <div class="cart-button">
+              <i class="bx bx-cart-alt cart-icon"></i>
+            </div>
+          </a>
+        </div>
+        <div class="rightMenuItems">
+          <div class="dropdown">
+            <button class="dropdownBtn">
+              <div class="buttonElement"><%= locals.userLogged.firstName %></div>
+              <div class="buttonElement"><i class='bx bxs-down-arrow'></i></div>
+            </button>
+            <div class="dropdownContent">
+              <li>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item" href="/users/profile">Mi Perfil</a>
+                  <li><hr></li>
+                  <a class="dropdown-item" href="/users/logout">Salir</a>
+                </ul>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% } else { %>
+      <div class="right-menu">
+        <a href="/users/login">
+          <div class="menu-item">Ingresar</div>
+        </a>
+        <a href="/users/register">
+          <div class="menu-item">Registrate</div>
+        </a>
+      </div>
+    <% } %>
+  </div>
 </div>
