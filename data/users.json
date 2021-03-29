@@ -9025,5 +9025,13 @@
   "password": "$2a$10$eZy5JHkeIQGdBwQUuVzrpugUou.saKUoqQfiBqQ7FlytV83CkBYoy",
   "confirmPass": "12345",
   "avatar": "1616983147107_img.jpeg"
+ },
+ {
+  "id": 1004,
+  "email": "luis@luis3.com",
+  "firstName": "Luis",
+  "lastName": "Díaz Muñiz",
+  "password": "$2a$10$Mdh1C8.9gsPgSDoWQn2RfedXG0.ukCV.JQ9ugS28GQixfEM6Mixqe",
+  "avatar": "1616989839543_img.jpeg"
  }
 ]

@@ -1,5 +1,6 @@
 const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
+
 const User = require('../models/User');
 
 const userController = {
@@ -37,6 +38,8 @@ const userController = {
             password: bcryptjs.hashSync(req.body.password, 10),
             avatar: req.file.filename
         }
+
+        delete userToCreate.confirmPass;
 
         let userCreated = User.create(userToCreate);
 
