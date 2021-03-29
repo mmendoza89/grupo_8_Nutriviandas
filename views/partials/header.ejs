@@ -27,18 +27,40 @@
         <div class="menu-item">Contacto</div>
       </a>
     </div>
-    <div class="right-menu">
-      <a href="/productCart">
-        <div class="cart-button">
-          <i class="bx bx-cart-alt cart-icon"></i>
+
+    <% if (locals.isLogged) { %>
+      <div class="right-menu">
+        <div class="rightMenuItems">
+          <a href="/productCart">
+            <div class="cart-button">
+              <i class="bx bx-cart-alt cart-icon"></i>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="/login">
-        <div class="menu-item">Ingresar</div>
-      </a>
-      <a href="/register">
-        <div class="menu-item">Registrate</div>
-      </a>
-    </div>
+        <div class="rightMenuItems">
+          <div class="dropdown">
+            <button class="dropdownBtn"><%= locals.userLogged.firstName %></button>
+            <div class="dropdownContent">
+              <li>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item" href="/users/profile">Mi Perfil</a>
+                  <li><hr></li>
+                  <a class="dropdown-item" href="/users/logout">Salir</a>
+                </ul>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% } else { %>
+      <div class="right-menu">
+        <a href="/users/login">
+          <div class="menu-item">Ingresar</div>
+        </a>
+        <a href="/users/register">
+          <div class="menu-item">Registrate</div>
+        </a>
+      </div>
+    <% } %>
   </div>
 </div>

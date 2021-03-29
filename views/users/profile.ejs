@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+    <body>
+        <!--TOP NAV-->
+        <%- include('../partials/header.ejs') %>
+
+        <main class="main-profile">
+            <h2>Hola <%= user.firstName %> </h2>
+            <img src="/images/avatars/<%= user.avatar %> ">
+            <br>
+            <br>
+            
+        </main>
+        <%- include('../partials/footer.ejs') %> 
+    </body>
+</html>
