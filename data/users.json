@@ -9007,5 +9007,14 @@
   "password": "$2a$10$rN5gQoIYJR9t5YW6xvVYFuuYZzG2X7Fn62rkLzQTprvAdd40nX/ay",
   "confirmPass": "moka123",
   "avatar": "1616971650879_img.jpeg"
+ },
+ {
+  "id": 1002,
+  "email": "mardoza21@gmail.com",
+  "firstName": "Marco",
+  "lastName": "Mendoza",
+  "password": "$2a$10$iZ.piNReClhdx.uAT9y1fuoM/9mv/IsROWADJNgqDaRCJcYkcRcc6",
+  "confirmPass": "marco123",
+  "avatar": "1616981565052_img.jpeg"
  }
 ]
