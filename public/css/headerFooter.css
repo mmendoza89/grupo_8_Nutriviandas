@@ -131,18 +131,28 @@ html{
       }
 
       .dropdownBtn{
+        display: flex;
         margin: 1rem 0;
         padding: .6rem 1.4rem;
-        background-color: var(--color-brown);
+        background-color: var(--color-light-green);
         color: white;
         border: none;
         border-radius: 7px;
         transition: all 0.3s;
     }
 
+    .buttonElement {
+        flex: 1 0 50%;
+        padding: 0 .3rem;
+    }
+
+    .down-arrow {
+        font-size: 4rem;
+    }
+
     .dropdownContent a:hover {background-color: #f1f1f1;}
     .dropdown:hover .dropdownContent {display: block;}
-    .dropdown:hover .dropdownBtn {background-color: #3e8e41;}
+    .dropdown:hover .dropdownBtn {background-color: var(--color-olive)}
     
     .cart-button {
         width: 3rem;

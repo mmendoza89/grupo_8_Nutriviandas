@@ -39,7 +39,10 @@
         </div>
         <div class="rightMenuItems">
           <div class="dropdown">
-            <button class="dropdownBtn"><%= locals.userLogged.firstName %></button>
+            <button class="dropdownBtn">
+              <div class="buttonElement"><%= locals.userLogged.firstName %></div>
+              <div class="buttonElement"><i class='bx bxs-down-arrow'></i></div>
+            </button>
             <div class="dropdownContent">
               <li>
                 <ul class="dropdown-menu">
