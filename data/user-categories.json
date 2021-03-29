@@ -2,16 +2,19 @@
   {
     "id": 1,
     "name": "owner",
-    "description": "Owns the web. Can do everything. Can create 'admin' users"
+    "description": "Owns the web. Can do everything. Can create 'admin' users",
+    "valid": true
   },
   {
     "id": 2,
     "name": "admin",
-    "description": "Can do everything except create 'admin' users"
+    "description": "Can do everything except create 'admin' users",
+    "valid": true
   },
   {
     "id": 3,
     "name": "guest",
-    "description": "Has no special privileges"
+    "description": "Has no special privileges",
+    "valid": true
   }
 ]
