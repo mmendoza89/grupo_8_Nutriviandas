@@ -23,11 +23,6 @@ body.body-products {
   padding-top: 80px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-
 h1,
 h2 {
   color: var(--color-text);

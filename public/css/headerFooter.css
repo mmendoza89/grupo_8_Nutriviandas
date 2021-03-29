@@ -11,6 +11,7 @@
     --color-dark-green: #314035;
     --color-orange: #F26D3D;
     --color-dark-orange: #bb532d;
+    --color-red: #f95858;
     --background-color: #f0f3f7;
     --white: #ffff;
     --html-font-size: 16px;
@@ -18,10 +19,16 @@
     --font-text: "El Messiri", sans-serif;
     --font-text-2: 'Poppins', sans-serif;
     --header-height: 96px;
+    --site-width: 1200px;
 }
 
 html{
     scroll-behavior: smooth
+}
+
+.container {
+    max-width: var(--site-width);
+    margin: auto;
 }
 
 /*-----HEADER-----*/

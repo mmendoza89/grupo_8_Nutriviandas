@@ -1,0 +1,54 @@
+html {
+  font-size: var(--html-font-size);
+}
+
+.body-ProductEdit {
+  font-family: var(--font-text);
+  padding-top: calc(var(--header-height) + 40px);
+  width: 70%;
+  margin: auto;
+}
+
+.createP-section {
+    padding: 1px 120px 30px 120px;
+    box-shadow: 8px 8px 20px 5px #b9b9b9;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+
+.createP-field {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-auto-rows: auto;
+  grid-gap: 15px;
+  margin-bottom: 35px;
+}
+
+.img-dummy {
+  display: inline-block;
+}
+.titulo-agregarP,
+.save-button-section {
+  text-align: center;
+}
+
+.titulo-form {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--color-light-green);
+}
+
+button,
+.createP-button {
+  padding: 0.6rem 1.4rem;
+  background-color: var(--color-light-green);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  transition: all 0.3s;
+}
+
+.createP-button-danger{
+    background-color: var(--color-red);
+    text-transform: uppercase;
+}

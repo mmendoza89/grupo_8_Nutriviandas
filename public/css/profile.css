@@ -16,8 +16,58 @@ a {
     text-decoration: none;
 }
 
+.body-profile{
+    margin-top: var(--header-height);
+    background-image: url(/images/fresh-food.jpg);
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
 .main-profile {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 50px;
+    padding: 50px;
+    background-color: white;
+    margin-top: calc(var(--header-height) + 25px);
+    margin-bottom: 25px;
+    border-radius: 4px;
+}
+
+.main-profile-right {
     display: flex;
-    padding-top: 7rem;
-    width: 80vw;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.main-profile-left img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 3px 5px 16px 3px black;
+}
+
+.main-profile h1{
+    font-size: 5rem;
+}
+
+.main-profile-email{
+    font-size: 3rem;
+}
+
+.main-profile-logout {
+    margin: 1rem 0;
+    padding: .6rem 2.8rem;
+    background-color: var(--color-brown);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    transition: all 0.3s;
+    font-size: 1.4rem;
+    align-self: flex-end;
+}
+.main-profile-logout:hover {
+background-color: #9c6444;
 }

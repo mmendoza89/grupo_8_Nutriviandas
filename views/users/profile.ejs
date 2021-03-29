@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head.ejs') %>
-    <body>
-        <!--TOP NAV-->
-        <%- include('../partials/header.ejs') %>
-
-        <main class="main-profile">
-            <h2>Hola <%= user.firstName %> </h2>
-            <img src="/images/avatars/<%= user.avatar %> ">
-            <br>
-            <br>
-            
-        </main>
-        <%- include('../partials/footer.ejs') %> 
-    </body>
+  <%- include('../partials/head.ejs', {css}) %>
+  <body class="body-profile">
+    <!--TOP NAV-->
+    <%- include('../partials/header.ejs') %>
+    <div class="container">
+      <main class="main-profile">
+        <div class="main-profile-left">
+          <img src="/images/avatars/<%= user.avatar %> " />
+        </div>
+        <div class="main-profile-right">
+          <h1><%= user.firstName %> <%= user.lastName %></h1>
+          <p class="main-profile-email"><%= user.email %></p>
+          <a class="main-profile-logout" href="/users/logout">Salir</a>
+        </div>
+      </main>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+  </body>
 </html>
