@@ -47,14 +47,12 @@
             <br>
             <br>
             <br>
-            <form
-            class="createP-form"
-            action="/products/<%= product.id %>/edit"
-            method="GET"
-            style="text-align:center;">
-            <span>Admin only: </span>
-            <button>Edit this Product</button>
-          </form>
+            <% if (isAdmin) { %>
+              <form class="createP-form" action="/products/<%= product.id %>/edit" method="GET" style="text-align:center;">
+                <span>Admin only: </span>
+                <button>Edit this Product</button>
+              </form>
+            <% } %>
           </div>
           <div class="productExtraLeftPriceDelivery">
             <h2>Precio</h2>

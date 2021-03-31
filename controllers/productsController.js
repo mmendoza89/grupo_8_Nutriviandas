@@ -8,7 +8,8 @@ const productsController = {
     detail: function(req, res){
         let prodId = req.params.id;
         let producto = Product.findByPk(prodId);
-        res.render('products/productDetail',{product: producto});
+        let isAdmin = req.session.isAdmin || req.session.isOwner;
+        res.render('products/productDetail',{product: producto, isAdmin});
     },
     create: function (req, res) {
         res.render("products/productCreate");

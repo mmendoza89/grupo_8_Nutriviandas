@@ -42,9 +42,11 @@ const productEditRouter = require(path.join(__dirname, './routes/productEdit'));
 const productsRouter = require(path.join(__dirname, './routes/products'));
 const indexRouter = require(path.join(__dirname, './routes/indexRoutes'));
 const userRouter = require(path.join(__dirname, './routes/userRoutes'));
+const userRoleRouter = require(path.join(__dirname, '/routes/userRoleRoutes'));
 
 app.use('/', indexRouter);
 app.use('/users', userRouter);
+app.use('/users/roles', userRoleRouter);
 app.use('/recoverPassword', recoverPassRouter);
 app.use('/productCart', productCartRouter);
 app.use('/productDetail', productDetailRouter);

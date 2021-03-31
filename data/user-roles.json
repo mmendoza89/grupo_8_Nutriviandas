@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "owner",
+    "description": "Owns the web. Can do everything. Can create 'admin' users",
+    "valid": true,
+    "editable": false
+  },
+  {
+    "id": 2,
+    "name": "admin",
+    "description": "Can do everything except create 'admin' users",
+    "valid": true,
+    "editable": false
+  },
+  {
+    "id": 3,
+    "name": "guest",
+    "description": "Has no special privileges",
+    "valid": true,
+    "editable": false
+  },
+  {
+    "id": 4,
+    "name": "franchise",
+    "description": "Has no special privileges",
+    "valid": true,
+    "editable": true
+  }
+]

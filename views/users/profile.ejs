@@ -12,7 +12,14 @@
         <div class="main-profile-right">
           <h1><%= user.firstName %> <%= user.lastName %></h1>
           <p class="main-profile-email"><%= user.email %></p>
-          <a class="main-profile-logout" href="/users/logout">Salir</a>
+          <p class="main-profile-role">Rol: <%= user.role %></p>
+          <div class="main-profile-buttons">
+            <% if (isOwner) { %>
+              <a class="main-profile-show-roles" href="/users/roles">Roles editables</a>
+              <a class="main-profile-show-users" href="/users">Lista usuarios</a>
+            <% } %>
+            <a class="main-profile-logout" href="/users/logout">Salir</a>
+          </div>
         </div>
       </main>
     </div>

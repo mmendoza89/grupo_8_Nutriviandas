@@ -2,8 +2,15 @@ const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
 
 const User = require('../models/User');
+const UserRole = require('../models/Role');
 
 const userController = {
+    index: (req, res) => {
+        //is Owner
+        const allUsers = User.findAll();
+        const usersWhithoutPasswords = allUsers.map(({ password, ...rest }) => rest);
+        res.send(usersWhithoutPasswords);
+    },
     register: (req, res) => {
         return res.render('users/register', {css:'register.css'});
     },
@@ -32,11 +39,12 @@ const userController = {
             })
             
         }
-    
+
         let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
-            avatar: req.file.filename
+            avatar: req.file.filename,
+            role: UserRole.getDefaultRoleName()
         }
 
         delete userToCreate.confirmPass;
@@ -57,6 +65,23 @@ const userController = {
             if(comparePasswords) {
                 delete userToLogin.password;
 				req.session.userLogged = userToLogin;
+
+                //If is "owner" write it in Session
+                if(userToLogin.role){
+                    if(userToLogin.role == UserRole.getSuperAdminName()){
+                        req.session.isOwner = true;
+                    } else {
+                        req.session.isOwner = false;
+                    }
+
+                    if(userToLogin.role == UserRole.getAdminName()){
+                        req.session.isAdmin = true;
+                    } else {
+                        req.session.isAdmin = false;
+                    }
+                } 
+
+
 
                 return res.redirect('/users/profile');
             }
@@ -84,7 +109,8 @@ const userController = {
     profile: (req, res) => {
 		return res.render('users/profile', {
 			user: req.session.userLogged,
-            css:'profile.css'
+            css:'profile.css',
+            isOwner: req.session.isOwner
 		});
 	},
 

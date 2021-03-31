@@ -11,7 +11,10 @@ const uploadFile = require('../middleware/multerMiddleware')
 const validations = require('../middleware/validateRegisterMiddleware');
 const authMiddleware = require('../middleware/authMiddleware');
 const guestMiddleware = require('../middleware/guestMiddleware');
+const isOwnerMiddleware = require('../middleware/isOwnerMiddleware');
 
+//Get all users
+router.get('/', isOwnerMiddleware, userController.index);
 
 //Register form
 router.get('/register', guestMiddleware, userController.register);
