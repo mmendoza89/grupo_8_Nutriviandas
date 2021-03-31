@@ -9006,7 +9006,8 @@
   "lastName": "Mendoza",
   "password": "$2a$10$rN5gQoIYJR9t5YW6xvVYFuuYZzG2X7Fn62rkLzQTprvAdd40nX/ay",
   "confirmPass": "moka123",
-  "avatar": "1616971650879_img.jpeg"
+  "avatar": "1616971650879_img.jpeg",
+  "role": "admin"
  },
  {
   "id": 1002,
@@ -9015,23 +9016,34 @@
   "lastName": "Mendoza",
   "password": "$2a$10$iZ.piNReClhdx.uAT9y1fuoM/9mv/IsROWADJNgqDaRCJcYkcRcc6",
   "confirmPass": "marco123",
-  "avatar": "1616981565052_img.jpeg"
+  "avatar": "1616981565052_img.jpeg",
+  "role": "guest"
  },
  {
   "id": 1003,
-  "email": "luis@luis.com",
+  "email": "admin@admin.com",
   "firstName": "Luis",
   "lastName": "Díaz Muñiz",
   "password": "$2a$10$eZy5JHkeIQGdBwQUuVzrpugUou.saKUoqQfiBqQ7FlytV83CkBYoy",
-  "confirmPass": "12345",
-  "avatar": "1616983147107_img.jpeg"
+  "avatar": "1616983147107_img.jpeg",
+  "role": "admin"
  },
  {
   "id": 1004,
-  "email": "luis@luis3.com",
+  "email": "guest@guest.com",
   "firstName": "Luis",
   "lastName": "Díaz Muñiz",
   "password": "$2a$10$Mdh1C8.9gsPgSDoWQn2RfedXG0.ukCV.JQ9ugS28GQixfEM6Mixqe",
-  "avatar": "1616989839543_img.jpeg"
+  "avatar": "1616989839543_img.jpeg",
+  "role": "guest"
+ },
+ {
+  "id": 1005,
+  "email": "owner@owner.com",
+  "firstName": "Montgomery",
+  "lastName": "Burns",
+  "password": "$2a$10$5TLlGM/yMuIyTNJiOHHkp.1u6n2/cmgrBRaR98WC2BSs1iX12dTIa",
+  "avatar": "1617158082848_img.png",
+  "role": "owner"
  }
 ]
