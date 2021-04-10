@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Customer_addresses', {
+    await queryInterface.createTable('Orders', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -13,19 +13,29 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'customers',
-            schema: 'schema'
+            tableName: 'Customers',
           },
           key: 'id'
         }
       },
-      address_id: {
+      total: {
+        allowNull: false,
+        type: Sequelize.DECIMAL
+      },
+      order_date: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      shipment_date: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      payment_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'adresses',
-            schema: 'schema'
+            tableName: 'Payment_methods',
           },
           key: 'id'
         }
@@ -41,6 +51,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Customer_addresses');
+    await queryInterface.dropTable('Orders');
   }
 };

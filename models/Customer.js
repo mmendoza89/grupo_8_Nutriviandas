@@ -9,6 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+
+
     }
   }
   Customer.init(
@@ -46,13 +48,12 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      role_id: {
+      user_role_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: role,
+          model: User_role,
           key: "id",
-          deferrable: Deferrable.INITIALLY_IMMEDIATE,
         }
       }
     },

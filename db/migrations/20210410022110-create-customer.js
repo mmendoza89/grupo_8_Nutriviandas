@@ -34,16 +34,15 @@ module.exports = {
       avatar: {
         type: Sequelize.STRING
       },
-      role_id: {
-        allowNull: false,
+      user_role_id: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'roles',
-            schema: 'schema'
+            tableName: 'User_roles',
           },
           key: 'id'
-        }
+        },
+        allowNull: false
       },
       createdAt: {
         allowNull: false,

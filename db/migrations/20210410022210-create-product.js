@@ -17,15 +17,14 @@ module.exports = {
         type: Sequelize.TEXT
       },
       category_id: {
-        allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'categories',
-            schema: 'schema'
+            tableName: 'Categories',
           },
           key: 'id'
-        }
+        },
+        allowNull: false
       },
       price: {
         allowNull: false,
