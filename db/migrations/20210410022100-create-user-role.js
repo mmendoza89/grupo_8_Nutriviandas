@@ -16,6 +16,14 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT
       },
+      valid:{
+        allowNull: false,
+        type: Sequelize.DataTypes.BOOLEAN
+      },
+      editable:{
+        allowNull: false,
+        type: Sequelize.DataTypes.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
