@@ -8998,21 +8998,5 @@
   "category": "Human Resources",
   "password": "6QuBaEYaDbK",
   "product_image": "product_1000.jpg"
- },
- {
-  "id": 1001,
-  "email": "mardoza21@gmail.com",
-  "firstName": "Marco",
-  "lastName": "Mendoza",
-  "password": "$2a$10$7DXlC0a5Lfai4zgki0vRBO8MO4CcERQCAlWQ8QeeCDXRA04KVVSA6",
-  "avatar": "1617144150939_img.jpeg"
- },
- {
-  "id": 1002,
-  "email": "mardoza21@icloud.com",
-  "firstName": "Moka",
-  "lastName": "Mendoza",
-  "password": "$2a$10$ZMEg9usHquBQXRJxTls7p.iYr5xW87nLSRnrT4BSg.4pVP.ZmtgHu",
-  "avatar": "1617144306796_img.jpeg"
  }
 ]
