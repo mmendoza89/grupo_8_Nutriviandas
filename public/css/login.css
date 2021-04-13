@@ -119,7 +119,7 @@ input{
 /*-----MEDIA CONDITIONS-----*/
 
 /* LARGE PHONES */
-@media (min-width:426px){
+@media (min-width:425px){
     .container-logo{
         box-shadow: rgba(99, 99, 9, 0.2) 0px 2px 8px 0px;
         background-color: var(--white);
@@ -144,8 +144,8 @@ input{
         width: 70vw;
     }
 
-    .l-email, .l-contraseña{
-        width: 80%;
+    .form-element {
+        margin: 0 10%;
     }
 }
 
@@ -161,6 +161,9 @@ input{
         justify-content: center;
     }
 
+    .form-element {
+        width: 80%;
+    }
 
     .login-box{
         width: 350px;

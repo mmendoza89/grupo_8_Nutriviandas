@@ -9001,37 +9001,18 @@
  },
  {
   "id": 1001,
-  "email": "moka@perro.com",
-  "firstName": "Moka",
-  "lastName": "Mendoza",
-  "password": "$2a$10$rN5gQoIYJR9t5YW6xvVYFuuYZzG2X7Fn62rkLzQTprvAdd40nX/ay",
-  "confirmPass": "moka123",
-  "avatar": "1616971650879_img.jpeg"
- },
- {
-  "id": 1002,
   "email": "mardoza21@gmail.com",
   "firstName": "Marco",
   "lastName": "Mendoza",
-  "password": "$2a$10$iZ.piNReClhdx.uAT9y1fuoM/9mv/IsROWADJNgqDaRCJcYkcRcc6",
-  "confirmPass": "marco123",
-  "avatar": "1616981565052_img.jpeg"
+  "password": "$2a$10$7DXlC0a5Lfai4zgki0vRBO8MO4CcERQCAlWQ8QeeCDXRA04KVVSA6",
+  "avatar": "1617144150939_img.jpeg"
  },
  {
-  "id": 1003,
-  "email": "luis@luis.com",
-  "firstName": "Luis",
-  "lastName": "Díaz Muñiz",
-  "password": "$2a$10$eZy5JHkeIQGdBwQUuVzrpugUou.saKUoqQfiBqQ7FlytV83CkBYoy",
-  "confirmPass": "12345",
-  "avatar": "1616983147107_img.jpeg"
- },
- {
-  "id": 1004,
-  "email": "luis@luis3.com",
-  "firstName": "Luis",
-  "lastName": "Díaz Muñiz",
-  "password": "$2a$10$Mdh1C8.9gsPgSDoWQn2RfedXG0.ukCV.JQ9ugS28GQixfEM6Mixqe",
-  "avatar": "1616989839543_img.jpeg"
+  "id": 1002,
+  "email": "mardoza21@icloud.com",
+  "firstName": "Moka",
+  "lastName": "Mendoza",
+  "password": "$2a$10$ZMEg9usHquBQXRJxTls7p.iYr5xW87nLSRnrT4BSg.4pVP.ZmtgHu",
+  "avatar": "1617144306796_img.jpeg"
  }
 ]

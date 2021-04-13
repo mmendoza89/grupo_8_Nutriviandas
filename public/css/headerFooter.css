@@ -48,7 +48,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
 }
 
 .logo-link {
@@ -79,6 +79,10 @@ html{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .menu-wrap {
+        padding: 1rem 1.5rem;
     }
     
     .menu-item {
