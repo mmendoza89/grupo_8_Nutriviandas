@@ -16,16 +16,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT
       },
-      category_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: {
-            tableName: 'Categories',
-          },
-          key: 'id'
-        },
-        allowNull: false
-      },
       price: {
         allowNull: false,
         type: Sequelize.DECIMAL

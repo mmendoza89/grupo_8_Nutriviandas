@@ -8,7 +8,18 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Order.belongsTo(models.Order_detail, {
+        foreignKey: 'order_id',
+        as: 'order'
+      });
+      Order.hasOne(models.Payment_method, {
+        foreignKey: 'payment_id',
+        as: 'payment'
+      });
+      Order.hasOne(models.Customer, {
+        foreignKey: 'customer_id',
+        as: 'customer'
+      })
     }
   }
   Order.init(
@@ -17,15 +28,14 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: DataTypes.INTEGER
       },
       customer_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: Customer,
-          key: "id",
-          deferrable: Deferrable.INITIALLY_IMMEDIATE,
+          model: "Customer",
+          key: "id"
         }
       },
       total: {
@@ -44,9 +54,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: Payment_method,
-          key: "id",
-          deferrable: Deferrable.INITIALLY_IMMEDIATE,
+          model: "Payment_method",
+          key: "id"
         }
       }
     },

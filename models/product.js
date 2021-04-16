@@ -1,7 +1,5 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
     /**
@@ -10,15 +8,30 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Product.belongsToMany(models.Order_detail, {
+        through: 'Order_details',
+        foreignKey: 'product_id1',
+        as: 'product_order_detail'
+      });
+      Product.belongsToMany(models.Product_category, {
+        through: 'Product_categories',
+        foreignKey: 'product_id2',
+        as: 'product_category'
+      })
+      Product.belongsToMany(models.Menu_product,{
+        through: 'Menu_products',
+        foreignKey: 'product_id3',
+        as: 'product_menu'
+      });
     }
   };
+  
   Product.init({
     id:{
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     name: {
       type: DataTypes.STRING,
@@ -27,15 +40,6 @@ module.exports = (sequelize, DataTypes) => {
     description: {
       type: DataTypes.TEXT,
       allowNull: false
-    },
-    category_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: Category,
-        key: "id",
-        deferrable: Deferrable.INITIALLY_IMMEDIATE,
-      }
     },
     price: {
       type: DataTypes.DECIMAL,

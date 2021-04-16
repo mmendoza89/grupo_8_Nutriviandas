@@ -10,7 +10,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Product_category.hasMany(models.Product,{
+        foreignKey: 'id',
+        as: 'product'
+      });
+      Product_category.hasMany(models.Category, {
+        foreignKey: 'category_id',
+        as: 'category'
+      })
     }
   };
   Product_category.init({
@@ -18,24 +25,22 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     product_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: product,
-        key: "id",
-        deferrable: Deferrable.INITIALLY_IMMEDIATE,
+        model: "product",
+        key: "id"
       }
     },
     category_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: Category,
-        key: "id",
-        deferrable: Deferrable.INITIALLY_IMMEDIATE,
+        model: "Category",
+        key: "id"
       }
     }
   }, {

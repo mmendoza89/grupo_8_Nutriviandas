@@ -1,13 +1,16 @@
-const Product = require('../modelsJSON/Product');
+const db = require("../models");
+const sequelize = db.sequelize;
+const Product = require('../models/product');
+const Products = db.Product;
 
 const productsController = {
-    index: (req, res) => {
-        let productos = Product.findAll();
+    index: async function(req, res) {
+        let productos = await Products.findAll();
         res.render('products/products',{productos: productos});
     },
-    detail: function(req, res){
+    detail: async function(req, res){
         let prodId = req.params.id;
-        let producto = Product.findByPk(prodId);
+        let producto = await Products.findByPk(prodId);
         let isAdmin = req.session.isAdmin || req.session.isOwner;
         res.render('products/productDetail',{product: producto, isAdmin});
     },
@@ -17,21 +20,21 @@ const productsController = {
     upload: function (req, res){
         let prod = req.body;
         prod['id'] = Date.now()*1;
-        Product.create(prod);
+        Products.create(prod);
         return res.redirect("/products");
     },
-    edit: function(req, res){
-        let producto = Product.findByPk(req.params.id);
+    edit: async function(req, res){
+        let producto = await Products.findByPk(req.params.id);
         res.render('products/productEdit',{producto: producto});
     },
     update: function (req, res){
         let product = req.body;
         product['id'] = req.params.id;
-        Product.update(product);
+        Products.update(product);
         return res.redirect("/products");
     },
     delete: function (req, res){
-        Product.destroy(req.params.id);
+        Products.destroy(req.params.id);
         return res.redirect("/products");
     }
 }

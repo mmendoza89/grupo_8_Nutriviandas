@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Address extends Model {
     /**
@@ -10,44 +8,53 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Address.hasOne(models.City, {
+        foreignKey: "city_id",
+        as: "city"
+      });
+      Address.belongsTo(models.Customer_address, {
+        foreignKey: "address_id",
+        as:"address"
+      });
     }
-  };
-  Address.init({
-    id: {
-      allowNull: false,
-      autoIncrement: true,
-      primaryKey: true,
-      type: Sequelize.INTEGER
+  }
+  Address.init(
+    {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: DataTypes.INTEGER,
+      },
+      street: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+      number: {
+        allowNull: false,
+        type: DataTypes.INTEGER,
+      },
+      unit: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+      post_code: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+      city_id: {
+        allowNull: false,
+        type: DataTypes.INTEGER,
+        references: {
+          model: "City",
+          key: "id"
+        },
+      },
     },
-    street: {
-      allowNull: false,
-      type: Sequelize.STRING
-    },
-    number: {
-      allowNull: false,
-      type: Sequelize.INTEGER
-    },
-    unit: {
-      allowNull: false,
-      type: Sequelize.STRING
-    },
-    post_code: {
-      allowNull: false,
-      type: Sequelize.STRING
-    },
-    city_id: {
-      allowNull: false,
-      type: Sequelize.INTEGER,
-      references: {
-        model: City,
-        key: "id",
-        deferrable: Deferrable.INITIALLY_IMMEDIATE,
-      }
+    {
+      sequelize,
+      modelName: "Address",
     }
-  }, {
-    sequelize,
-    modelName: 'Address',
-  });
+  );
   return Address;
 };

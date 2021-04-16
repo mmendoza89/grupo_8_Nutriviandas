@@ -8,7 +8,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Order_detail.hasMany(models.Order, {
+        foreignKey: 'order_id',
+        as: 'order'
+      });
+      Order_detail.hasMany(models.Product, {
+        foreignKey: 'id',
+        as: 'product'
+      });
     }
   }
   Order_detail.init(
@@ -17,24 +24,22 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
       },
       order_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: Order,
-          key: "id",
-          deferrable: Deferrable.INITIALLY_IMMEDIATE,
+          model: "Order",
+          key: "id"
         },
       },
       product_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: product,
-          key: "id",
-          deferrable: Deferrable.INITIALLY_IMMEDIATE,
+          model: "product",
+          key: "id"
         },
       },
     },

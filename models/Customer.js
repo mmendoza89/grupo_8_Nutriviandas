@@ -8,9 +8,18 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-
-
+      Customer.hasMany(models.Customer_address, {
+        foreignKey: 'customer_id',
+        as: 'customer_address'
+      });
+      Customer.belongsTo(models.Order, {
+        foreignKey: 'customer_id',
+        as: 'customer'
+      });
+      Customer.hasOne(models.User_role, {
+        foreignKey: 'customer_id',
+        as: 'user_role'
+      })
     }
   }
   Customer.init(
@@ -19,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: DataTypes.INTEGER
       },
       first_name: {
         type: DataTypes.STRING,
@@ -53,13 +62,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         defaultValue: 1,
         references: {
-          model: User_role,
+          model: "User_role",
           key: "id",
         }
       }
     },
     {
-      sequelize,
+    sequelize,
       modelName: "Customer",
     }
   );

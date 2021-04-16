@@ -10,7 +10,10 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Menu.belongsTo(models.Menu_product, {
+        foreignKey: 'menu_id',
+        as: 'menu'
+      });
     }
   };
   Menu.init({
@@ -18,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
     },
     name: {
       type: DataTypes.STRING,

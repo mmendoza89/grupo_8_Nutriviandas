@@ -10,7 +10,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      City.hasOne(models.Province, {
+        foreignKey: "province_id",
+        as: "province"
+      });
+      City.belongsTo(models.Customer_address, {
+        foreignKey: "city_id",
+        as:"city"
+      });
     }
   };
   City.init({
@@ -18,19 +25,18 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     name: {
       allowNull: false,
-      type: Sequelize.STRING
+      type: DataTypes.STRING
     },
     province_id: {
       allowNull: false,
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       references: {
-        model: Province,
-        key: "id",
-        deferrable: Deferrable.INITIALLY_IMMEDIATE,
+        model: "Province",
+        key: "id"
       }
     }
   }, {

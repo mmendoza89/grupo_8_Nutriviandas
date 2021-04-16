@@ -1,5 +1,6 @@
 "use strict";
 const { Model } = require("sequelize");
+const Customer = require("./Customer");
 module.exports = (sequelize, DataTypes) => {
   class Customer_address extends Model {
     /**
@@ -8,7 +9,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Customer_address.hasMany(models.Customer,{
+        foreignKey: 'customer_id',
+        as: 'customer'
+      });
+
+      Customer_address.hasMany(models.Address, {
+        foreignKey: 'address_id',
+        as: 'address'
+      })
     }
   }
   Customer_address.init(
@@ -17,24 +26,22 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
       },
       customer_id: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         references: {
-          model: Customer,
-          key: "id",
-          deferrable: Deferrable.INITIALLY_IMMEDIATE,
+          model: "Customer",
+          key: "id"
         },
       },
       address_id: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         references: {
-          model: Address,
-          key: "id",
-          deferrable: Deferrable.INITIALLY_IMMEDIATE,
+          model: "Address",
+          key: "id"
         },
       },
     },

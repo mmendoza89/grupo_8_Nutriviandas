@@ -40,9 +40,9 @@
             />
           </div>
           <div id="productAndDescriptionText">
-            <h2><%= product.product_name %>  <br>(id: <%= product.id %>) </h2>
+            <h2><%= product.name %>  <br>(id: <%= product.id %>) </h2>
             <p>
-              <%= product.product_description %>
+              <%= product.description %>
             </p>
             <br>
             <br>
@@ -56,7 +56,7 @@
           </div>
           <div class="productExtraLeftPriceDelivery">
             <h2>Precio</h2>
-            <div class="precioProducto"><%= product.product_price %></div>
+            <div class="precioProducto">$ <%= product.price %></div>
             <div class="productExtraOptions">
               <!-- OPCIONES DE ENTREGA OBLIGATORIAS DE ELEGIR CON UN PUNTO DE TILDES -->
               <form id="form-deliveryOptions">
