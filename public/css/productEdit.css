@@ -5,8 +5,12 @@ html {
 .body-ProductEdit {
   font-family: var(--font-text);
   padding-top: calc(var(--header-height) + 40px);
+}
+
+main{
   width: 70%;
   margin: auto;
+  margin-bottom: 80px;
 }
 
 .createP-section {

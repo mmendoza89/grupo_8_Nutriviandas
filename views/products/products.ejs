@@ -56,8 +56,13 @@
         </section>
 
         <section class="listOfProducts">
-          <header>
+          <header class="listOfProducts_header">
             <h2>Nuestros platos</h2>
+            <% if (isAdmin) { %>
+              <form action="/products/create" method="get">
+                <button>+ Agregar nuevo producto</button>
+              </form>
+            <% } %>
           </header>
           <% for(let producto of productos) { %> 
             <%- include('../partials/product', {product: producto}) %> 

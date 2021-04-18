@@ -3,8 +3,10 @@ const router = express.Router();
 const path = require('path');
 
 
-//Controller
+//Controller JSON
 const userController = require(path.join(__dirname, '../controllers/userController'));
+//Controller DB
+const userControllerDB = require(path.join(__dirname, '../controllers/userControllerDB'));
 
 //Middleware
 const uploadFile = require('../middleware/multerMiddleware')
@@ -14,7 +16,7 @@ const guestMiddleware = require('../middleware/guestMiddleware');
 const isOwnerMiddleware = require('../middleware/isOwnerMiddleware');
 
 //Get all users
-router.get('/', isOwnerMiddleware, userController.index);
+router.get('/', isOwnerMiddleware, userControllerDB.index);
 
 //Register form
 router.get('/register', guestMiddleware, userController.register);

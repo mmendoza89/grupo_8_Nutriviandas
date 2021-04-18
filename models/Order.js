@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         as: 'payment'
       });
       Order.hasOne(models.Customer, {
-        foreignKey: 'customer_id',
+        foreignKey: 'id',
         as: 'customer'
       })
     }

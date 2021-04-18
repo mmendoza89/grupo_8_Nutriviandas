@@ -9,15 +9,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Customer.hasMany(models.Customer_address, {
-        foreignKey: 'customer_id',
+        foreignKey: 'customer_id1',
         as: 'customer_address'
       });
       Customer.belongsTo(models.Order, {
-        foreignKey: 'customer_id',
+        foreignKey: 'id',
         as: 'customer'
       });
       Customer.hasOne(models.User_role, {
-        foreignKey: 'customer_id',
+        foreignKey: 'customer_id3',
         as: 'user_role'
       })
     }
@@ -65,6 +65,14 @@ module.exports = (sequelize, DataTypes) => {
           model: "User_role",
           key: "id",
         }
+      },
+      updatedAt:{
+        type: DataTypes.DATE,
+        defaultValue: new Date()
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        defaultValue: new Date()
       }
     },
     {
