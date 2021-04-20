@@ -1,5 +1,5 @@
-const bcryptjs = require('bcryptjs');
-const {validationResult} = require('express-validator');
+const bcryptjs = require("bcryptjs");
+const { validationResult } = require("express-validator");
 const db = require("../models");
 const Customer = db.Customer;
 const UserRole = db.User_role;
@@ -8,120 +8,135 @@ const UserRole = db.User_role;
 // const UserRole = require('../modelsJSON/Role');
 
 const userController = {
-    index: async (req, res) => {
-        //is Owner
-        const allUsers = await Customer.findAll();
-        const usersWhithoutPasswords = allUsers.map(({ password, ...rest }) => rest);
-        res.send(usersWhithoutPasswords);
-    },
-    register: (req, res) => {
-        return res.render('users/register', {css:'register.css'});
-    },
-    processRegister: (req, res) => {
-        let resultValidation = validationResult(req);
-        
-        if (!resultValidation.isEmpty()) {
-			return res.render('users/register', {
-				errors: resultValidation.mapped(),
-                oldData: req.body,
-                css:'register.css'
-		    });
+  index: async (req, res) => {
+    //is Owner
+    try {
+      const allUsers = await Customer.findAll({ raw: true });
+      const usersWhithoutPasswords = allUsers.map(
+        ({ password, ...rest }) => rest
+      );
+      res.send(usersWhithoutPasswords);
+    } catch (error) {
+      console.error("Couldn't get Users from DB. " + error);
+    }
+  },
+  register: (req, res) => {
+    console.log("register");
+    return res.render("users/register", { css: "register.css" });
+  },
+  processRegister: async (req, res) => {
+    console.log("process register");
+    let resultValidation = validationResult(req);
+
+    if (!resultValidation.isEmpty()) {
+        console.log(resultValidation);
+      return res.render("users/register", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+        css: "register.css",
+      });
+    }
+
+    let userInDB = await Customer.findOne({
+        where:{
+            "email": req.body.email
+        }
+    });
+
+    if (userInDB) {
+      return res.render("users/register", {
+        errors: {
+          email: {
+            msg: "Este correo electronico ya se encuentra registrado",
+          },
+        },
+        oldData: req.body,
+        css: "register.css",
+      });
+    }
+
+    let fileName = req.file ? req.file.filename : '/images/default-profile.jpg';
+
+    let userToCreate = {
+      ...req.body,
+      password: bcryptjs.hashSync(req.body.password, 10),
+      avatar: fileName,
+      role: 'guest' //Default user role
+    };
+
+    delete userToCreate.confirmPass;
+
+    let userCreated = Customer.create(userToCreate);
+
+    return res.render("users/login", { css: "login.css" });
+  },
+  login: (req, res) => {
+    return res.render("users/login", { css: "login.css" });
+  },
+  loginProcess: (req, res) => {
+    let resultValidation = validationResult(req);
+    let userToLogin = Customer.findByField("email", req.body.email);
+
+    if (userToLogin) {
+      let comparePasswords = bcryptjs.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
+      if (comparePasswords) {
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;
+
+        //If is "owner" write it in Session
+        if (userToLogin.role) {
+          if (userToLogin.role == UserRole.getSuperAdminName()) {
+            req.session.isOwner = true;
+          } else {
+            req.session.isOwner = false;
+          }
+
+          if (userToLogin.role == UserRole.getAdminName()) {
+            req.session.isAdmin = true;
+          } else {
+            req.session.isAdmin = false;
+          }
         }
 
-        let userInDB = Customer.findByField('email', req.body.email);
+        return res.redirect("/users/profile");
+      }
+      return res.render("users/login", {
+        errors: {
+          email: {
+            msg: "Credenciales inválidas",
+          },
+        },
+        oldData: req.body,
+        css: "login.css",
+      });
+    }
 
-        if(userInDB){
-            return res.render('users/register', {
-                errors: {
-                    email: {
-                        msg: 'Este correco electronico ya se encuentra registrado'
-                    }
-                },
-                oldData: req.body,
-                css:'register.css'
-            })
-            
-        }
+    return res.render("users/login", {
+      errors: {
+        email: {
+          msg: "Email no registrado.",
+        },
+      },
+      oldData: req.body,
+      css: "login.css",
+    });
+  },
+  profile: (req, res) => {
+    return res.render("users/profile", {
+      user: req.session.userLogged,
+      css: "profile.css",
+      isOwner: req.session.isOwner,
+    });
+  },
 
-        let userToCreate = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            avatar: req.file.filename,
-            role: UserRole.getDefaultRoleName()
-        }
-
-        delete userToCreate.confirmPass;
-
-        let userCreated = Customer.create(userToCreate);
-
-        return res.render('users/login', {css:'login.css'});
-    },
-    login: (req, res) => {
-        return res.render('users/login', {css:'login.css'});
-    },
-    loginProcess: (req, res) => {
-        let resultValidation = validationResult(req);
-        let userToLogin = Customer.findByField('email', req.body.email);
-
-        if(userToLogin) {
-            let comparePasswords = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if(comparePasswords) {
-                delete userToLogin.password;
-				req.session.userLogged = userToLogin;
-
-                //If is "owner" write it in Session
-                if(userToLogin.role){
-                    if(userToLogin.role == UserRole.getSuperAdminName()){
-                        req.session.isOwner = true;
-                    } else {
-                        req.session.isOwner = false;
-                    }
-
-                    if(userToLogin.role == UserRole.getAdminName()){
-                        req.session.isAdmin = true;
-                    } else {
-                        req.session.isAdmin = false;
-                    }
-                } 
-
-
-
-                return res.redirect('/users/profile');
-            }
-            return res.render('users/login', {
-                errors: {
-                    email: {
-                        msg: 'Credenciales inválidas'
-                    }
-                },
-                oldData: req.body,
-                css:'login.css'
-            });
-        }
-        
-        return res.render('users/login', {
-            errors: {
-                email: {
-                    msg: 'Email no registrado.'
-                }
-            },
-            oldData: req.body,
-            css:'login.css'
-        });
-    },
-    profile: (req, res) => {
-		return res.render('users/profile', {
-			user: req.session.userLogged,
-            css:'profile.css',
-            isOwner: req.session.isOwner
-		});
-	},
-
-	logout: (req, res) => {
-		res.clearCookie('userEmail');
-		req.session.destroy();
-		return res.redirect('/');
-	}
-}
+  logout: (req, res) => {
+    res.clearCookie("userEmail");
+    req.session.destroy();
+    return res.redirect("/");
+  },
+};
 
 module.exports = userController;

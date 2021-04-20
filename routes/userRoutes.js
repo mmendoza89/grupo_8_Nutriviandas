@@ -19,10 +19,10 @@ const isOwnerMiddleware = require('../middleware/isOwnerMiddleware');
 router.get('/', isOwnerMiddleware, userControllerDB.index);
 
 //Register form
-router.get('/register', guestMiddleware, userController.register);
+router.get('/register', guestMiddleware, userControllerDB.register);
 
 // Procesar el registro
-router.post('/register', uploadFile.single('avatar'), validations, userController.processRegister);
+router.post('/register', uploadFile.single('avatar'), validations, userControllerDB.processRegister);
 
 // Formulario de login
 router.get('/login', guestMiddleware, userController.login);
