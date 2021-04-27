@@ -139,21 +139,18 @@ section {
 }
 
 .btn-menu {
-    display: flex;
+    display: inline-block;
     width: 80%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
     padding: .6rem 1.4rem;
-    background-color: var(--color-brown);
+    background-color: var(--color-orange);
     color: white;
     border: none;
-    border-radius: 7px;
+    border-radius: 30px;
     transition: all 0.3s;
 }
 
 .btn-menu:hover{
-    background-color: #9c6444;
+    background-color: var(--color-dark-orange);
     color: white;
 }
 
