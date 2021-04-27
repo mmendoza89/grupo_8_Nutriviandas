@@ -43,6 +43,7 @@ const productsRouter = require(path.join(__dirname, './routes/products'));
 const indexRouter = require(path.join(__dirname, './routes/indexRoutes'));
 const userRouter = require(path.join(__dirname, './routes/userRoutes'));
 const userRoleRouter = require(path.join(__dirname, '/routes/userRoleRoutes'));
+const menuRouter = require(path.join(__dirname, './routes/menus'));
 
 app.use('/', indexRouter);
 app.use('/users', userRouter);
@@ -53,6 +54,7 @@ app.use('/productDetail', productDetailRouter);
 app.use('/productCreate', productCreateRouter);
 app.use('/productEdit', productEditRouter);
 app.use('/products', productsRouter);
+app.use('/menus', menuRouter);
 
 
 app.listen(3000, (req, res)=>{

@@ -3,20 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"
-    />
-
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+    
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/headerFooter.css" />
 
@@ -37,34 +27,47 @@
   <body class="body-products">
     <%- include('../partials/header.ejs') %>
 
-    <main>
-      <div class="container">
-        <h1 class="sr-only">Productos</h1>
-        <section class="menuSemanal">
-          <header>
-            <h2>Menu Semanal</h2>
-            <div class="buttonAddToCartInProduct">
-              <%- include('../partials/buttonAddToCart') %>
-            </div>
-          </header>
+    <div class="main-products">
+      <h1 class="sr-only">Productos</h1>
 
-          <div class="itemsMenuSemanal">
-            <% for(let i = 1; i < 6; i++) { %> <%-
-            include('../partials/productInMenuSemanal', {productId: "productId"
-            + i});%> <% } %>
-          </div>
-        </section>
-
-        <section class="listOfProducts">
-          <header>
-            <h2>Nuestros platos</h2>
-          </header>
-          <% for(let producto of productos) { %> 
-            <%- include('../partials/product', {product: producto}) %> 
-          <% } %> 
-        </section>
+      <div class="filters-bar">
+        <div class="categories">
+            <a href="#" class="category" data-class="withMeat">Con Carnes</a>
+            <a href="#" class="category" data-class="vegetarian">Vegetariano</a>
+            <a href="#" class="category" data-class="pies">Tartas</a>
+            <a href="#" class="category" data-class="pizzas">Pizzas</a>
+            <a href="#" class="category" data-class="burgers">Hamburguesas</a>
+            <a href="#" class="category" data-class="custom">Personalizado</a>
+        </div>
       </div>
-    </main>
+      <div class="on-the-menu">
+        <div class="on-the-box">
+          <div class="title">
+            <h1>Nuestros Menús</h1>
+          </div>
+          <div class="sub-title">
+            <h2>Directo de nuestra cocina a tu mesa.</h2>
+          </div>
+        </div>
+      </div>
+
+      <section class="menuSemanal">
+        <div class="itemsMenuSemanal">
+          <% for(let i = 1; i < 6; i++) { %> 
+          <%- include('../partials/productInMenuSemanal', {productId: "productId" + i});%> <% } %>
+        </div>
+      </section>
+
+      <section class="listOfProducts">
+        <% for(let producto of productos) { %> 
+          <%- include('../partials/product', {product: producto}) %> 
+        <% } %> 
+      </section>
+
+
+
+    </div>
+
 
     <%- include('../partials/footer.ejs') %>
   </body>
