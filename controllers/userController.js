@@ -8,8 +8,8 @@ const userController = {
     index: (req, res) => {
         //is Owner
         const allUsers = User.findAll();
-        const usersWhithoutPasswords = allUsers.map(({ password, ...rest }) => rest);
-        res.send(usersWhithoutPasswords);
+        const usersWithoutPasswords = allUsers.map(({ password, ...rest }) => rest);
+        res.send(usersWithoutPasswords);
     },
     register: (req, res) => {
         return res.render('users/register', {css:'register.css'});

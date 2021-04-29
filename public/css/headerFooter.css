@@ -26,11 +26,6 @@ html{
     scroll-behavior: smooth
 }
 
-.container {
-    max-width: var(--site-width);
-    margin: auto;
-}
-
 /*-----HEADER-----*/
 
 .nav {
@@ -48,11 +43,15 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
+    width: 100%;
 }
 
 .logo-link {
     display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-left: 26px;
 }
 
 .logo {
@@ -79,6 +78,14 @@ html{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .menu-wrap {
+        margin: 0 5rem;
+    }
+
+    .logo-link {
+        width: auto;
     }
     
     .menu-item {
