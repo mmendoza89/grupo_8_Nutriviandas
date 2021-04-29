@@ -11,7 +11,7 @@ module.exports = {
           "unit": "",
           "post_code": 3246,
           "city_id": 1,
-                    createdAt: new Date(),
+          createdAt: new Date(),
           updatedAt: new Date()
         },
         {

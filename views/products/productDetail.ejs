@@ -49,8 +49,12 @@
             <br>
             <% if (isAdmin) { %>
               <form class="createP-form" action="/products/<%= product.id %>/edit" method="GET" style="text-align:center;">
-                <span>Admin only: </span>
+                <span>Admin/Owner only: </span>
                 <button>Edit this Product</button>
+              </form>
+              <form class="createP-form" action="/products/<%= product.id %>/delete?_method=DELETE" method="POST" style="text-align:center;">
+                <span>Admin/Owner only: </span>
+                <button style="background-color: var(--color-red);">Delete this Product</button>
               </form>
             <% } %>
           </div>

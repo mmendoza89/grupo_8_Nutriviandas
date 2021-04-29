@@ -73,9 +73,16 @@ const userController = {
   login: (req, res) => {
     return res.render("users/login", { css: "login.css" });
   },
-  loginProcess: (req, res) => {
+  loginProcess: async (req, res) => {
     let resultValidation = validationResult(req);
-    let userToLogin = Customer.findByField("email", req.body.email);
+
+    let userToLogin = await Customer.findOne(
+      {
+        where: {
+          email: req.body.email
+        }
+      }
+    );
 
     if (userToLogin) {
       let comparePasswords = bcryptjs.compareSync(
@@ -87,14 +94,14 @@ const userController = {
         req.session.userLogged = userToLogin;
 
         //If is "owner" write it in Session
-        if (userToLogin.role) {
-          if (userToLogin.role == UserRole.getSuperAdminName()) {
+        if (userToLogin.user_role_id) {
+          if (userToLogin.user_role_id == 2) {//TODO hardcoded "owner" = 2... can't reach linked table User_role. Should be Customer.user_role == "owner"
             req.session.isOwner = true;
           } else {
             req.session.isOwner = false;
           }
 
-          if (userToLogin.role == UserRole.getAdminName()) {
+          if (userToLogin.user_role_id == 3) {//TODO hardcoded "admin" = 3... can't reach linked table User_role. Should be Customer.user_role == "admin"
             req.session.isAdmin = true;
           } else {
             req.session.isAdmin = false;
@@ -129,6 +136,7 @@ const userController = {
       user: req.session.userLogged,
       css: "profile.css",
       isOwner: req.session.isOwner,
+      isAdmin: req.session.isAdmin
     });
   },
 

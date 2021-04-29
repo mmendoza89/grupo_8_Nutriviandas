@@ -1,7 +1,6 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class User_role extends Model {
     /**
@@ -10,9 +9,9 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      User_role.belongsTo(models.Customer, {
+      User_role.hasMany(models.Customer, {
         foreignKey: 'user_role_id',
-        as: 'role'
+        as: 'users_by_role'
       })
     }
   };

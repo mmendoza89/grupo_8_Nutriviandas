@@ -9,15 +9,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Customer.hasMany(models.Customer_address, {
-        foreignKey: 'customer_id1',
+        foreignKey: 'customer_id',
         as: 'customer_address'
       });
       Customer.belongsTo(models.Order, {
         foreignKey: 'id',
         as: 'customer'
       });
-      Customer.hasOne(models.User_role, {
-        foreignKey: 'customer_id3',
+      Customer.belongsTo(models.User_role, {
+        foreignKey: 'user_role_id',
         as: 'user_role'
       })
     }

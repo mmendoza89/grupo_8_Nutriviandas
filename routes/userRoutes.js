@@ -25,15 +25,15 @@ router.get('/register', guestMiddleware, userControllerDB.register);
 router.post('/register', uploadFile.single('avatar'), validations, userControllerDB.processRegister);
 
 // Formulario de login
-router.get('/login', guestMiddleware, userController.login);
+router.get('/login', guestMiddleware, userControllerDB.login);
 
 // Procesar login
-router.post('/login', userController.loginProcess);
+router.post('/login', userControllerDB.loginProcess);
 
 // Perfil de Usuario
-router.get('/profile/', authMiddleware, userController.profile);
+router.get('/profile/', authMiddleware, userControllerDB.profile);
 
 // Logout
-router.get('/logout/', userController.logout);
+router.get('/logout/', userControllerDB.logout);
 
 module.exports = router;
