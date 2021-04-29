@@ -12,9 +12,9 @@ const validations = [
     //       });
     // })
     ,
-    body('firstName').trim().notEmpty().withMessage('Debes escribir un nombre'),
-    body('lastName').trim().notEmpty().withMessage('Debes escribir un apellido'),
-    body('password').trim().notEmpty().withMessage('Debes escribir una contraseña').isLength({ min: 5 })
+    body('firstName').trim().notEmpty().withMessage('Debes escribir un nombre').isLength({ min: 2 }).withMessage('Debe contener al menos 2 carácteres'),
+    body('lastName').trim().notEmpty().withMessage('Debes escribir un apellido').isLength({ min: 2 }).withMessage('Debe contener al menos 2 carácteres'),
+    body('password').trim().notEmpty().withMessage('Debes escribir una contraseña').isLength({ min: 8 })
     .withMessage('Debe contener al menos 5 carácteres').matches(/\d/).withMessage('Debe contener un numero'),
     body('confirmPass').notEmpty().withMessage('Debes confirmar la contraseña').custom((value, {req}) => {
         if(value !== req.body.password) {
