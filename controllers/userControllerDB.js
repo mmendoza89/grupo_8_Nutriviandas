@@ -55,7 +55,7 @@ const userController = {
       });
     }
 
-    let fileName = req.file ? req.file.filename : '/images/default-profile.jpg';
+    let fileName = req.file ? req.file.filename : 'default-profile.jpg';
 
     let userToCreate = {
       ...req.body,
