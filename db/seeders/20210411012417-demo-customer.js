@@ -100,6 +100,42 @@ module.exports = {
           "user_role_id": 1,
           "createdAt": new Date(),
           "updatedAt": new Date()
+        },
+        {
+          "first_name": "Owner",
+          "last_name": "Brown",
+          "email": "owner@owner.com",
+          "phone_number": "+54 (862) 425-3111",
+          "notes": "Velit anim commodo laborum tempor mollit eu laboris.",
+          "password": 12345,
+          "avatar": "default-profile.jpg",
+          "user_role_id": 2,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
+        },
+        {
+          "first_name": "Admin",
+          "last_name": "Brown",
+          "email": "admin@admin.com",
+          "phone_number": "+54 (862) 425-3111",
+          "notes": "Velit anim commodo laborum tempor mollit eu laboris.",
+          "password": 12345,
+          "avatar": "default-profile.jpg",
+          "user_role_id": 3,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
+        },
+        {
+          "first_name": "Guest",
+          "last_name": "Brown",
+          "email": "guest@guest.com",
+          "phone_number": "+54 (862) 425-3111",
+          "notes": "Velit anim commodo laborum tempor mollit eu laboris.",
+          "password": 12345,
+          "avatar": "default-profile.jpg",
+          "user_role_id": 1,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         }
       ],
       {}
