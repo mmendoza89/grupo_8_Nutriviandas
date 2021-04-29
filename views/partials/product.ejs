@@ -1,4 +1,4 @@
-<div class="partial_product product" id="<%= product.product_name %>">
+<div class="partial_product product" id="<%= product.name %>">
   <a href="/products/<%= product.id%>">
     <img
       class="partial_product_left"
@@ -8,8 +8,8 @@
   </a>
   <div class="partial_product_right">
     <div>
-      <h2><%= product.product_name %></h2>
-      <p><%= product.product_description %></p>
+      <h2><%= product.name %></h2>
+      <p><%= product.description %></p>
     </div>
     <div class="numbers_and_buttons">
       <div>
@@ -24,7 +24,7 @@
       <div class="product_price">
         <!-- $ -->
         <span id="product_<%= product.id %>_price"
-          ><%= product.product_price %></span
+          >$ <%= product.price %></span
         >
       </div>
       <div class="buttonAddToCartInProduct">
