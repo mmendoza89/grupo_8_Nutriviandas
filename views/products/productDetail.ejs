@@ -40,23 +40,27 @@
             />
           </div>
           <div id="productAndDescriptionText">
-            <h2><%= product.product_name %>  <br>(id: <%= product.id %>) </h2>
+            <h2><%= product.name %>  <br>(id: <%= product.id %>) </h2>
             <p>
-              <%= product.product_description %>
+              <%= product.description %>
             </p>
             <br>
             <br>
             <br>
             <% if (isAdmin) { %>
               <form class="createP-form" action="/products/<%= product.id %>/edit" method="GET" style="text-align:center;">
-                <span>Admin only: </span>
+                <span>Admin/Owner only: </span>
                 <button>Edit this Product</button>
+              </form>
+              <form class="createP-form" action="/products/<%= product.id %>/delete?_method=DELETE" method="POST" style="text-align:center;">
+                <span>Admin/Owner only: </span>
+                <button style="background-color: var(--color-red);">Delete this Product</button>
               </form>
             <% } %>
           </div>
           <div class="productExtraLeftPriceDelivery">
             <h2>Precio</h2>
-            <div class="precioProducto"><%= product.product_price %></div>
+            <div class="precioProducto">$ <%= product.price %></div>
             <div class="productExtraOptions">
               <!-- OPCIONES DE ENTREGA OBLIGATORIAS DE ELEGIR CON UN PUNTO DE TILDES -->
               <form id="form-deliveryOptions">

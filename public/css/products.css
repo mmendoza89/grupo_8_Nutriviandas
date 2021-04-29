@@ -157,6 +157,21 @@ a {
   margin-bottom: 40px;
 }
 
+header.listOfProducts_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header.listOfProducts_header button{
+  background-color: var(--color-orange);
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+}
+
 /*MEDIA CONDITIONS*/
 
 /*PARA TABLETS*/

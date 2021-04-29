@@ -1,58 +1,38 @@
-const fs = require('fs');
-
-const Menu = {
-    fileName: './data/menus.json',
-
-    getData: function () {
-        return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
-    },
-
-    generateID: function() {
-        let allMenus = this.findAll();
-        let lastMenu = allMenus.pop();
-        if(lastMenu){
-            return lastMenu.id + 1;
-        } else {
-            return 1;
-        }
-    },
-
-    findAll: function() {
-        return this.getData();
-    },
-
-    findByPk: function (menuId) {
-        let menuFile = fs.readFileSync(filePath);
-        let menus = JSON.parse(menuFile);
-        let menu = menus.find((item) => {
-          return item.id == menuId;
-        });
-        return menu;
-      },
-
-    findByField: function(field, text){
-        let allMenus = this.findAll();
-        let menuFound = allMenus.find(aMenu => aMenu[field] == text);
-        return menuFound;
-    },
-
-    create: function(menuData) {
-        let allMenus = this.findAll();
-        let newMenu = {
-            id: this.generateID(),
-            ...menuData
-        }
-        allMenus.push(newMenu);
-        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ' '));
-        return newMenu;
-    },
-
-    delete: function(id) {
-        let allMenus = this.findAll();
-        let finalMenus = allMenus.filter(aMenu => aMenu.id !== id);
-        fs.writeFileSync(this.fileName, JSON.stringify(finalMenus, null, ' '));
-        return true;
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Menu extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      Menu.belongsTo(models.Menu_product, {
+        foreignKey: 'menu_id',
+        as: 'menu'
+      });
     }
-}
-
-module.exports = Menu;
+  };
+  Menu.init({
+    id: {
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
+      type: DataTypes.STRING
+    }
+  }, {
+    sequelize,
+    modelName: 'Menu',
+  });
+  return Menu;
+};

@@ -1,4 +1,4 @@
-const Menu = require('../models/Menu');
+const Menu = require('../modelsJSON/Menu');
 
 const menusController = {
     index: (req, res) => {

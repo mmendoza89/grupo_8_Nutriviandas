@@ -1,8 +1,8 @@
 const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
 
-const User = require('../models/User');
-const UserRole = require('../models/Role');
+const User = require('../modelsJSON/User');
+const UserRole = require('../modelsJSON/Role');
 
 const userController = {
     index: (req, res) => {

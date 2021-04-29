@@ -29,7 +29,7 @@
                             <input type="text" id="r-nombre" class="r-nombre" name="firstName" value="<%= locals.oldData ? oldData.firstName : null %>">
                             <% if (locals.errors && errors.firstName) { %>
                                 <div class="text-danger">
-                                    <%= errors.firstName.msg %> 
+                                    <%= errors.first_name.msg %> 
                                 </div>
                             <% } %>
                             <div class="textName"></div>
@@ -40,7 +40,17 @@
                             <input type="text" id="r-apellido" class="r-apellido" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %>">
                             <% if (locals.errors && errors.lastName) { %>
                                 <div class="text-danger">
-                                    <%= errors.lastName.msg %> 
+                                    <%= errors.last_name.msg %> 
+                                </div>
+                            <% } %>
+                        </div>
+
+                        <div class="form-element">
+                            <label for="phone_number" class="form-label">Teléfono:</label>
+                            <input type="text" id="phone_number" name="phone_number" value="<%= locals.oldData ? oldData.phone_number : null %>">
+                            <% if (locals.errors && errors.phone_number) { %>
+                                <div class="text-danger">
+                                    <%= errors.phone_number.msg %> 
                                 </div>
                             <% } %>
                             <div class="textLastName"></div>

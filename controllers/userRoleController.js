@@ -1,5 +1,5 @@
-const User = require('../models/User');
-const UserRole = require('../models/Role');
+const User = require('../modelsJSON/User');
+const UserRole = require('../modelsJSON/Role');
 
 const userRoleController = {
     index: (req, res) => {

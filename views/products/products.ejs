@@ -30,6 +30,12 @@
     <div class="main-products">
       <h1 class="sr-only">Productos</h1>
 
+      <% if (isAdmin) { %>
+        <form action="/products/create" method="get">
+          <button>+ Agregar nuevo producto</button>
+        </form>
+      <% } %>
+
       <div class="filters-bar">
         <div class="categories">
             <a href="#" class="category" data-class="withMeat">Con Carnes</a>
