@@ -95,13 +95,19 @@ const userController = {
 
         //If is "owner" write it in Session
         if (userToLogin.user_role_id) {
-          if (userToLogin.user_role_id == 2) {//TODO hardcoded "owner" = 2... can't reach linked table User_role. Should be Customer.user_role == "owner"
+          console.log(userToLogin);
+          console.log("-.-.-.-.-.-.-.-.-.-.");
+          console.log(userToLogin.user_role);
+          console.log(userToLogin.users_by_role);
+          console.log(userToLogin.customer_address);
+          console.log(userToLogin.customer);
+          if (userToLogin.user_role_id == 2) {//TODO hardcoded "owner" = 2... can't reach linked table User_role. Should be userToLogin.user_role == "owner"
             req.session.isOwner = true;
           } else {
             req.session.isOwner = false;
           }
 
-          if (userToLogin.user_role_id == 3) {//TODO hardcoded "admin" = 3... can't reach linked table User_role. Should be Customer.user_role == "admin"
+          if (userToLogin.user_role_id == 3) {//TODO hardcoded "admin" = 3... can't reach linked table User_role. Should be userToLogin.user_role == "admin"
             req.session.isAdmin = true;
           } else {
             req.session.isAdmin = false;
