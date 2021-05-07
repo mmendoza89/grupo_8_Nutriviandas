@@ -63,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: 1,
         references: {
           model: "User_role",
-          key: "id",
+          key: "id"
         }
       },
       updatedAt:{
