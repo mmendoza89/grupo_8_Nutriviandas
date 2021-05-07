@@ -9,16 +9,8 @@ const validations = [
     .withMessage("Debes escribir un email")
     .isEmail()
     .toLowerCase(),
-  // .custom(value => {
-  //     return User.findByField(value).then(user => {
-  //         if (user) {
-  //           return Promise.reject('E-mail se encuentra registrado');
-  //         }
-  //       });
-  // })
-  body("first_name").trim().notEmpty().withMessage("Debes escribir un nombre"),
-  body("last_name").trim().notEmpty().withMessage("Debes escribir un apellido"),
-  body("phone_number").trim().notEmpty().withMessage("Debes escribir un número de teléfono"),
+  body("firstName").trim().notEmpty().withMessage("Debes escribir un nombre"),
+  body("lastName").trim().notEmpty().withMessage("Debes escribir un apellido"),
   body("password")
     .trim()
     .notEmpty()

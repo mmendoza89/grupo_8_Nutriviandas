@@ -1,10 +1,18 @@
 window.addEventListener("load", function() {
 
     // ******** REGISTER VALIDATIONS ******** //
-    let button = document.querySelector('button.registrar-b');
+    let button = document.querySelector('form.register-b');
+    let form = document.querySelector('form.register-form');
 
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
+    form.addEventListener("focus", function(e) {
+        e.target.style.background = "rgba(139, 166, 81, 0.2)";
+    }, true)
+
+    form.addEventListener("blur", function(e) {
+        e.target.style.background = "";
+    }, true)
+
+    button.addEventListener("click", function(e) {
 
         let responseEmail = document.querySelector('div.textEmail');
         let emailField = document.querySelector('input.r-email');
@@ -17,9 +25,11 @@ window.addEventListener("load", function() {
 
         if(email == '') {
             responseEmail.innerHTML = "El campo no puede estar vacío";
+            e.preventDefault();
         } 
         else if (!validateEmail(email)) {
             responseEmail.innerHTML = "Lo siento, formato incorrecto 😩";
+            e.preventDefault();
         } else {
             responseEmail.innerHTML = "";
         }
@@ -28,6 +38,7 @@ window.addEventListener("load", function() {
         let responseName = document.querySelector('div.textName');
         if (nameField.value.length < 2) {
             responseName.innerHTML = "El campo debe tener 2 o más caracteres";
+            e.preventDefault();
         } else {
             responseName.innerHTML = "";
         }
@@ -36,6 +47,7 @@ window.addEventListener("load", function() {
         let responseLastName = document.querySelector('div.textLastName');
         if (lastNameField.value.length < 2) {
             responseLastName.innerHTML = "El campo debe tener 2 o más caracteres";
+            e.preventDefault();
         } else {
             responseLastName.innerHTML = "";
         }
@@ -45,8 +57,10 @@ window.addEventListener("load", function() {
         let password = passwordField.value;
         if (password == '') {
             responsePass.innerHTML = "El campo no puede estar vacío";
+            e.preventDefault();
         } else if (password.length < 8) {
             responsePass.innerHTML = "Mínimo de 8 caracteres";
+            e.preventDefault();
         } else {
             responsePass.innerHTML = "";
         }
@@ -56,8 +70,10 @@ window.addEventListener("load", function() {
         let password2 = password2Field.value;
         if (password2 == '') {
             responsePass2.innerHTML = "El campo no puede estar vacío";
+            e.preventDefault();
         } else if (password != password2) {
             responsePass2.innerHTML = "Las contraseñas no coinciden";
+            e.preventDefault();
         } else {
             responsePass.innerHTML = "";
         }
@@ -68,6 +84,7 @@ window.addEventListener("load", function() {
         var re = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
         if (!avatarField == null && !re.exec(avatar)) {
             responseAvatar.innerHTML = "Extensiones validas: JPG, JPEG, PNG, GIF";
+            e.preventDefault();
         }
     });
 })
