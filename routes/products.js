@@ -6,10 +6,10 @@ const productsControllerDB = require(path.join(__dirname, '../controllers/produc
 
 const isAdminMiddleware = require('../middleware/isAdminMiddleware');
 
-router.get('/', productsControllerDB.index);
+router.get('/', isAdminMiddleware, productsControllerDB.index);
 router.get('/create', isAdminMiddleware, productsControllerDB.create);
 router.post('/create', isAdminMiddleware, productsControllerDB.upload);
-router.get('/:id', productsControllerDB.detail);
+router.get('/:id', isAdminMiddleware, productsControllerDB.detail);
 router.put('/:id', isAdminMiddleware, productsControllerDB.update);
 router.delete('/:id/delete', isAdminMiddleware, productsControllerDB.delete);
 router.get('/:id/edit', isAdminMiddleware, productsControllerDB.edit);
