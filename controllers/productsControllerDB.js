@@ -69,7 +69,7 @@ const productsController = {
             id: req.params.id
         }
     });
-    return res.redirect("/products");
+    return res.redirect('back');
   },
 };
 

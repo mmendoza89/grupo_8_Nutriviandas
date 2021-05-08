@@ -11,11 +11,17 @@ const userController = {
   index: async (req, res) => {
     //is Owner
     try {
-      const allUsers = await Customer.findAll({ raw: true });
+      let actualRoles = await UserRole.findAll();
+      const allUsers = await Customer.findAll(
+        { 
+          raw: true, 
+          include: "user_role" 
+        });
+
       const usersWhithoutPasswords = allUsers.map(
         ({ password, ...rest }) => rest
       );
-      res.send(usersWhithoutPasswords);
+      res.render("users/usersList",{users: usersWhithoutPasswords, roles: actualRoles});
     } catch (error) {
       console.error("Couldn't get Users from DB. " + error);
     }
@@ -60,7 +66,7 @@ const userController = {
     let userToCreate = {
       ...req.body,
       password: bcryptjs.hashSync(req.body.password, 10),
-      avatar: fileName,
+      avatar: fileName, 
       role: 'guest' //Default user role
     };
 
@@ -80,7 +86,8 @@ const userController = {
       {
         where: {
           email: req.body.email
-        }
+        },
+        include: "user_role"
       }
     );
 
@@ -95,13 +102,13 @@ const userController = {
 
         //If is "owner" write it in Session
         if (userToLogin.user_role_id) {
-          if (userToLogin.user_role_id == 2) {//TODO hardcoded "owner" = 2... can't reach linked table User_role. Should be Customer.user_role == "owner"
+          if (userToLogin.user_role.name == "owner") {//TODO hardcoded "owner" = 2... can't reach linked table User_role. Should be userToLogin.user_role == "owner"
             req.session.isOwner = true;
           } else {
             req.session.isOwner = false;
           }
 
-          if (userToLogin.user_role_id == 3) {//TODO hardcoded "admin" = 3... can't reach linked table User_role. Should be Customer.user_role == "admin"
+          if (userToLogin.user_role.name == "admin") {//TODO hardcoded "admin" = 3... can't reach linked table User_role. Should be userToLogin.user_role == "admin"
             req.session.isAdmin = true;
           } else {
             req.session.isAdmin = false;
@@ -144,6 +151,23 @@ const userController = {
     res.clearCookie("userEmail");
     req.session.destroy();
     return res.redirect("/");
+  },
+  update: async (req, res) => {
+    let userId = req.params.id;
+    let newRoleId = req.body.roleSelect;
+    console.log("-.-.-.-.-.-.-");
+    console.log(newRoleId);
+    try {
+      await Customer.update(
+        {"user_role_id": req.body.roleSelect},
+        {where:{"id": req.params.id}}
+      );  
+    } catch (error) {
+      console.error("Couldn't update role in user id: " + userId);
+    }
+    
+    return res.redirect("/users");
+    
   },
 };
 

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs',{css:"/partials/partial_userInList.css"}); %>
+  <body class="body-userList">
+    <!--TOP NAV-->
+    <%- include('../partials/header.ejs') %>
+    <div class="container">
+      <main class="userList">
+        <% users.forEach(user => { %>
+          <%- include('../partials/userInList.ejs',{user, roles}) %>
+          <% }) %>
+      </main>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head.ejs') %>
+    <script type="text/javascript" src="/js/loginVal.js"></script>
     <body>
         <!--TOP NAV-->
         <%- include('../partials/header.ejs') %>
@@ -16,15 +17,17 @@
                             <label for="email" class="form-label">Email:</label>
                             <input type="email" class="l-email" name="email" value="<%= locals.oldData ? oldData.email : '' %>">
                             <% if (locals.errors && errors.email) { %>
-                                <div class="text-danger">
+                                <div class="textDanger">
                                     <%= errors.email.msg %>
                                 </div>
                             <% } %>
+                            <div class="textEmail"></div>
                         </div>
                         
                         <div class="form-element">
                             <label for="password" class="form-label">Contraseña:</label>
                             <input type="password" class="l-contraseña" name="password">
+                            <div class="textPass"></div>
                         </div>
                         
                         <button type="submit" value="Ingresar" class="login-b">Ingresar</button>

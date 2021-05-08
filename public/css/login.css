@@ -42,7 +42,7 @@ a {
     text-align: left;
 }
 
-.text-danger {
+.textDanger, .textEmail, .textPass {
     color: #dc3545;
     text-align: left;
 }

@@ -1,0 +1,33 @@
+.body-userList{
+    padding-top: var(--header-height);
+}
+
+.userList{
+    margin: 20px 0;
+}
+
+.userInList {
+    display: grid;
+    grid-template-columns: 2fr 1fr 4fr 4fr 2fr 4fr;
+    border-bottom: 1px solid var(--bs-green);
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.userInList_avatar img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0 0 10px 0;
+}
+
+.userInList_roleSelect form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    grid-gap: 5px;
+    background-color: var(--color-red);
+    padding: 6px;
+    border-radius: 4px;
+}

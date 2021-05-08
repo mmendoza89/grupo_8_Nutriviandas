@@ -21,6 +21,9 @@ router.get('/', isOwnerMiddleware, userControllerDB.index);
 //Register form
 router.get('/register', guestMiddleware, userControllerDB.register);
 
+//Update role
+router.post('/update/:id', isOwnerMiddleware, userControllerDB.update);
+
 // Procesar el registro
 router.post('/register', uploadFile.single('avatar'), validations, userControllerDB.processRegister);
 

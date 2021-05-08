@@ -79,7 +79,9 @@ a {
     text-align: left;
 }
 
-.text-danger {
+.text-danger, .textEmail, .textName,
+.textLastName, .textPass, .textPass2,
+.textAvatar {
     color: #dc3545;
     text-align: left;
 }
@@ -91,12 +93,15 @@ a {
 }
 
 #upload-file {
-    margin-bottom: 1rem;
     width: 100%;
 }
 
 input{
     padding: .3rem;
+}
+
+.lastElement {
+    margin-bottom: 1.5rem;
 }
 
 .registrar-b{
