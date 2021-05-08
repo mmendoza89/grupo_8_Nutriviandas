@@ -11,11 +11,17 @@ const userController = {
   index: async (req, res) => {
     //is Owner
     try {
-      const allUsers = await Customer.findAll({ raw: true });
+      let actualRoles = await UserRole.findAll();
+      const allUsers = await Customer.findAll(
+        { 
+          raw: true, 
+          include: "user_role" 
+        });
+
       const usersWhithoutPasswords = allUsers.map(
         ({ password, ...rest }) => rest
       );
-      res.send(usersWhithoutPasswords);
+      res.render("users/usersList",{users: usersWhithoutPasswords, roles: actualRoles});
     } catch (error) {
       console.error("Couldn't get Users from DB. " + error);
     }
@@ -60,7 +66,7 @@ const userController = {
     let userToCreate = {
       ...req.body,
       password: bcryptjs.hashSync(req.body.password, 10),
-      avatar: fileName,
+      avatar: fileName, 
       role: 'guest' //Default user role
     };
 
@@ -145,6 +151,23 @@ const userController = {
     res.clearCookie("userEmail");
     req.session.destroy();
     return res.redirect("/");
+  },
+  update: async (req, res) => {
+    let userId = req.params.id;
+    let newRoleId = req.body.roleSelect;
+    console.log("-.-.-.-.-.-.-");
+    console.log(newRoleId);
+    try {
+      await Customer.update(
+        {"user_role_id": req.body.roleSelect},
+        {where:{"id": req.params.id}}
+      );  
+    } catch (error) {
+      console.error("Couldn't update role in user id: " + userId);
+    }
+    
+    return res.redirect("/users");
+    
   },
 };
 

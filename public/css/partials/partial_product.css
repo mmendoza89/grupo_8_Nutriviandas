@@ -32,8 +32,29 @@
   padding: 6px;
 }
 
-.partial_product .product_price {
+.partial_product .product_price span {
   font-size: 3rem;
+}
+
+.partial_product .editProduct, .partial_product .deleteProduct{
+  width: auto;
+  padding: 10px 30px;
+  font-size: 1.4em;
+  border: 0;
+  border-radius: 4px;
+}
+
+.partial_product .editProduct{
+  background-color: var(--color-main);
+}
+
+.partial_product .deleteProduct{
+  background-color: var(--color-red);
+}
+
+.numbers_and_buttons div, .numbers_and_buttons form {
+  margin: 10px 0;
+  padding: 0 !important;
 }
 
 .partial_product .quantityButtons {
@@ -55,8 +76,13 @@
 }
 
 .numbers_and_buttons {
-  display: flex;
+  display: grid;
   align-items: center;
+  grid-template-columns: 1fr 1fr 2fr 2fr;
+}
+
+.product_id {
+  font-size: 2rem;
 }
 
 /* product Tags */

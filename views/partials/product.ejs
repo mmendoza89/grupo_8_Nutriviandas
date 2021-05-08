@@ -12,32 +12,19 @@
       <p><%= product.description %></p>
     </div>
     <div class="numbers_and_buttons">
-      <div>
-        <span
-          >Cantidad: <span id="productQuantity_<%= product.id %>">1</span></span
-        >
-        <div class="quantityButtons">
-          <button id="quantityIncrease"><i class="fas fa-plus"></i></button>
-          <button id="quantityDecrease"><i class="fas fa-minus"></i></button>
-        </div>
-      </div>
+      <p class="product_id">ID: <%= product.id %> </p>
       <div class="product_price">
-        <!-- $ -->
         <span id="product_<%= product.id %>_price"
           >$ <%= product.price %></span
         >
       </div>
-      <!-- <div class="buttonAddToCartInProduct">
-        <%#- include('buttonAddToCart') %>
-      </div> -->
       <% if (isAdmin) { %>
-        <form class="createP-form" action="/products/<%= product.id %>/edit" method="GET" style="text-align:center;">
-          <span>Admin/Owner only: </span>
-          <button>Edit this Product</button>
+        <form action="/products/<%= product.id %>/edit" method="GET" style="text-align:center;">
+          <button class="editProduct">Edit this Product</button>
         </form>
-        <form class="createP-form" action="/products/<%= product.id %>/delete?_method=DELETE" method="POST" style="text-align:center;">
-          <span>Admin/Owner only: </span>
-          <button style="background-color: var(--color-red);">Delete this Product</button>
+        <form action="/products/<%= product.id %>/delete?_method=DELETE" method="POST" style="text-align:center;">
+
+          <button class="deleteProduct">Delete this Product</button>
         </form>
       <% } %>
     </div>
