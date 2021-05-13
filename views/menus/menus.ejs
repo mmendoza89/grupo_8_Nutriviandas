@@ -24,12 +24,9 @@
           <section class="header-menus">
             <div class="filters-bar">
               <div class="categories">
-                  <a href="#" class="category" data-class="withMeat">Con Carnes</a>
-                  <a href="#" class="category" data-class="vegetarian">Vegetariano</a>
-                  <a href="#" class="category" data-class="pies">Tartas</a>
-                  <a href="#" class="category" data-class="pizzas">Pizzas</a>
-                  <a href="#" class="category" data-class="burgers">Hamburguesas</a>
-                  <a href="#" class="category" data-class="custom">Personalizado</a>
+                <% for( let i = 0; i < 6; i++ ) { %>
+                  <%- include('../partials/menuMobile', {menuId: i});%>
+                <% } %>
               </div>
             </div>
             <div class="on-the-menu">

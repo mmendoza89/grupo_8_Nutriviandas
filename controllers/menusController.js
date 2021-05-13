@@ -1,8 +1,9 @@
-const Menu = require('../modelsJSON/Menu');
+const db = require("../models");
+const Menu = db.Menu;
 
 const menusController = {
-    index: (req, res) => {
-        let menus = Menu.findAll();
+    index: async (req, res) => {
+        let menus = await Menu.findAll();
         res.render('menus/menus',{menus: menus});
     }
 }

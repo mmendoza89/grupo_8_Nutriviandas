@@ -26,19 +26,19 @@
             <div class="row">
               <div class="col-2">
                 <div class="product-route-mobile">
-                  <p>Menús / Carnes</p>
+                  <p>Menús /  </p>
                 </div>
-                <img src="images/productDetail.jpg" width="100%" alt="productImage">
+                <img src="/images/menus/menu<%=menuId - 1 %>.jpg" width="100%" alt="productImage">
               </div>
               <div class="col-2 product-info">
                 <div class="product-route-lg">
-                  <p>Menús / Carnes</p>
+                  <p><a href="/menus">Menús</a> / <%= menus.name %> </p>
                 </div>
                 <div class="product-title">
-                    <h1>Menu Carnes</h1>
+                    <h1>Menu <%= menus.name %></h1>
                 </div>
                 <div class="product-price">
-                    <h4>$ 500</h4>
+                    <h4>$ <%= total %></h4>
                 </div>
                 <div class="product-qty-btn">
                     <input type="number" value="1">
@@ -46,7 +46,7 @@
                 </div>
                 <div class="product-description">
                     <h3>Descripción</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti officia voluptate a tempore neque natus aut iure saepe unde suscipit quae optio voluptatem ipsa placeat voluptates odio, excepturi accusamus vitae.</p>
+                    <p><%= menus.description %></p>
                 </div>
               </div>
             </div>
@@ -56,28 +56,13 @@
             <div class="included-title">
               <h2>Platos Incluidos</h2>
             </div>
-            <div class="row" id="included">
-              <div class="col-5">
-                <img src="/images/chicken-curry.jpg" alt="">
-                <h4>Curry de Pollo</h4>
-              </div>
-              <div class="col-5">
-                <img src="/images/chicken-salad.jpg" alt="">
-                <h4>Ensalada de Pollo</h4>
-              </div>
-              <div class="col-5">
-                <img src="/images/chicken-pasta.jpg" alt="">
-                <h4>Pasta de Pollo</h4>
-              </div>
-              <div class="col-5">
-                <img src="/images/chicken-vegetables.jpg" alt="">
-                <h4>Pollo y Vegetales</h4>
-              </div>
-              <div class="col-5">
-                <img src="/images/chicken-vegetables.jpg" alt="">
-                <h4>Pollo y mas</h4>
-              </div>
+
+            <div class="row platesIncluded" id="included">
+              <% for(let plate of plates) { %> 
+                <%- include('../partials/plate', {plate: plate}) %> 
+              <% } %> 
             </div>
+
           </div>
         </div>
       </section>
