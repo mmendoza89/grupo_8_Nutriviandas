@@ -47,7 +47,7 @@ module.exports = {
         },
         {
           "id": 6,
-          "name": "Personalizado",
+          "name": "Vegano",
           "description":
             "morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in",
             createdAt: new Date(),
