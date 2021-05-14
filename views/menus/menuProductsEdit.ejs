@@ -1,0 +1,20 @@
+<html lang="en">
+  <%- include('../partials/head.ejs',{css: 'productEdit.css'}) %>
+  <body class="body-productEdit">
+    <%- include('../partials/header.ejs') %>
+    <main class="main-product_create">
+      <div class="container">
+        <section>
+          <div class="createP-section">
+            <h1 class="titulo-agregarP">Editar item id: <%= menu_products.id %></h1>
+            <% menu_products.forEach(item => { %>
+             <% item.menu_id.name %> 
+            <% }) %>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
