@@ -13,13 +13,12 @@
           <h1><%= user.first_name %> <%= user.last_name %></h1>
           <p class="main-profile-email"><%= user.email %></p>
           <% if (isOwner) { %>
-            <p class="main-profile-role">Rol: <%= user.user_role %></p>
-            <p class="main-profile-role">Rol id: <%= user.user_role_id %></p>
+            <p class="main-profile-role">Rol: <%= user.user_role.name %></p>
           <% } %>
           <div class="main-profile-buttons">
             <% if (isOwner) { %>
               <a class="main-profile-show-roles" href="/products">Productos</a>
-              <a class="main-profile-show-menu-products" href="/menus/menu_products">Productos por Menú</a>
+              <a class="main-profile-show-menu-products" href="/menus/menu_products">Editar Menúes</a>
               <!-- <a class="main-profile-show-roles" href="/users/roles">Roles</a> -->
               <a class="main-profile-show-users" href="/users">Usuarios</a>
             <% } %>

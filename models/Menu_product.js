@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
           as: 'menu'
         });
         Menu_product.belongsTo(models.Product, {
-          foreignKey: 'id',
+          foreignKey: 'product_id',
           as: 'product'
         });
     }

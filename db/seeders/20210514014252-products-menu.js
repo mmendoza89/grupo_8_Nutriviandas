@@ -6,7 +6,6 @@ module.exports = {
       "Menu_products",
       [
         {
-          "id": 1,
           "menu_id":"1",
           "product_id": "15",
           createdAt: new Date(),
