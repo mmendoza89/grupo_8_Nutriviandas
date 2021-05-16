@@ -9,8 +9,9 @@ const validations = [
     .withMessage("Debes escribir un email")
     .isEmail()
     .toLowerCase(),
-  body("firstName").trim().notEmpty().withMessage("Debes escribir un nombre"),
-  body("lastName").trim().notEmpty().withMessage("Debes escribir un apellido"),
+  body("first_name").trim().notEmpty().withMessage("Debes escribir un nombre"),
+  body("last_name").trim().notEmpty().withMessage("Debes escribir un apellido"),
+  body("phone_number").trim().notEmpty().withMessage("Debes escribir un número de teléfono"),
   body("password")
     .trim()
     .notEmpty()

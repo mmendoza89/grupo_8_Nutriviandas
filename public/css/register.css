@@ -87,7 +87,7 @@ a {
 }
 
 #r-email, #r-nombre, #r-apellido, 
-#r-contraseña, #r-confirmar-c{
+#r-contraseña, #r-confirmar-c, #phone_number{
     width: 100%;
     border: solid 1px black;
 }
@@ -165,7 +165,7 @@ input{
         width: 350px;
     }
 
-    #r-email, #r-nombre, #r-apellido, #r-contraseña, #r-confirmar-c{
+    #r-email, #r-nombre, #r-apellido, #r-contraseña, #r-confirmar-c, #phone_number{
         height: 22px;
     }
 }
