@@ -39,12 +39,26 @@ h2 {
   overflow: hidden;
 }
 
+.productsTopNav button {
+  background-color: var(--color-main);
+  width: auto;
+  padding: 10px 30px;
+  font-size: 1.4em;
+  border: 0;
+  border-radius: 4px;
+}
+
 .main-products {
-  max-width: 1300px;
-  margin: auto;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 9.8rem;
+  padding-top: var(--header-height);
+}
+
+.productsTopNav {
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  position: sticky;
+  top: var(--header-height);
+  background-color: var(--bs-light);
 }
 
 a {

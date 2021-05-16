@@ -1,9 +1,6 @@
 <div class="partial_product product" id="<%= product.name %>">
-  <a href="/products/<%= product.id%>">
-    <img
-      class="partial_product_left"
-      src="images/deleteMockupImages/casserole-dish-2776735_1280.jpg"
-      alt="Product Image"
+  <a href="/products/<%= product.id %>">
+    <img class="partial_product_left" src="/images/products/<%= product.image %>" alt="Product Image"
     />
   </a>
   <div class="partial_product_right">
@@ -22,8 +19,7 @@
         <form action="/products/<%= product.id %>/edit" method="GET" style="text-align:center;">
           <button class="editProduct">Edit this Product</button>
         </form>
-        <form action="/products/<%= product.id %>/delete?_method=DELETE" method="POST" style="text-align:center;">
-
+        <form id="form-deleteProduct" action="/products/<%= product.id %>/delete?_method=DELETE" method="POST" style="text-align:center;">
           <button class="deleteProduct">Delete this Product</button>
         </form>
       <% } %>

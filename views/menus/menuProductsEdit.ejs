@@ -1,0 +1,44 @@
+<html lang="en">
+  <%- include('../partials/head.ejs',{css: 'productEdit.css'}) %>
+  <body class="body-productEdit">
+    <%- include('../partials/header.ejs') %>
+    <main class="main-product_create">
+      <div class="container">
+        <section>
+          <div class="createP-section">
+            <h1 class="titulo-agregarP">Editar productos por menu %></h1>
+              <% let initialMenu = "" %>
+              <% menu_products.forEach(function(item, index) { %>
+                <% if(initialMenu != item.menu.name) {%>
+                  <% initialMenu = item.menu.name; %>
+                <h2>Menu <%= item.menu.name %></h2>
+                <% } %>
+                <div class="menuProductsItem">
+                  <div class="image_h3">
+                    <img src="/images/products/<%= item.product.image %> " alt="Imagen del producto">
+                    <h3><span><%= ((index % 5) + 1) %></span> - <%= item.product.name %> (id: <%= item.product.id %>)</h3>
+                  </div>
+                  <form action="update/<%= item.id %>" method="POST">
+                    <div>
+                    <label for="menuProductEdit_newProductSelect">Cambiar por producto...</label>
+                    <select id="menuProductEdit_newProductSelect" name="nuevoItemId">
+                      <% products.forEach(product => { %>
+                       <option value="<%= product.id %> "><%= product.name %> (id: <%= product.id %>)</option>
+                      <% }) %>
+                    </select>
+                    </div>
+                    <button>Actualizar</button>
+                  </form>
+
+                </div>
+
+            <% }); %>
+            
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>

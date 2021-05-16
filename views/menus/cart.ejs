@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> 
+  <link rel="stylesheet" href="/css/cart.css">
+  <link rel="stylesheet" href="/css/headerFooter.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="icon" href="images/logo_nutriviandas.jpeg" type="image/gif" sizes="16x16" />
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  
+  <title>Nutriviandas</title>
+</head>
+
+    <body>
+        <!--TOP NAV-->
+        <%- include('../partials/header.ejs') %>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="cart-box">
+                <div class="cart-box-title">
+                  <span class="float-right">(<strong>number</strong>) productos</span>
+                  <h5>Productos en tu carro</h5>
+                </div>
+                <div class="cart-box-content">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td class="table-pro-img"></td>
+                          <td class="table-pro-desc">
+                            <h3>Nombre Menu</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos minima mollitia beatae laboriosam repudiandae eveniet, ut aspernatur alias vel, iure aperiam? Nihil voluptatum magnam modi fuga a dolor? In?</p>
+
+                          </td>
+                          <td class="table-pro-price">$ 1200</td>
+                          <td class="table-pro-qty">
+                            <input type="text" class="form-control" placeholder="1">
+                          </td>
+                          <td class="table-pro-total">
+                            <h4> $1200</h4>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="cart-box">
+                <div class="cart-box-title">
+                  <h5>Recuento de carro</h5>
+                </div>
+                <div class="cart-box-content">
+                  <span> Total </span>
+                  <h2 class="font-bold"> $ 1200</h2>
+                  <hr>
+                  <div class="m-t-sm">
+                    <div class="btn-group">
+                      <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i> 
+                        Comprar ahora
+                      </a> 
+                        <a href="#" class="btn btn-white btn-sm"> Cancelar</a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <%- include('../partials/footer.ejs') %> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    </body>
+</html>

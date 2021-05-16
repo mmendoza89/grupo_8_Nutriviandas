@@ -10,7 +10,7 @@ module.exports = {
           description:
             "amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla",
           price: 200.70,
-          image: "http://www.placekitten.com/21",
+          image: "producto00.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -19,7 +19,7 @@ module.exports = {
           description:
             "nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer",
           price: 241.99,
-          image: "http://www.placekitten.com/22",
+          image: "producto01.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -28,7 +28,7 @@ module.exports = {
           description:
             "nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed",
           price: 307.22,
-          image: "http://www.placekitten.com/23",
+          image: "producto02.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -37,7 +37,7 @@ module.exports = {
           description:
             "posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus",
           price: 512.26,
-          image: "http://www.placekitten.com/24",
+          image: "producto03.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -46,7 +46,7 @@ module.exports = {
           description:
             "duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse",
           price: 639.98,
-          image: "http://www.placekitten.com/25",
+          image: "producto04.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -55,7 +55,7 @@ module.exports = {
           description:
             "morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in",
           price: 311.64,
-          image: "http://www.placekitten.com/26",
+          image: "producto05.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -64,7 +64,7 @@ module.exports = {
           description:
             "in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem",
           price: 86.90,
-          image: "http://www.placekitten.com/27",
+          image: "producto06.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -73,7 +73,7 @@ module.exports = {
           description:
             "libero rutrum ac lobortis vel dapibus at diam nam tristique tortor",
           price: 156.77,
-          image: "http://www.placekitten.com/28",
+          image: "producto07.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -82,7 +82,7 @@ module.exports = {
           description:
             "vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat",
           price: 105.14,
-          image: "http://www.placekitten.com/29",
+          image: "producto08.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -91,7 +91,7 @@ module.exports = {
           description:
             "vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac",
           price: 158.92,
-          image: "http://www.placekitten.com/210",
+          image: "producto09.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -100,7 +100,7 @@ module.exports = {
           description:
             "dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut",
           price: 258.47,
-          image: "http://www.placekitten.com/211",
+          image: "producto10.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -109,7 +109,7 @@ module.exports = {
           description:
             "quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu",
           price: 106.06,
-          image: "http://www.placekitten.com/212",
+          image: "producto11.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -118,7 +118,7 @@ module.exports = {
           description:
             "convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit",
           price: 267.14,
-          image: "http://www.placekitten.com/213",
+          image: "producto12.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -127,7 +127,7 @@ module.exports = {
           description:
             "turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci",
           price: 88.04,
-          image: "http://www.placekitten.com/214",
+          image: "producto00.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -136,7 +136,7 @@ module.exports = {
           description:
             "habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla",
           price: 93.67,
-          image: "http://www.placekitten.com/215",
+          image: "producto01.jpg",
           createdAt: new Date(),
           updatedAt: new Date()
         },

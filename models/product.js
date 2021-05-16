@@ -18,9 +18,9 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'product_id2',
         as: 'product_category'
       })
-      Product.belongsToMany(models.Menu_product,{
+      Product.belongsToMany(models.Menu,{
         through: 'Menu_products',
-        foreignKey: 'product_id3',
+        foreignKey: 'product_id',
         as: 'product_menu'
       });
     }
@@ -51,7 +51,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'Product'
+    modelName: 'Product',
+    tableName: 'Products'
   });
   return Product;
 };

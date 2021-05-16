@@ -11,11 +11,17 @@
             <div class="register-section">
                 <div class="register-box">
                     <h3 class="titulo-registrar">Creá tu cuenta</h3>
-
+                    <div class="registerErrorMessage">
+                        <% if (locals.errors && errors.registerError) { %>
+                            <div class="text-danger">
+                                <%= errors.registerError %> 
+                            </div>
+                        <% } %>
+                    </div>
                     <form action="/users/register" method="POST" enctype="multipart/form-data" class="register-form"  autocomplete="on">
                         <div class="form-element">
                             <label for="email" class="form-label">E-mail:</label>
-                            <input type="email" id="r-email" class="r-email" name="email" value="<%= locals.oldData ? oldData.email : '' %>">
+                            <input type="email" id="r-email" class="r-email" name="email" value="<%= locals.oldData ? oldData.email : '' %>" required>
                             <% if (locals.errors && errors.email) { %>
                                 <div class="text-danger">
                                     <%= errors.email.msg %> 
@@ -25,22 +31,33 @@
                         </div>
                         
                         <div class="form-element">
-                            <label for="firstName" class="form-label">Nombre:</label>
-                            <input type="text" id="r-nombre" class="r-nombre" name="firstName" value="<%= locals.oldData ? oldData.firstName : null %>">
-                            <% if (locals.errors && errors.firstName) { %>
+                            <label for="first_name" class="form-label">Nombre:</label>
+                            <input type="text" id="r-nombre" class="r-nombre" name="first_name" value="<%= locals.oldData ? oldData.first_name : null %>"required>
+                            <% if (locals.errors && errors.first_name) { %>
                                 <div class="text-danger">
-                                    <%= errors.firstName.msg %> 
+                                    <%= errors.first_name.msg %> 
                                 </div>
                             <% } %>
                             <div class="textName"></div>
                         </div>
                         
                         <div class="form-element">
-                            <label for="lastName" class="form-label">Apellido:</label>
-                            <input type="text" id="r-apellido" class="r-apellido" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %>">
-                            <% if (locals.errors && errors.lastName) { %>
+                            <label for="last_name" class="form-label">Apellido:</label>
+                            <input type="text" id="r-apellido" class="r-apellido" name="last_name" value="<%= locals.oldData ? oldData.last_name : null %>" required>
+                            <% if (locals.errors && errors.last_name) { %>
                                 <div class="text-danger">
-                                    <%= errors.lastName.msg %> 
+                                    <%= errors.last_name.msg %> 
+                                </div>
+                            <% } %>
+                            <div class="textLastName"></div>
+                        </div>
+
+                        <div class="form-element">
+                            <label for="phone_number" class="form-label">Teléfono:</label>
+                            <input type="text" id="phone_number" class="telefono" name="phone_number" value="<%= locals.oldData ? oldData.phone_number : null %>" required>
+                            <% if (locals.errors && errors.phone_number) { %>
+                                <div class="text-danger">
+                                    <%= errors.phone_number.msg %> 
                                 </div>
                             <% } %>
                             <div class="textLastName"></div>
@@ -48,7 +65,7 @@
 
                         <div class="form-element">
                             <label for="password" class="form-label">Contraseña:</label>
-                            <input type="password" id="r-contraseña" class="r-contraseña" name="password">
+                            <input type="password" id="r-contraseña" class="r-contraseña" name="password" required>
                             <% if (locals.errors && errors.password) { %>
                                 <div class="text-danger">
                                     <%= errors.password.msg %> 
@@ -59,7 +76,7 @@
                         
                         <div class="form-element">
                             <label for="confirmPass" class="form-label">Confirma Contraseña:</label>
-                            <input type="password" id="r-confirmar-c" class="confirmarPass" name="confirmPass">
+                            <input type="password" id="r-confirmar-c" class="confirmarPass" name="confirmPass" required>
                             <% if (locals.errors && errors.confirmPass) { %>
                                 <div class="text-danger">
                                     <%= errors.confirmPass.msg %> 
@@ -73,6 +90,7 @@
                             <input type="file" name="avatar" id="upload-file" class="avatar" value="<%= locals.oldData ? oldData.avatar : null %>">
                             <div class="textAvatar"></div>
                         </div>
+
                         <button type="submit" value="Registrarse" class="registrar-b">Registrarse</button>
                     </form>
                 </div>

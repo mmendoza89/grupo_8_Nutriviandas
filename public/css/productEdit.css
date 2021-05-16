@@ -7,6 +7,17 @@ html {
   padding-top: calc(var(--header-height) + 40px);
 }
 
+.body-ProductEdit h1 {
+  margin-top: 22px;
+}
+
+.body-ProductEdit h2 {
+  font-size: 2.2rem;
+  color: var(--color-light-green);
+  font-weight: bold;
+  margin-top: 20px;
+}
+
 main{
   width: 70%;
   margin: auto;
@@ -14,10 +25,14 @@ main{
 }
 
 .createP-section {
-    padding: 1px 120px 30px 120px;
+    padding: 1px 60px 30px 60px;
     box-shadow: 8px 8px 20px 5px #b9b9b9;
     margin-bottom: 30px;
     border-radius: 6px;
+}
+
+a{
+  font-size: 14px;
 }
 
 .createP-field {
@@ -55,4 +70,39 @@ button,
 .createP-button-danger{
     background-color: var(--color-red);
     text-transform: uppercase;
+}
+
+.menuProductsItem {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  border-bottom: 1px solid darkgrey;
+  margin-left: 30px;
+  padding: 20px 0 20px 0px;
+  grid-gap: 5px;
+}
+
+.menuProductsItem form{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  grid-gap: 5px;
+  border-left: 1px dotted grey;
+  padding-left: 35px;
+}
+
+.image_h3 {
+  display: flex;
+  align-items: center;
+}
+
+.image_h3 img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 0 0 8px 0;
+}
+
+.image_h3 h3 {
+  font-size: 1.2rem;
 }

@@ -1,13 +1,26 @@
 const db = require("../models");
-const Product = require("../models/Menu_product");
-const Products = db.Menu_products;
-
-const Menu = require('../modelsJSON/Menu');
+const Menu = db.Menu;
 
 const menuDetailController = {
-    index: (req, res) => {
-        let menus = Menu.findAll();
-        res.render('menus/menuDetail');
+    index: async function (req, res) {
+        let menuId = req.params.id;
+
+        let allMenus = await Menu.findAll();
+        let menus = await Menu.findByPk(menuId, {include: 'Products'});
+        let plates = await menus.Products;
+        let total = 0;
+        let allPrices = [];
+
+        for(let i = 0; i < menus.Products.length; i++) {
+            allPrices.push(menus.Products[i].price);
+        }
+
+        allPrices.forEach (function(price) {
+            total += +price;
+        });
+
+        // res.send(menus);
+        res.render("menus/menuDetail", { allMenus: allMenus, menus, plates, total, menuId });
     }
 }
 

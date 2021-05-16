@@ -28,6 +28,10 @@ html{
 
 /*-----HEADER-----*/
 
+a {
+    text-decoration: none;
+}
+
 .nav {
     position: fixed;
     top: 0;
@@ -63,14 +67,19 @@ html{
     display: none
 }
 
-.nav-mobile i {
+.nav-mobile button {
+    padding: 0;
     font-size: 2rem;
     color: var(--color-olive);
 }
 
+.dropdown-menu.show {
+    top: 2rem !important;
+}
+
 @media (min-width: 1024px) {
 
-    .nav-mobile {
+    #mobile-menu {
         display: none;
     }
 
@@ -146,6 +155,7 @@ html{
 
       .dropdownBtn{
         display: flex;
+        align-items: center;
         margin: 1rem 0;
         padding: .6rem 1.4rem;
         background-color: var(--color-light-green);
@@ -167,6 +177,14 @@ html{
     .dropdownContent a:hover {background-color: #f1f1f1;}
     .dropdown:hover .dropdownContent {display: block;}
     .dropdown:hover .dropdownBtn {background-color: var(--color-olive)}
+
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+    .dropdown > .dropdown-toggle:active {
+        /*Without this, clicking will make it sticky*/
+        pointer-events: none;
+    }
     
     .cart-button {
         width: 3rem;

@@ -61,7 +61,7 @@ const userController = {
       });
     }
 
-    let fileName = req.file ? req.file.filename : 'default-profile.jpg';
+    let fileName = req.file ? req.file.filename : 'default-profile.jpg';//Uploaded photo or default
 
     let userToCreate = {
       ...req.body,
@@ -72,7 +72,16 @@ const userController = {
 
     delete userToCreate.confirmPass;
 
-    let userCreated = Customer.create(userToCreate);
+    try {
+      await Customer.create(userToCreate);
+    } catch (error) {
+      console.log("Couldn't create user. " + error);
+      return res.render("users/register", {
+        errors: {registerError: "El usuario no se pudo crear correctamente."},
+        oldData: req.body,
+        css: "register.css",
+      });
+    }
 
     return res.render("users/login", { css: "login.css" });
   },
