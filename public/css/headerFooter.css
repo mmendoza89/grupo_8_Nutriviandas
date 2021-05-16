@@ -63,14 +63,19 @@ html{
     display: none
 }
 
-.nav-mobile i {
+.nav-mobile button {
+    padding: 0;
     font-size: 2rem;
     color: var(--color-olive);
 }
 
+.dropdown-menu.show {
+    top: 2rem !important;
+}
+
 @media (min-width: 1024px) {
 
-    .nav-mobile {
+    #mobile-menu {
         display: none;
     }
 

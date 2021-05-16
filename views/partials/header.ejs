@@ -7,28 +7,49 @@
         alt="Logo de Nutriviandas"
       />
     </a>
-    <div class="nav-mobile">
-      <i class="bx bx-menu"></i>
+
+    <div class="dropdown nav-mobile" id="mobile-menu">
+      <button class="btn bx bx-menu" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item menu-item" href="/#inicio">Inicio</a>
+        <a class="dropdown-item menu-item" href="/#nosotros">Nosotros</a>
+        <a class="dropdown-item menu-item" href="/menus">Menús</a>
+        <a class="dropdown-item menu-item" href="/#contacto">Contacto</a>
+
+        <% if (locals.isLogged) { %>
+
+          <a class="dropdown-item menu-item" href="/cart">
+            <div class="cart-button">
+              <i class="bx bx-cart-alt cart-icon"></i>
+            </div>
+          </a>
+          <li><hr></li>
+          <a class="dropdown-item menu-item" href="/users/profile">Mi Perfil</a>
+          <a class="dropdown-item menu-item" href="/users/logout">Salir</a>
+
+        <% } else { %>
+
+          <li><hr></li>
+          <a class="dropdown-item menu-item" href="/users/login"> Ingresar </a>
+          <a class="dropdown-item menu-item" href="/users/register"> Registrate </a>
+
+        <% } %>
+      </div>
     </div>
+
     <div class="menu">
-      <a href="/#inicio">
-        <div class="menu-item">Inicio</div>
-      </a>
-      <a href="/#nosotros">
-        <div class="menu-item">Nosotros</div>
-      </a>
-      <a href="/menus">
-        <div class="menu-item">Menús</div>
-      </a>
-      <a href="/#contacto">
-        <div class="menu-item">Contacto</div>
-      </a>
+      <a class="menu-item" href="/#inicio">Inicio</a>
+      <a class="menu-item" href="/#nosotros">Nosotros</a>
+      <a class="menu-item" href="/menus">Menús</a>
+      <a class="menu-item" href="/#contacto">Contacto</a>
     </div>
 
     <% if (locals.isLogged) { %>
+
       <div class="right-menu">
         <div class="rightMenuItems">
-          <a href="/productCart">
+          <a href="/cart">
             <div class="cart-button">
               <i class="bx bx-cart-alt cart-icon"></i>
             </div>
@@ -37,7 +58,7 @@
         <div class="rightMenuItems">
           <div class="dropdown">
             <button class="dropdownBtn">
-              <div class="buttonElement"><%= locals.userLogged.first_name %></div>
+              <div class="buttonElement"> <%= locals.userLogged.first_name %> </div>
               <div class="buttonElement"><i class='bx bxs-down-arrow'></i></div>
             </button>
             <div class="dropdownContent">
@@ -52,15 +73,14 @@
           </div>
         </div>
       </div>
+
     <% } else { %>
+
       <div class="right-menu">
-        <a href="/users/login">
-          <div class="menu-item">Ingresar</div>
-        </a>
-        <a href="/users/register">
-          <div class="menu-item">Registrate</div>
-        </a>
+        <a class="menu-item" href="/users/login"> Ingresar </a>
+        <a class="menu-item" href="/users/register"> Registrate </a>
       </div>
+
     <% } %>
   </div>
 </div>
