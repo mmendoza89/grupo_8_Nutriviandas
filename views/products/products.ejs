@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <!-- <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
@@ -10,21 +10,22 @@
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/headerFooter.css" />
 
-    <!-- from head -->
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- partials -->
+
     <link rel="stylesheet" href="/css/partials/partial_product.css" />
-    <link rel="stylesheet" href="/css/partials/partial_buttonAddToCart.css" />
-    <link rel="stylesheet" href="/css/partials/partial_productMenuSemanal.css" />
-    <link rel="stylesheet" href="/css/partials/partial_shoppingSteps.css" />
-    <style src="/js/scripts.js"></style>
+    <script src="/js/scripts.js"></script>
 
     <link rel="stylesheet" href="/css/products.css" />
 
     <title>Productos</title>
-  </head>
+  </head> -->
+
+  <%# include("../partials/head.ejs", {css: "partial_product.css", script: "scripts.js", title: "Productos"}) %> 
+  <% include("../partials/head.ejs") %> 
+
   <body class="body-products">
     <%- include('../partials/header.ejs') %>
 
