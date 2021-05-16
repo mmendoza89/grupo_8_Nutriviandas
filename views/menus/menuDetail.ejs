@@ -21,18 +21,27 @@
 
         <!--SECCION HEADER MENUS-->
       <section class="main-productDetail">
+        <div class="img-for-mobile">
+          <div class="filters-bar">
+            <div class="categories">
+              <% for( let i = 0; i < 6; i++ ) { %>
+                <a href="/menuDetail/<%= i + 1 %>" class="category" > <%= allMenus[i].name %> </a>
+              <% } %>
+            </div>
+          </div>
+        </div>
         <div class="container">
           <div class="small-container single-product">
             <div class="row">
               <div class="col-2">
                 <div class="product-route-mobile">
-                  <p>Menús /  </p>
+                  <p> <a href="/menus">Menús</a> /  <%= menus.name %> </p>
                 </div>
                 <img src="/images/menus/menu<%=menuId - 1 %>.jpg" width="100%" alt="productImage">
               </div>
               <div class="col-2 product-info">
                 <div class="product-route-lg">
-                  <p><a href="/menus">Menús</a> / <%= menus.name %> </p>
+                  <p> <a href="/menus" >Menús</a> / <%= menus.name %> </p>
                 </div>
                 <div class="product-title">
                     <h1>Menu <%= menus.name %></h1>

@@ -5,6 +5,7 @@ const menuDetailController = {
     index: async function (req, res) {
         let menuId = req.params.id;
 
+        let allMenus = await Menu.findAll();
         let menus = await Menu.findByPk(menuId, {include: 'Products'});
         let plates = await menus.Products;
         let total = 0;
@@ -19,7 +20,7 @@ const menuDetailController = {
         });
 
         // res.send(menus);
-        res.render("menus/menuDetail", { menus: menus, plates, total, menuId });
+        res.render("menus/menuDetail", { allMenus: allMenus, menus, plates, total, menuId });
     }
 }
 

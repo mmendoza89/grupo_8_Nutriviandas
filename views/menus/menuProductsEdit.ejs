@@ -11,23 +11,26 @@
               <% menu_products.forEach(function(item, index) { %>
                 <% if(initialMenu != item.menu.name) {%>
                   <% initialMenu = item.menu.name; %>
-                <h2><%= item.menu.name %></h2>
+                <h2>Menu <%= item.menu.name %></h2>
                 <% } %>
-                <div>
-                  <h3><span><%= ((index % 5) + 1) %></span> - <%= item.product.name %> (id: <%= item.product.id %>)</h3>
+                <div class="menuProductsItem">
+                  <div class="image_h3">
+                    <img src="/images/products/<%= item.product.image %> " alt="Imagen del producto">
+                    <h3><span><%= ((index % 5) + 1) %></span> - <%= item.product.name %> (id: <%= item.product.id %>)</h3>
+                  </div>
+                  <form action="update/<%= item.id %>" method="POST">
+                    <div>
+                    <label for="menuProductEdit_newProductSelect">Cambiar por producto...</label>
+                    <select id="menuProductEdit_newProductSelect" name="nuevoItemId">
+                      <% products.forEach(product => { %>
+                       <option value="<%= product.id %> "><%= product.name %> (id: <%= product.id %>)</option>
+                      <% }) %>
+                    </select>
+                    </div>
+                    <button>Actualizar</button>
+                  </form>
+
                 </div>
-
-                <form action="update/<%= item.id %>" method="POST">
-                  <label for="menuProductEdit_newProductSelect">Cambiar por producto...</label>
-                  <select id="menuProductEdit_newProductSelect" name="nuevoItemId">
-                    <% products.forEach(product => { %>
-                     <option value="<%= product.id %> "><%= product.name %> (<%= product.id %>)</option>
-                    <% }) %>
-                  </select>
-                  <button>Actualizar</button>
-                </form>
-                <hr>
-
 
             <% }); %>
             
