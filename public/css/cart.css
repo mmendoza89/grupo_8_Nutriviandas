@@ -67,3 +67,23 @@ section {
 .table-pro-desc {
     width: 70%;
 }
+
+td.table-pro-desc {
+    width: 60%;
+}
+
+td.table-pro-price {
+    width:  10%;
+}
+
+td.table-pro-qty {
+    width: 10%;
+}
+
+td.table-pro-total1 {
+    width: 20%;
+}
+
+tr:nth-child(2n+1){
+    background-color: #f5f5f5;
+}

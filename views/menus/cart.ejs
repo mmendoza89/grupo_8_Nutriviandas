@@ -14,8 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <script src="/js/cart.js"></script>
   
-  <title>Nutriviandas</title>
+  <title>Carrito - Nutriviandas</title>
 </head>
 
     <body>
@@ -34,20 +35,19 @@
                 <div class="cart-box-content">
                   <div class="table-responsive">
                     <table class="table">
-                      <tbody>
+                      <tbody id="menusDynamicData">
                         <tr>
                           <td class="table-pro-img"></td>
                           <td class="table-pro-desc">
-                            <h3>Nombre Menu</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos minima mollitia beatae laboriosam repudiandae eveniet, ut aspernatur alias vel, iure aperiam? Nihil voluptatum magnam modi fuga a dolor? In?</p>
-
+                              <h3>Agrega menús al carrito.</h3>
+                              <p></p>
                           </td>
-                          <td class="table-pro-price">$ 1200</td>
+                          <td class="table-pro-price">$ 0.-</td>
                           <td class="table-pro-qty">
-                            <input type="text" class="form-control" placeholder="1">
+                              <input id="cartQuantity" type="number" class="form-control" placeholder="0" min="0">
                           </td>
                           <td class="table-pro-total">
-                            <h4> $1200</h4>
+                              <h4>$ 0.-</h4>
                           </td>
                         </tr>
                       </tbody>
@@ -63,14 +63,14 @@
                 </div>
                 <div class="cart-box-content">
                   <span> Total </span>
-                  <h2 class="font-bold"> $ 1200</h2>
+                  <h2 class="font-bold" id="cartTotal"> $ 0.-</h2>
                   <hr>
                   <div class="m-t-sm">
                     <div class="btn-group">
                       <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i> 
                         Comprar ahora
                       </a> 
-                        <a href="#" class="btn btn-white btn-sm"> Cancelar</a>
+                        <a href="#" class="btn btn-white btn-sm" onclick="cancelCart()"> Cancelar</a>
                       </div>
                     </div>
                 </div>
