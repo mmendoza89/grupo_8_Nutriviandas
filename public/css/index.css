@@ -134,11 +134,30 @@ section {
 
 .menu-group h1 {
     color: var(--color-dark-green);
-    padding: .5rem 2rem;
+    padding: .5rem 1rem;
 }
 
 .highlighted-text {
     color: var(--color-light-green);
+    font-size: calc(1.375rem + 1.5vw);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    display: flex;
+    text-align: center;
+}
+
+.container-menu-option {
+    margin: auto;
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .food-item-container {
@@ -189,6 +208,11 @@ section {
     margin: 0 2rem;
 }
 
+.card-img-top {
+    object-fit: cover;
+    height: 250px;
+}
+
 .item-info {
     display: flex;
     align-items: center;
@@ -204,7 +228,6 @@ section {
 
 .cart-button-menu {
     display: flex;
-    align-items: center;
     color: var(--color-light-green);
     font-size: 2rem;
     cursor: pointer;
@@ -479,8 +502,19 @@ input, textarea {
         font-size: 1.6rem;
     }
 
-    .food-item {
+    #homeMenu {
         flex: 1 0 26%;
+        margin: 1rem;
+    }
+
+    .card-title {
+        display: flex;
+        font-size: 1.5rem;
+    }
+
+    .card-text {
+        display: flex;
+        text-align: start;
     }
 }
 

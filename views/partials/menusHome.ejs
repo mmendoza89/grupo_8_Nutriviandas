@@ -1,10 +1,12 @@
-<div class="card">
-    <img src="/images/menus/menu<%=menuId%>.jpg" class="card-img-top" alt="Imagen Menu con Carnes">
+<div class="card" id="homeMenu">
+    <a href="/menuDetail/<%=menus[menuId].id%>">
+        <img src="/images/menus/menu<%=menuId%>.jpg" class="card-img-top" alt="Imagen de Menu">
+    </a>
+
     <div class="card-body">
         <h5 class="card-title"> <%= menus[menuId].name %> </h5>
         <p class="card-text"><%= menus[menuId].description %></p>
         <div class="container-menu-btn">
-            <a href="/menuDetail/<%=menus[menuId].id%>" class="btn btn-menu">Ir al menu</a>
         </div>
     </div>
 </div>
