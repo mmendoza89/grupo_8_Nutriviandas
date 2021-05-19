@@ -1,9 +1,10 @@
-const fs = require('fs');
-const path = require('path');
+const db = require("../models");
+const Menu = db.Menu;
 
 const indexController = {
-    index: (req, res) => {
-        return res.render('index', {css:'index.css'});
+    index: async (req, res) => {
+        let menus = await Menu.findAll();
+        res.render('index', {menus: menus});
     }
 }
 module.exports = indexController;
