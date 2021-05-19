@@ -51,14 +51,14 @@
                     <h4>$ <%= total %></h4>
                 </div>
                 <div class="product-qty-btn">
-                    <input type="number" value="1">
+                    <input id="quantityOfMenu" type="number" value="1">
                     <script>
                       menuId = <%- JSON.stringify(menuId) %>;
                       menuDescription = <%- JSON.stringify(menus.description) %>;
                       total = <%- JSON.stringify(total) %>;
                       menu = <%- JSON.stringify(menus) %>;
                     </script>
-                    <button onclick="addToCart(menuId, total, menu)" id="add-to-cart" class="add-button">Agregar al carrito</button>
+                    <button onclick="addToCart()" id="add-to-cart" class="add-button">Agregar al carrito</button>
                 </div>
                 <div class="product-description">
                     <h3>Descripción</h3>

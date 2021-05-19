@@ -3,7 +3,6 @@ let total;
 let menu;
 
 function addToCart(){
-    console.log(".-.-.-.-.inside addToCart-.-.-.-.");
     let clientLocalStorage = window.localStorage;
     console.log(clientLocalStorage);
     //Get stored menus
@@ -15,12 +14,16 @@ function addToCart(){
         previousMenus = JSON.parse(storedMenus);
         console.log(previousMenus);
     } 
+
+    let quantity = document.getElementById("quantityOfMenu").value;
+
     //Create new menu to add
     let menuToAdd = {
         "menuId": menuId,
         "menuName": menu.name,
         "menuTotal": total,
-        "menuDescription": menuDescription
+        "menuDescription": menuDescription,
+        "quantity": quantity
     }
 
     //Add new menu

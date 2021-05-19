@@ -16,13 +16,16 @@ function init() {
   let quantities = {};
 
   if (menus) {
+    document.querySelector("#numberOfProducts strong").innerHTML = menus.length;
+    document.querySelector("#numberOfProducts span").innerHTML = menus.length > 1 ? "productos" : "producto";
     menusElementRoot.innerHTML = "";
+
 
     for (const menu of menus) {
       let id = menu.menuId;
       let quantityId = "cartQuantity" + id;
       quantities[id] = 1;
-      subTotals[id] = menu.menuTotal;
+      subTotals[id] = menu.menuTotal * Number(menu.quantity);
 
       menusElementRoot.innerHTML += `
         <tr>
@@ -33,7 +36,7 @@ function init() {
             </td>
             <td class="table-pro-price">$ ${menu.menuTotal}</td>
             <td class="table-pro-qty">
-                <input id="${quantityId}" type="number" class="form-control" value="1" min="0">
+                <input id="${quantityId}" type="number" class="form-control" value="${menu.quantity}" min="0">
             </td>
             <td class="table-pro-total${id}">
                 <h4>$ ${subTotals[id]}</h4>
