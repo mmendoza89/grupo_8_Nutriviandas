@@ -16,9 +16,11 @@
             <p class="main-profile-role">Rol: <%= user.user_role.name %></p>
           <% } %>
           <div class="main-profile-buttons">
-            <% if (isOwner) { %>
+            <% if (isOwner || isAdmin) { %>
               <a class="main-profile-show-roles" href="/products">Productos</a>
               <a class="main-profile-show-menu-products" href="/menus/menu_products">Editar Menúes</a>
+            <% } %>
+            <% if (isOwner) { %>
               <!-- <a class="main-profile-show-roles" href="/users/roles">Roles</a> -->
               <a class="main-profile-show-users" href="/users">Usuarios</a>
             <% } %>

@@ -6,8 +6,8 @@
       <div class="container">
         <section>
           <div class="createP-section">
-            <h1 class="titulo-agregarP">Editar <%= product.name %></h1>
-            <form class="createP-form" action="/products/<%= product.id %>?_method=PUT" method="POST"
+            <h1 class="titulo-agregarP">Editar <%= producto.name %></h1>
+            <form class="createP-form" action="/products/<%= producto.id %>?_method=PUT" method="POST"
             >
               <div class="createP-field">
                 <label class="titulo-form" for="name">Nombre </label>
@@ -50,59 +50,59 @@
                   <div>
                     <input
                       type="checkbox"
-                      name="product_categ-1"
-                      id="product_categ-1"
+                      name="producto_categ-1"
+                      id="producto_categ-1"
                       checked
                     />
-                    <label for="product_categ-1">Carnes rojas </label>
+                    <label for="producto_categ-1">Carnes rojas </label>
                   </div>
                   <div>
                     <input
                       type="checkbox"
-                      name="product_categ-2"
-                      id="product_categ-2"
+                      name="producto_categ-2"
+                      id="producto_categ-2"
                     />
-                    <label for="product_categ-2">Pollo </label>
+                    <label for="producto_categ-2">Pollo </label>
                   </div>
                   <div>
                     <input
                       type="checkbox"
-                      name="product_categ-3"
-                      id="product_categ-3"
+                      name="producto_categ-3"
+                      id="producto_categ-3"
                     />
-                    <label for="product_categ-3">Vegetariano </label>
+                    <label for="producto_categ-3">Vegetariano </label>
                   </div>
                   <div>
                     <input
                       type="checkbox"
-                      name="product_categ-4"
-                      id="product_categ-4"
+                      name="producto_categ-4"
+                      id="producto_categ-4"
                     />
-                    <label for="product_categ-4">Vegano </label>
+                    <label for="producto_categ-4">Vegano </label>
                   </div>
                   <div>
                     <input
                       type="checkbox"
-                      name="product_categ-5"
-                      id="product_categ-5"
+                      name="producto_categ-5"
+                      id="producto_categ-5"
                     />
-                    <label for="product_categ-5">Bajo en calorias </label>
+                    <label for="producto_categ-5">Bajo en calorias </label>
                   </div>
                   <div>
                     <input
                       type="checkbox"
-                      name="product_categ-6"
-                      id="product_categ-6"
+                      name="producto_categ-6"
+                      id="producto_categ-6"
                     />
-                    <label for="product_categ-6">Postre </label>
+                    <label for="producto_categ-6">Postre </label>
                   </div>
                   <div>
                     <input
                       type="checkbox"
-                      name="product_categ-7"
-                      id="product_categ-7"
+                      name="producto_categ-7"
+                      id="producto_categ-7"
                     />
-                    <label for="product_categ-7">Bajo en sodio </label>
+                    <label for="producto_categ-7">Bajo en sodio </label>
                   </div>
                 </div>
               </div>
@@ -121,7 +121,7 @@
                 </div>
               </div>
               <div class="save-button-section">
-                <button type="submit" class="save-product_button">
+                <button type="submit" class="save-producto_button">
                   GUARDAR PRODUCTO
                 </button>
               </div>
@@ -129,7 +129,7 @@
 
             <form
               class="createP-form"
-              action="/products/<%= producto.id %>/delete?_method=DELETE"
+              action="/productos/<%= producto.id %>/delete?_method=DELETE"
               method="POST"
               style="text-align: center"
             >
