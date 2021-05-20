@@ -109,15 +109,15 @@ const userController = {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
 
-        //If is "owner" write it in Session
+        //If is "owner" or "admin" write it in Session
         if (userToLogin.user_role_id) {
-          if (userToLogin.user_role.name == "owner") {//TODO hardcoded "owner" = 2... can't reach linked table User_role. Should be userToLogin.user_role == "owner"
+          if (userToLogin.user_role.name == "owner") {
             req.session.isOwner = true;
           } else {
             req.session.isOwner = false;
           }
 
-          if (userToLogin.user_role.name == "admin") {//TODO hardcoded "admin" = 3... can't reach linked table User_role. Should be userToLogin.user_role == "admin"
+          if (userToLogin.user_role.name == "admin") {
             req.session.isAdmin = true;
           } else {
             req.session.isAdmin = false;

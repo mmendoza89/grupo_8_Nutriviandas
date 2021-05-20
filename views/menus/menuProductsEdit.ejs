@@ -1,5 +1,5 @@
 <html lang="en">
-  <%- include('../partials/head.ejs',{css: 'productEdit.css'}) %>
+  <%- include('../partials/head.ejs',{css: 'productEdit.css', title: "Editar Menús - Nutriviandas"}) %>
   <body class="body-productEdit">
     <%- include('../partials/header.ejs') %>
     <main class="main-product_create">
@@ -13,10 +13,10 @@
                   <% initialMenu = item.menu.name; %>
                 <h2>Menu <%= item.menu.name %></h2>
                 <% } %>
-                <div class="menuProductsItem">
+                <div class="menuProductsItem <%= (index % 5 == 4) ? 'lastOfSet' : '' %> <%= (index % 2 == 1) ? 'odd' : '' %>">
                   <div class="image_h3">
                     <img src="/images/products/<%= item.product.image %> " alt="Imagen del producto">
-                    <h3><span><%= ((index % 5) + 1) %></span> - <%= item.product.name %> (id: <%= item.product.id %>)</h3>
+                    <h3 class="productNameId"><span class="productIndex"><%= ((index % 5) + 1) %> - </span><strong><%= item.product.name %></strong> <span class="productId">(id: <%= item.product.id %>)</span></h3>
                   </div>
                   <form action="update/<%= item.id %>" method="POST">
                     <div>

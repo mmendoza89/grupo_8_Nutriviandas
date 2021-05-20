@@ -26,7 +26,7 @@
           </a>
           <li><hr></li>
           <a class="dropdown-item menu-item" href="/users/profile">Mi Perfil</a>
-          <a class="dropdown-item menu-item" href="/users/logout">Salir</a>
+          <a class="dropdown-item menu-item" href="/users/logout" onclick="logout();">Salir</a>
 
         <% } else { %>
 
@@ -54,23 +54,6 @@
               <i class="bx bx-cart-alt cart-icon"></i>
             </div>
           </a>
-        </div>
-        <div class="rightMenuItems">
-          <!--
-          <div class="dropdown">
-            <button class="dropdownBtn">
-              <div class="buttonElement"> <%#= locals.userLogged.first_name %> </div>
-              <div class="buttonElement"><i class='bx bxs-down-arrow'></i></div>
-            </button>
-            <div class="dropdownContent">
-              <li>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/users/profile">Mi Perfil</a></li>
-                  <li><a class="dropdown-item" href="/users/logout">Salir</a></li>
-                </ul>
-              </li>
-            </div>
-          </div> -->
 
           <div class="dropdown">
             <button class="dropdownBtn btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -78,7 +61,7 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="/users/profile">Mi Perfil</a>
-                  <a class="dropdown-item" href="/users/logout">Salir</a>
+                  <a class="dropdown-item" href="/users/logout" onclick="logout();">Salir</a>
             </div>
           </div><!-- dropdown -->
         </div><!-- rightMenuItems -->

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head.ejs',{css:"/partials/partial_userInList.css"}); %>
+  <%- include('../partials/head.ejs',{css:"/partials/partial_userInList.css", title:"Lista de Usuarios - Nutriviandas"}); %>
   <body class="body-userList">
     <!--TOP NAV-->
     <%- include('../partials/header.ejs') %>
     <div class="container">
+      <h1>Lista de Usuarios</h1>
+      <p>Puede editar el rol del usuario eligiendo el nuevo rol, y presionando "Actualizar rol"</p>
       <main class="userList">
         <% users.forEach(user => { %>
           <%- include('../partials/userInList.ejs',{user, roles}) %>

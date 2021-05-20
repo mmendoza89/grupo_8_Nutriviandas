@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head.ejs', {css}) %>
+  <%- include('../partials/head.ejs', {css, script:"login.js", title:"Perfil - Nutriviandas"}) %>
   <body class="body-profile">
     <!--TOP NAV-->
     <%- include('../partials/header.ejs') %>
@@ -24,7 +24,7 @@
               <!-- <a class="main-profile-show-roles" href="/users/roles">Roles</a> -->
               <a class="main-profile-show-users" href="/users">Usuarios</a>
             <% } %>
-            <a class="main-profile-logout" href="/users/logout">Salir</a>
+            <a class="main-profile-logout" href="/users/logout" onclick="logout()">Salir</a>
           </div>
         </div>
       </main>

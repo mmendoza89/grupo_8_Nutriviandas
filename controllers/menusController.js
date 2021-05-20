@@ -11,15 +11,14 @@ const menusController = {
     menu_products_index: async (req, res) => {
         try{
             let products = await Product.findAll({
-                raw: true
+                raw: true,
+                nest: true
             });
             let menu_products = await Menu_product.findAll({
                 include: {all: true},
                 raw: true,
                 nest: true
               });
-            // console.log("1 -.-.-.-.-.-.-.-.-.");
-            // console.log(menu_products);
             return res.render('menus/menuProductsEdit',{menu_products, products});
         } catch (e) {
             console.error("Couldn't get Menu_products table.")

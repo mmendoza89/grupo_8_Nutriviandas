@@ -77,6 +77,12 @@ a {
     top: 2rem !important;
 }
 
+.rightMenuItems {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
 @media (min-width: 1024px) {
 
     #mobile-menu {

@@ -1,5 +1,6 @@
 .body-userList{
     padding-top: var(--header-height);
+    background-color: var(--background-color);
 }
 
 .userList{
@@ -13,6 +14,8 @@
     align-items: center;
     padding-bottom: 15px;
     margin-bottom: 15px;
+    background-color: white;
+    padding: 5px
 }
 
 .userInList_avatar img{
@@ -24,10 +27,19 @@
 
 .userInList_roleSelect form {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     grid-gap: 5px;
     background-color: var(--color-red);
     padding: 6px;
     border-radius: 4px;
+}
+
+#buttonRoleUpdate{
+    grid-column: 1 / -1;
+    margin: 5px 17px 5px;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--color-dark-green);
+    color: white;
 }

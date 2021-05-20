@@ -1,13 +1,18 @@
 <div class="userInList">
   <div class="userInList_avatar">
-    <img src="<%= user.avatar %>" alt="User profile image" />
+    <% if ((user.avatar).substring(0, 4) == "http") { %>
+      <img src="<%= user.avatar %>" alt="User profile image" />
+    <% } else { %>
+      <img src="/images/avatars/<%= user.avatar %>" alt="User profile image" />
+    <% } %>
+
   </div>
-  <div class="userInlist_id">Id: <%= user.id %></div>
+  <div class="userInlist_id">Id: <strong><%= user.id %></strong></div>
   <div class="userInlist_name">
-    Name: <%= user.first_name + " " + user.last_name %>
+    Name: <strong><%= user.first_name + " " + user.last_name %></strong>
   </div>
-  <div class="userInlist_email">Email: <%= user.email %></div>
-  <div class="userInlist_role">Actual Role: <%= user['user_role.name'] %></div>
+  <div class="userInlist_email">Email: <strong><%= user.email %></strong></div>
+  <div class="userInlist_role">Actual Role: <strong><%= user['user_role.name'] %></strong></div>
   <div class="userInList_roleSelect">
     <form action="users/update/<%= user.id %>" method="POST">
       <label for="roleSelect">Select New Role</label>
@@ -16,7 +21,7 @@
         <option value="<%= role.id %>" <%- role.id == user.user_role_id ? "selected" : "" %>><%= role.name %></option>
         <% }) %>
       </select>
-      <button>Update</button>
+      <button id="buttonRoleUpdate">Actualizar rol</button>
     </form>
   </div>
 </div>
