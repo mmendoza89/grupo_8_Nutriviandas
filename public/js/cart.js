@@ -93,4 +93,5 @@ function cancelCart(){
 
 function buyNow(){
   alert("Ha iniciado la compra.");
+  cancelCart();
 }
