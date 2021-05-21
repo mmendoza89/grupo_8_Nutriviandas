@@ -26,7 +26,7 @@ body, html {
 }
 
 section {
-    height: 46rem;
+    min-height: 46rem;
     margin-top: 6rem;
     padding-top: 4rem;
     padding-bottom: 4rem;

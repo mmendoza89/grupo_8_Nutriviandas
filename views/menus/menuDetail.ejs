@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <script src="/js/logout.js"></script>
+  <script src="/js/cartListener.js"></script>
   <script src="/js/menusCartStorage.js"></script>
   <title>Menus - Nutriviandas</title>
 </head>
@@ -51,14 +53,22 @@
                     <h4>$ <%= total %></h4>
                 </div>
                 <div class="product-qty-btn">
-                    <input id="quantityOfMenu" type="number" value="1">
-                    <script>
-                      menuId = <%- JSON.stringify(menuId) %>;
-                      menuDescription = <%- JSON.stringify(menus.description) %>;
-                      total = <%- JSON.stringify(total) %>;
-                      menu = <%- JSON.stringify(menus) %>;
+                  <script>
+                    menuId = <%- JSON.stringify(menuId) %>;
+                    menuDescription = <%- JSON.stringify(menus.description) %>;
+                    total = <%- JSON.stringify(total) %>;
+                    menu = <%- JSON.stringify(menus) %>;
                     </script>
-                    <button onclick="addToCart()" id="add-to-cart" class="add-button">Agregar al carrito</button>
+                    <div class="buttonAndPopover">
+                      <input id="quantityOfMenu" type="number" value="1">
+                      <button onclick="addToCart()" id="add-to-cart" class="add-button">Agregar al carrito</button>
+                      <div id="popoverNotLogged" class="popoverText hide">
+                        Ingresa o regístrate para poder agregar menús al carrito.
+                      </div>
+                      <div id="menuAlreadyStored" class="popoverText hide">
+                        Este menú ya se encuentra en el carrito. Podrás agregar más menús de este tipo desde el carrito.
+                      </div>
+                    </div>
                 </div>
                 <div class="product-description">
                     <h3>Descripción</h3>

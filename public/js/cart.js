@@ -1,15 +1,14 @@
 window.onload = function () {
   console.log("Hello from cart. Hi there!");
-
   init();
 };
-
 
 let subTotals = {};
 let total = 0;
 let clientLocalStorage = window.localStorage;
 
 function init() {
+  console.log("cart init");
   let menus = JSON.parse(clientLocalStorage.getItem("storedMenus"));
   const menusElementRoot = document.getElementById("menusDynamicData");
 
@@ -18,6 +17,7 @@ function init() {
   if (menus) {
     document.querySelector("#numberOfProducts strong").innerHTML = menus.length;
     document.querySelector("#numberOfProducts span").innerHTML = menus.length > 1 ? "productos" : "producto";
+    updateCartBubble();
     menusElementRoot.innerHTML = "";
 
 
@@ -86,6 +86,11 @@ function calculateTotal() {
 }
 
 function cancelCart(){
-    clientLocalStorage.clear();
+    clientLocalStorage.removeItem("storedMenus");
+    clientLocalStorage.removeItem("menusCount");
     location.reload();
+}
+
+function buyNow(){
+  alert("Ha iniciado la compra.");
 }

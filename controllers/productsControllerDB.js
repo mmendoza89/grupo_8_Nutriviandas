@@ -40,13 +40,8 @@ const productsController = {
     return res.render("products/productEdit", { producto: producto });
   },
   update: async function (req, res) {
-    console.log("update 1");
     let product = req.body;
     product["id"] = req.params.id;
-    console.log("update 2");
-    console.log(product);
-    console.log("update 3");
-    console.log(product.id);
     try {
       await Products.update(
         product,
@@ -56,7 +51,6 @@ const productsController = {
           },
         }
       );
-      console.log("update 2");
     } catch (error) {
       console.log("Product update error: " + error);
     }
@@ -70,7 +64,7 @@ const productsController = {
         }
     });
     return res.redirect("/products");
-  },
+  }
 };
 
 module.exports = productsController;

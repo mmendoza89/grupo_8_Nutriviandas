@@ -83,6 +83,16 @@ a {
     align-items: center;
 }
 
+#cartActualCount {
+    background-color: var(--color-red);
+    color: white;
+    border-radius: 50%;
+    padding: 0px 6px;
+    margin-top: -25px;
+    margin-left: -8px;
+    font-size: 12px;
+}
+
 @media (min-width: 1024px) {
 
     #mobile-menu {
